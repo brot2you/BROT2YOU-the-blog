@@ -31,7 +31,9 @@
      colle-le en premier dans la liste, puis modifie-le.
      - id : court, sans espace ni accent (il sert dans l'adresse de l'article)
      - date : au format AAAA-MM-JJ
-     - rubrique : apps (mes apps & outils numériques), classe (classe & pédagogie,
+     - rubrique : une rubrique ("apps") ou plusieurs entre crochets (["ia", "classe"]),
+       la première étant la rubrique principale. Rubriques possibles :
+       apps (mes apps & outils numériques), classe (classe & pédagogie,
        conseils, réflexions) ou culture (English & Culture)
      - public : choisis parmi "Élèves", "Collègues", "Familles" (ou laisse [])
      - contenu : un paragraphe par ligne entre guillemets.
@@ -47,13 +49,309 @@
                   {"texte": "Site de la BBC", "url": "https://www.bbc.co.uk/learningenglish"}]
        Un fichier déposé dans le dépôt (chemin sans https) se télécharge directement.
        Laisse [] ou supprime la ligne s'il n'y en a pas.
-     - icone : icône de l'appli. Icônes intégrées : "arbre", "cible", "gomme", "cerveau", "dojo", "loupe", "livre".
+     - icone : icône de l'appli. Icônes intégrées : "arbre", "cible", "gomme", "cerveau", "dojo", "loupe", "livre", "sac", "lunettes", "dragon", "globe", "micro", "boite", "robot", "hibou", "puzzle", "coeur", "duo".
        Tu peux aussi mettre le chemin d'une image déposée dans le dépôt
        (par exemple "images/phonix.png") ou laisser "" pour la vignette de la rubrique.
      N'oublie pas la virgule entre deux blocs, et pas de virgule après le dernier.
      ===================================================================== -->
 <script type="application/json" id="articles">
 [
+  {
+    "id": "evars-companion",
+    "icone": "duo",
+    "titre": "EVARS Companion : intégrer l'EVARS dans les séquences d'anglais au collège",
+    "date": "2026-10-03",
+    "rubrique": [
+      "classe",
+      "apps"
+    ],
+    "appNom": "EVARS Companion",
+    "appUrl": "https://brot2you.github.io/Evars-Companion/",
+    "tutoUrl": "",
+    "public": [
+      "Collègues"
+    ],
+    "resume": "69 dossiers pédagogiques qui croisent les axes du programme d'anglais 2025 et les objectifs EVARS, de la 6e à la 3e.",
+    "contenu": [
+      "Depuis la rentrée 2025, l'éducation à la vie affective et relationnelle, et à la sexualité (EVARS) a son propre programme, et chaque discipline peut y contribuer. En anglais, les liens sont nombreux : les relations, les émotions, les stéréotypes, la vie privée en ligne… Mais trouver comment articuler ces objectifs avec nos axes culturels, sans plaquer un thème sur une séquence, demande du temps et de la réflexion. J'ai voulu proposer un point de départ : **EVARS Companion**.",
+      "## L'idée",
+      "L'outil croise les axes culturels du programme d'anglais de 2025 et les objectifs EVARS du collège, organisés en trois axes : le corps, les relations et la société. On choisit un niveau, un axe culturel (par exemple « Sport et société » ou « Le Royaume-Uni »), un objectif EVARS et un format de travail : discussion guidée, analyse de document, production créative ou jeu de rôle. L'outil propose alors un dossier pédagogique : une activité de 45 minutes, une séquence de trois ou quatre séances, des idées de supports ou une tâche d'évaluation avec ses critères.",
+      "Chacun des 69 dossiers comporte un contexte, des objectifs, des consignes en anglais et, surtout, des points de vigilance propres au sujet abordé. Le dossier peut être imprimé ou copié pour être adapté. Tout fonctionne hors ligne, sans IA et sans compte.",
+      "## Et en classe ?",
+      "Le plus simple est de partir de l'axe culturel déjà travaillé avec la classe et de choisir l'objectif EVARS qui s'y rattache naturellement : l'EVARS enrichit alors la séquence au lieu de s'y ajouter. Les formats comme la production créative ou le jeu de rôle permettent aux élèves de s'exprimer à travers un personnage, ce qui protège leur intimité. Et comme pour toute séance EVARS, il est précieux d'en parler en amont avec le CPE, l'infirmière scolaire et les collègues du niveau.",
+      "---",
+      "Comme les autres outils BROT2YOU, il est gratuit, sans inscription ni collecte de données, et fonctionne directement dans le navigateur, même hors ligne.",
+      "Si vous l'utilisez, je serais vraiment content d'avoir vos retours : un dossier qui a bien fonctionné en classe, un point de vigilance à ajouter, ou la façon dont vous intégrez l'EVARS dans vos cours d'anglais. Je suis sûr qu'à plusieurs, on peut enrichir ces propositions !"
+    ]
+  },
+  {
+    "id": "dyscompagnon",
+    "icone": "coeur",
+    "titre": "DysCompagnon : fiches, adaptateur de texte et assistant IA pour les élèves dys",
+    "date": "2026-10-03",
+    "rubrique": [
+      "classe",
+      "ia"
+    ],
+    "appNom": "DysCompagnon",
+    "appUrl": "https://eleves-dys-brot2you.lovable.app/",
+    "tutoUrl": "",
+    "public": [
+      "Collègues"
+    ],
+    "resume": "27 fiches conseils filtrables, un adaptateur de texte, un assistant IA et un carnet de suivi pour accompagner les élèves dys au collège.",
+    "contenu": [
+      "Accompagner les élèves dys au quotidien, c'est souvent jongler avec beaucoup de choses en même temps : relire un PAP, adapter une évaluation la veille, se demander comment aider un élève qui décroche… Et on manque de temps pour tout chercher. J'ai voulu réunir au même endroit des outils simples, pensés pour faire gagner du temps sans perdre de vue les besoins de chaque élève : c'est **DysCompagnon**.",
+      "## L'idée",
+      "L'application rassemble quatre outils. D'abord, 27 fiches conseils synthétisées à partir de guides officiels et de ressources d'enseignants, filtrables par trouble (dyslexie, dysorthographie, dyspraxie, dyscalculie, dysphasie, TDAH), par catégorie (aménagements, évaluations, langues vivantes, mathématiques, posture enseignante…) et par délai de mise en place, de l'immédiat à l'année entière. Ensuite, un adaptateur de texte qui reformate une consigne ou un document en quelques secondes : police, taille, interligne, espacements, fond coloré, syllabes en couleur.",
+      "S'y ajoutent un assistant IA, à qui l'on peut poser une question pédagogique concrète pour obtenir des pistes d'adaptation, et un carnet « Mes élèves » pour noter les aménagements de chacun et suivre ses progrès, enregistré uniquement sur l'appareil. Comme toujours avec l'IA, les réponses de l'assistant sont des pistes à vérifier, et les questions ne doivent jamais permettre d'identifier un élève, puisqu'elles sont traitées par un service en ligne.",
+      "## Et en pratique ?",
+      "Pour commencer, on peut filtrer les fiches sur le délai « immédiat » et choisir une ou deux adaptations à mettre en place dès le cours suivant. Avant une évaluation, l'adaptateur permet de rendre une consigne plus lisible en un instant, ce qui profite souvent à toute la classe. Face à une situation qui pose question, l'assistant aide à trouver des idées, à confronter ensuite au PAP ou au PPS. Et en équipe, les fiches peuvent servir de base commune pour harmoniser les adaptations entre disciplines.",
+      "---",
+      "L'outil est gratuit et fonctionne directement dans le navigateur, sur ordinateur comme sur téléphone.",
+      "Si vous l'utilisez, je serais vraiment content d'avoir vos retours : une fiche qui manque, une adaptation qui fonctionne bien avec vos élèves, ou une idée pour améliorer l'outil. Je suis sûr qu'à plusieurs, on peut en faire un vrai compagnon du quotidien !"
+    ]
+  },
+  {
+    "id": "dys-college",
+    "icone": "puzzle",
+    "titre": "DysCollège : des conseils concrets pour accompagner les élèves dys",
+    "date": "2026-10-03",
+    "rubrique": [
+      "classe",
+      "apps"
+    ],
+    "appNom": "DysCollège",
+    "appUrl": "https://brot2you.github.io/Dys-College/",
+    "tutoUrl": "",
+    "public": [
+      "Collègues"
+    ],
+    "resume": "Plus de 350 conseils par trouble et par discipline, tirés de sources de référence, et un outil pour adapter un texte en direct.",
+    "contenu": [
+      "Un PAP qui arrive en cours d'année, un élève dyslexique qui décroche dès qu'il faut recopier le tableau, une consigne qu'on pensait claire et qui ne l'est pas… Accompagner les élèves dys, on le sait important, mais on ne sait pas toujours par où commencer, surtout quand on enseigne une autre discipline que le français. J'ai voulu rassembler des pistes concrètes, faciles à retrouver : c'est **DysCollège**.",
+      "## L'idée",
+      "L'application fonctionne en deux temps : on choisit un trouble (dyslexie, dysorthographie, dysphasie, dyspraxie, dysgraphie, troubles des fonctions exécutives, TDA/H ou dyscalculie), puis un contexte (conseils généraux ou discipline : français, langues vivantes, sciences, musique, arts plastiques, EPS, histoire-géographie). Les conseils s'affichent aussitôt, courts et concrets. Il y en a plus de 350, tous tirés de cinq sources de référence, et chacun indique d'où il vient.",
+      "L'application propose aussi un outil pour adapter un texte : on colle une consigne ou un énoncé, on choisit la police, la taille, l'interligne, la couleur de fond, et on peut mettre les mots-clés en gras ou découper les syllabes en couleurs. L'aperçu se met à jour en direct, et le texte adapté se copie ou s'imprime. Une recherche dans tous les conseils et des fiches de principes universels complètent l'ensemble. Le tout sans IA et sans connexion nécessaire.",
+      "## Et en pratique ?",
+      "Quand un PAP ou un PPS arrive, on peut ouvrir le trouble concerné dans sa discipline pour repérer quelques adaptations à mettre en place dès le cours suivant. Avant une évaluation, l'outil d'adaptation permet de rendre une consigne ou un énoncé plus lisible en quelques secondes, ce qui profite souvent à toute la classe. En équipe, l'application peut aussi servir de base commune pour harmoniser les adaptations entre disciplines, toujours en lien avec la famille et les professionnels qui suivent l'élève.",
+      "---",
+      "Comme les autres outils BROT2YOU, elle est gratuite, sans inscription ni collecte de données, et fonctionne directement dans le navigateur, sur ordinateur comme sur téléphone.",
+      "Si vous l'utilisez, je serais vraiment content d'avoir vos retours : un conseil qui manque pour votre discipline, une adaptation qui fonctionne bien avec vos élèves, ou une source à ajouter. Je suis sûr qu'à plusieurs, on peut en faire un outil encore plus utile !"
+    ]
+  },
+  {
+    "id": "didalangues",
+    "icone": "hibou",
+    "titre": "DidaLangues : 190 fiches pour s'y retrouver en didactique des langues",
+    "date": "2026-10-03",
+    "rubrique": "classe",
+    "appNom": "DidaLangues",
+    "appUrl": "https://brot2you.github.io/DidaLangues/",
+    "tutoUrl": "",
+    "public": [
+      "Collègues"
+    ],
+    "resume": "Concepts, démarches, activités langagières, numérique, mise en œuvre et auteurs de référence, réunis dans une bibliothèque de fiches.",
+    "contenu": [
+      "Approche actionnelle, tâche finale, médiation, input compréhensible, focus on form… Quand on débute, ou même avec quelques années d'expérience, la didactique des langues peut vite ressembler à un empilement de notions et de références. Et au moment de préparer un cours, un mémoire ou un oral, on aimerait souvent retrouver l'essentiel en quelques minutes. C'est pour ça que j'ai rassemblé mes notes dans **DidaLangues**.",
+      "## L'idée",
+      "L'application réunit 190 fiches réparties en sept rubriques : un glossaire de 109 concepts (didactique, cognition, évaluation, acquisition, phonologie, lexique…), les grandes démarches pédagogiques de l'audio-oral à l'actionnel, la didactique de chaque activité langagière du CECRL, les innovations et outils numériques (IA générative, classe inversée, podcasting, eTwinning…), des fiches pratiques de mise en œuvre, les formes de travail en classe et une sélection d'ouvrages de référence, de Tricot à Krashen en passant par Meirieu, Ellis ou Puren.",
+      "Chaque fiche commence par un résumé en une phrase, puis développe la notion avec des exemples pour la classe d'anglais. Des filtres par catégorie et une recherche dans toutes les fiches à la fois permettent de retrouver rapidement ce qu'on cherche.",
+      "## Et en pratique ?",
+      "Un étudiant MEEF ou un stagiaire peut s'en servir pour clarifier une notion avant un cours ou un écrit, puis chercher dans les fiches de mise en œuvre comment la transposer en classe. Pour un tuteur ou un formateur, une fiche peut servir de point de départ à un échange après une séance observée. Et pour le mémoire ou le concours, la rubrique des auteurs offre une première entrée dans les lectures de référence, à approfondir ensuite.",
+      "---",
+      "Comme les autres outils BROT2YOU, elle est gratuite, sans inscription ni collecte de données, et fonctionne directement dans le navigateur, sur ordinateur comme sur téléphone.",
+      "Si vous l'utilisez, je serais vraiment content d'avoir vos retours : une notion qui manque, une fiche à préciser, ou un ouvrage qui mériterait d'y figurer. Je suis sûr qu'à plusieurs, on peut en faire une ressource encore plus utile !"
+    ]
+  },
+  {
+    "id": "didactics-ai-coach",
+    "icone": "robot",
+    "titre": "Didactics AI Coach : un compagnon IA pour la didactique de l'anglais",
+    "date": "2026-10-03",
+    "rubrique": [
+      "ia",
+      "classe"
+    ],
+    "appNom": "Didactics AI Coach",
+    "appUrl": "https://didactics-ai-coach.lovable.app/",
+    "tutoUrl": "",
+    "public": [
+      "Collègues"
+    ],
+    "resume": "Un assistant conversationnel pour les étudiants MEEF : programmes du collège et du lycée, construction de séances et préparation au CAPES.",
+    "contenu": [
+      "Quand on prépare ses premières séances, ou ses oraux de concours, on a souvent mille questions et pas toujours quelqu'un sous la main pour y répondre : que disent exactement les programmes de 5e ? Comment articuler une tâche intermédiaire et une tâche finale ? Comment différencier sans tout réécrire ? J'ai voulu proposer aux étudiants MEEF un interlocuteur disponible à tout moment pour réfléchir à ces questions : **Didactics AI Coach**.",
+      "## L'idée",
+      "C'est un assistant conversationnel, propulsé par une intelligence artificielle et spécialisé en didactique de l'anglais. Il est organisé en espaces de travail : la 6e, le cycle 4 (5e, 4e, 3e), la seconde, le cycle terminal et la préparation au concours, avec en plus un chat libre. Des suggestions de questions aident à démarrer, et on peut ensuite poursuivre l'échange pour affiner une séance, demander une variante, une différenciation ou une justification didactique.",
+      "Comme tout outil d'IA, il peut se tromper, et l'application le rappelle clairement : ses réponses sont des pistes de réflexion, à vérifier dans les textes officiels et à discuter avec son tuteur ou ses formateurs. Il ne faut pas non plus y écrire d'informations personnelles sur des élèves ou des collègues, puisque les messages sont traités par un service d'IA en ligne.",
+      "## Et en pratique ?",
+      "L'étudiant peut formuler sa propre idée de séance, puis demander à l'assistant de la critiquer ou de l'enrichir. Pour le concours, l'espace dédié permet de s'entraîner à analyser un document et à répondre à des questions de type jury. Et en formation, une proposition de l'assistant peut devenir le point de départ d'un échange avec le tuteur : est-elle adaptée à la classe, cohérente avec les programmes, réaliste en 55 minutes ? C'est aussi une belle occasion de développer un regard critique sur les réponses d'une IA.",
+      "---",
+      "L'outil est gratuit et fonctionne directement dans le navigateur, sur ordinateur comme sur téléphone.",
+      "Si vous le testez, ou si vous le proposez à des étudiants, je serais vraiment content d'avoir vos retours : une réponse approximative, un espace à ajouter, ou la façon dont vous abordez l'IA en formation. Je suis sûr qu'il y a beaucoup à apprendre de vos pratiques !"
+    ]
+  },
+  {
+    "id": "boite-outils-stagiaires",
+    "icone": "boite",
+    "titre": "La Boîte à outils du stagiaire : un guide de survie pour la première année",
+    "date": "2026-10-03",
+    "rubrique": "classe",
+    "appNom": "La Boîte à outils du stagiaire",
+    "appUrl": "https://brot2you.github.io/Boite-outils-stagiaires/",
+    "tutoUrl": "",
+    "public": [
+      "Collègues"
+    ],
+    "resume": "Sigles décodés, interlocuteurs de l'établissement, sites utiles et solutions concrètes aux difficultés de l'année de stage.",
+    "contenu": [
+      "PPMS, LSU, PAP, AESH, SOPA… La première année dans l'Éducation nationale, on a parfois l'impression d'apprendre une nouvelle langue avant même d'enseigner la sienne. Et quand une difficulté arrive, on ne sait pas toujours à qui s'adresser, ni par où commencer. En accompagnant des stagiaires, je me suis dit qu'un petit dossier de référence pourrait leur faire gagner du temps et de la sérénité. C'est l'idée de **la Boîte à outils du stagiaire**.",
+      "## L'idée",
+      "Le dossier rassemble quatre rubriques. Les abréviations d'abord : 93 sigles décodés et expliqués, des examens au handicap et à l'inclusion, jusqu'à la réforme de la formation des enseignants. Les acteurs de l'établissement ensuite : 21 interlocuteurs, du CPE à l'IA-IPR, avec pour chacun son rôle, les situations où le solliciter et la façon de préparer sa démarche.",
+      "Viennent enfin une sélection de 27 sites utiles, institutionnels, académiques et pédagogiques pour l'anglais, et surtout 17 fiches « Problèmes & solutions » : perdre l'autorité sur une classe, être débordé par la charge de travail, préparer une inspection, gérer un message agressif d'un parent, se sentir isolé… Chaque fiche décrit la situation et propose des pistes concrètes. Le dossier est pensé pour un stagiaire d'anglais, mais il peut être utile à toute personne qui arrive dans un établissement.",
+      "## Et en pratique ?",
+      "Le stagiaire peut garder la Boîte à outils sur son téléphone, pour décoder un sigle en réunion ou savoir qui contacter avant de faire une démarche. Pour un tuteur, elle peut servir de support lors des premiers rendez-vous : faire ensemble le tour des acteurs de l'établissement, ou partir d'une fiche pour échanger sur une situation vécue. Elle peut aussi être présentée lors d'une réunion d'accueil des nouveaux collègues en début d'année.",
+      "---",
+      "Comme les autres outils BROT2YOU, elle est gratuite, sans inscription ni collecte de données, et fonctionne directement dans le navigateur, sur ordinateur comme sur téléphone.",
+      "Si vous l'utilisez ou la partagez avec des stagiaires, je serais vraiment content d'avoir vos retours : un sigle qui manque, une situation à ajouter, ou un conseil qui vous a aidé pendant votre propre année de stage. Je suis sûr qu'à plusieurs, on peut en faire un vrai outil d'accueil !"
+    ]
+  },
+  {
+    "id": "phonix",
+    "icone": "micro",
+    "titre": "Phonix : s'entraîner à prononcer les sons de l'anglais",
+    "date": "2026-10-03",
+    "rubrique": "apps",
+    "appNom": "Phonix",
+    "appUrl": "https://brot2you.github.io/Phonix/",
+    "tutoUrl": "",
+    "public": [
+      "Élèves",
+      "Collègues",
+      "Familles"
+    ],
+    "resume": "Les 44 sons de l'anglais, des paires minimales, un quiz d'écoute et les règles de l'oral, avec la possibilité de s'enregistrer.",
+    "contenu": [
+      "Ship ou sheep ? Think ou sink ? Pour beaucoup d'élèves francophones, certains sons de l'anglais restent un mystère : on ne les entend pas vraiment, alors difficile de les prononcer. Et en classe, on manque souvent de temps pour travailler la phonologie de façon individuelle. J'ai voulu leur offrir un espace pour écouter, comparer et s'entraîner à leur rythme : **Phonix**.",
+      "## L'idée",
+      "L'application présente les 44 phonèmes de l'anglais : voyelles courtes et longues, diphtongues et consonnes. Pour chacun, l'élève découvre son symbole, un petit dessin de la bouche, une astuce en français et des mots-exemples à écouter, avec un choix de huit accents, du britannique à l'australien en passant par l'irlandais ou l'indien. Il peut ensuite s'enregistrer pour vérifier si son mot est bien reconnu.",
+      "Pour aller plus loin, Phonix propose des paires minimales (ship / sheep, wine / vine…), un quiz pour reconnaître le son entendu dans un mot, une lecture à voix haute avec un retour sur les mots reconnus, et une partie consacrée aux règles de l'oral : terminaisons en -ed et en -s, accent de mot, lettres muettes, intonation et liaisons.",
+      "## Et en classe ?",
+      "Les paires minimales et le quiz se prêtent bien à un petit rituel en début de cours, projetés au tableau : la classe vote pour le son entendu. L'onglet des règles tombe à pic au moment de travailler le prétérit ou le pluriel. Pour les enregistrements, mieux vaut un travail individuel au casque, en salle informatique ou sur tablette. Et à la maison, l'élève peut réécouter et s'entraîner en autonomie, autant qu'il le souhaite.",
+      "---",
+      "Comme les autres applications BROT2YOU, elle est gratuite, sans inscription, et fonctionne directement dans le navigateur. Pour la partie enregistrement, il faut utiliser Google Chrome et autoriser le micro.",
+      "Si vous la testez avec vos élèves, je serais vraiment content d'avoir vos retours : un son difficile à faire entendre, une paire minimale à ajouter, ou vos astuces pour travailler la prononciation en classe. Je suis sûr qu'il y a plein d'idées à partager !"
+    ]
+  },
+  {
+    "id": "culture-corner",
+    "icone": "globe",
+    "titre": "Culture Corner : une bibliothèque de ressources culturelles anglophones",
+    "date": "2026-10-03",
+    "rubrique": "culture",
+    "appNom": "Culture Corner",
+    "appUrl": "https://brot2you.github.io/Culture-Corner/",
+    "tutoUrl": "",
+    "public": [
+      "Collègues",
+      "Élèves"
+    ],
+    "resume": "Près de 1 150 documents authentiques classés par axe du BO 2025, de la 6e à la terminale, avec des pistes d'exploitation pour la classe.",
+    "contenu": [
+      "Trouver le bon document pour lancer une séquence, c'est souvent des heures passées à fouiller YouTube, des sites de presse ou des banques de ressources, sans être sûr que ça collera vraiment à l'axe du programme ni au niveau de la classe. J'ai eu envie de rassembler, au même endroit, des documents authentiques déjà triés et prêts à être explorés. C'est le principe de **Culture Corner**.",
+      "## L'idée",
+      "L'application rassemble près de 1 150 ressources culturelles anglophones : articles de presse, films, œuvres d'art et de littérature, podcasts, chansons et séries, du Royaume-Uni et des États-Unis, mais aussi d'Irlande, d'Australie, d'Afrique du Sud ou du Nigeria. Chacune est rattachée à un axe culturel des programmes du BO 2025, de la 6e à la terminale, avec un niveau CECRL indicatif. Des filtres permettent de croiser niveau de classe, axe, type de document et niveau CECRL, ou de chercher par mot-clé.",
+      "En profil enseignant, chaque ressource est accompagnée d'une suggestion d'exploitation : des objectifs, une mise en œuvre en trois étapes (anticiper, vérifier, réinvestir), des consignes guidées en anglais, un lexique clé, une tâche finale et des pistes de différenciation. Chacun peut aussi ajouter ses propres ressources à sa bibliothèque.",
+      "## Et en classe ?",
+      "Au moment de construire une séquence, on peut filtrer par niveau et par axe pour trouver un document d'accroche, puis s'appuyer sur la suggestion pour préparer ses étapes, en l'adaptant bien sûr à sa classe. Le profil élève permet aussi de laisser les élèves explorer un axe en autonomie et choisir une ressource à présenter à leurs camarades. Et à la maison, c'est une belle porte d'entrée pour découvrir des chansons, des films ou des podcasts en anglais selon ses goûts.",
+      "---",
+      "Comme les autres applications BROT2YOU, elle est gratuite, sans inscription, et fonctionne directement dans le navigateur, sur ordinateur comme sur téléphone.",
+      "Si vous l'utilisez, je serais vraiment content d'avoir vos retours : une ressource incontournable qui manque, un lien qui ne fonctionne plus, ou une idée pour mieux l'exploiter en classe. Je suis sûr qu'à plusieurs, on peut enrichir cette bibliothèque !"
+    ]
+  },
+  {
+    "id": "grammar-arena",
+    "icone": "dragon",
+    "titre": "Grammar Arena : affronter la grammaire anglaise dans un donjon",
+    "date": "2026-10-03",
+    "rubrique": "apps",
+    "appNom": "Grammar Arena",
+    "appUrl": "https://brot2you.github.io/Grammar-Arena/",
+    "tutoUrl": "",
+    "public": [
+      "Élèves",
+      "Collègues",
+      "Familles"
+    ],
+    "resume": "Quinze créatures, quinze points de grammaire : on découvre la règle par soi-même, puis on l'affronte en combat.",
+    "contenu": [
+      "La grammaire a souvent mauvaise réputation auprès des élèves : une règle à apprendre, des exercices à trous, et la sensation de ne jamais vraiment comprendre pourquoi. Je me suis demandé comment changer un peu la façon de l'aborder, en laissant les élèves chercher la règle eux-mêmes, et en mettant un peu d'aventure dans l'entraînement. C'est ainsi qu'est né **Grammar Arena**.",
+      "## L'idée",
+      "L'application est un donjon gardé par quinze créatures, chacune maîtresse d'un point de grammaire : Lord Modal pour les modaux, Tense Titan pour les temps, Passive Phantom pour la voix passive, Article Archer pour les articles… Avant chaque combat, l'élève consulte une « prophétie » : il observe quelques phrases d'exemple, formule sa propre hypothèse sur la règle, puis la compare à la vraie règle.",
+      "Vient ensuite le combat. Les épreuves prennent quatre formes : choisir la bonne réponse, compléter une phrase, corriger une erreur ou transformer une phrase. Chaque bonne réponse fait perdre des points de vie à la créature, chaque erreur en fait perdre à l'élève, et une série de bonnes réponses déclenche un coup critique. Après chaque épreuve, la correction et un rappel de la règle s'affichent en français. Deux modes sont proposés : l'exploration, à son rythme, et le combat rapide, avec un sablier de vingt secondes.",
+      "## Et en classe ?",
+      "La prophétie se prête très bien à un travail collectif : on projette les exemples, la classe formule une hypothèse sur la règle, puis on vérifie ensemble avant de passer au combat. Celui-ci peut se faire en binômes, ou en équipes au tableau, chaque bonne réponse faisant reculer la créature. Le mode combat rapide permet de réactiver une notion en fin de séquence, et l'élève peut aussi s'entraîner seul chez lui, puisque tout est expliqué en français.",
+      "---",
+      "Comme les autres applications BROT2YOU, elle est gratuite, sans inscription ni collecte de données, et fonctionne directement dans le navigateur, sur ordinateur comme sur téléphone.",
+      "Si vous la testez avec vos élèves, je serais vraiment content d'avoir vos retours : une créature trop coriace, un point de grammaire qui manque, ou une idée pour enrichir le donjon. Je suis sûr qu'il y a plein d'idées à partager !"
+    ]
+  },
+  {
+    "id": "make-me-read",
+    "icone": "lunettes",
+    "titre": "Make Me Read : apprendre à lire en anglais avec des stratégies",
+    "date": "2026-10-03",
+    "rubrique": "apps",
+    "appNom": "Make Me Read",
+    "appUrl": "https://brot2you.github.io/Make-Me-Read/",
+    "tutoUrl": "",
+    "public": [
+      "Élèves",
+      "Collègues",
+      "Familles"
+    ],
+    "resume": "58 textes de l'A2 au B2, un glossaire à portée de clic et six stratégies de lecture pour devenir un lecteur plus autonome.",
+    "contenu": [
+      "Face à un texte en anglais, beaucoup d'élèves font la même chose : ils commencent par le premier mot, cherchent à tout traduire, butent sur le troisième mot inconnu… et abandonnent. On leur dit souvent de « lire autrement », mais encore faut-il leur montrer comment. C'est ce que j'ai voulu faire avec **Make Me Read**.",
+      "## L'idée",
+      "L'application propose 58 textes, de l'A2 au B2, dans six genres : fantasy, science-fiction, thriller, enquête, horreur et fiction contemporaine. On y trouve des textes originaux et des extraits adaptés de grands classiques, de Sherlock Holmes à Frankenstein. Chaque mot difficile est souligné : un clic suffit pour voir sa prononciation, sa définition en anglais et un exemple.",
+      "Surtout, sous chaque texte, l'élève choisit une stratégie de lecture parmi six : survoler, chercher une information, déduire ce qui est sous-entendu, deviner un mot grâce au contexte, analyser la structure du texte, ou s'interroger sur les choix de l'auteur. Il écrit sa réponse, reçoit un retour et des pistes de réflexion propres au texte, puis peut comparer avec des réponses modèles. Une barre d'outils DYS (police adaptée, règle de lecture, masque, syllabation…) rend la lecture plus confortable pour tous.",
+      "## Et en classe ?",
+      "On peut projeter un texte et travailler une stratégie tous ensemble, puis laisser les élèves l'appliquer seuls à un autre texte du même niveau. La différenciation se fait facilement : chaque groupe lit un texte adapté à son niveau, avec la même stratégie, avant une mise en commun. Et comme les consignes, les retours et les solutions sont en français, l'élève peut aussi s'entraîner chez lui en autonomie.",
+      "---",
+      "Comme les autres applications BROT2YOU, elle est gratuite, sans inscription, et fonctionne directement dans le navigateur, sur ordinateur comme sur téléphone.",
+      "Si vous la testez avec vos élèves, je serais vraiment content d'avoir vos retours : un texte qui fonctionne particulièrement bien, une stratégie à ajouter, ou un genre qui manque. Je suis sûr qu'il y a plein d'idées à partager !"
+    ]
+  },
+  {
+    "id": "my-survival-kit",
+    "icone": "sac",
+    "titre": "My Survival Kit : la trousse de survie du cours d'anglais",
+    "date": "2026-10-03",
+    "rubrique": "apps",
+    "appNom": "My Survival Kit",
+    "appUrl": "https://brot2you.github.io/My-Survival-Kit/",
+    "tutoUrl": "",
+    "public": [
+      "Élèves",
+      "Familles",
+      "Collègues"
+    ],
+    "resume": "Consignes, petits mots qui bloquent, bases de grammaire et phrases de survie : plus de 230 expressions à réviser en s'amusant.",
+    "contenu": [
+      "« Circle », « underline », « take out your copybook », « can you repeat, please? »… Pour certains élèves, ces petites phrases du quotidien sont un vrai mur dès les premières minutes de cours. Ne pas comprendre une consigne, ne pas oser demander, ne pas savoir dire qu'on est perdu : c'est souvent là que tout commence à décrocher. J'ai voulu leur donner une petite trousse de secours : **My Survival Kit**.",
+      "## L'idée",
+      "L'application rassemble plus de 230 expressions, rangées en quatre thèmes : les consignes et la vie de classe (Classroom English), les petits mots qui bloquent (mots interrogatifs, connecteurs, l'heure, la date, les chiffres), les bases de grammaire (pronoms, temps et aspects, modaux, prépositions) et les phrases de survie, avec une « boîte à sentiments » pour dire comment on se sent. Chaque expression est accompagnée de sa traduction, d'un emoji et d'une petite astuce pour la retenir.",
+      "Pour réviser, l'élève a le choix : lire les fiches, s'entraîner avec des flashcards, faire un quiz éclair, jouer au memory ou consulter une carte mentale du thème. Un cadran interactif aide aussi à apprendre à dire l'heure. Et chaque jour, une petite « expédition » de cinq mots tirés au hasard permet de garder son feu de camp allumé, avec des niveaux et des badges pour encourager la régularité.",
+      "## Et en classe ?",
+      "En début d'année, l'application peut aider à installer les consignes et les phrases de survie : quelques minutes de flashcards ou de quiz éclair en début de cours suffisent. Quand une consigne bloque, on peut simplement renvoyer l'élève vers la bonne fiche. La boîte à sentiments se prête bien à un rituel d'accueil (« How do you feel today? »). Et à la maison, l'élève peut réviser en autonomie, quelques minutes par jour, grâce à l'expédition du jour.",
+      "---",
+      "Comme les autres applications BROT2YOU, elle est gratuite, sans inscription ni collecte de données, et fonctionne directement dans le navigateur, sur ordinateur comme sur téléphone.",
+      "Si vous la testez avec vos élèves, je serais vraiment content d'avoir vos retours : une expression qui manque, un thème à ajouter, ou les phrases que vos élèves trouvent les plus utiles. Je suis sûr qu'il y a plein d'idées à partager !"
+    ]
+  },
   {
     "id": "books-of-heroes",
     "icone": "livre",
@@ -348,6 +646,88 @@ L'arbre propose 24 situations, chacune associée à une stratégie nommée. Ce t
 **À savoir.** L'application n'enregistre rien et ne demande aucune donnée. Elle ne remplace pas le cours : elle donne une méthode pour se mettre au travail.
 </script>
 
+<script type="text/markdown" id="tuto-boite-outils-stagiaires">
+## C'est quoi, la Boîte à outils du stagiaire ?
+
+La Boîte à outils du stagiaire est un guide de survie dans l'Éducation nationale. Elle rassemble les sigles à connaître, les interlocuteurs de l'établissement, des sites utiles et des solutions concrètes aux difficultés les plus courantes de l'année de stage. Elle est pensée pour un professeur d'anglais stagiaire, mais elle sert à toute l'équipe : néo-titulaires, contractuels, tuteurs.
+
+L'application est gratuite, sans inscription, et aucune donnée saisie n'est envoyée nulle part. Elle fonctionne dans le navigateur, sur ordinateur, tablette ou téléphone.
+
+Elle s'organise en quatre onglets :
+
+| Onglet | Ce qu'on y trouve |
+| --- | --- |
+| Abréviations | 93 sigles décodés et expliqués (DNB, CPE, PPMS, LSU, PAP, AESH…) |
+| Acteurs de l'établissement | 21 interlocuteurs : leur rôle, quand les solliciter, quoi leur apporter |
+| Sites utiles | 27 ressources institutionnelles, académiques, pédagogiques et numériques |
+| Problèmes & solutions | 17 situations difficiles de l'année de stage, avec des pistes concrètes |
+
+## Premiers pas
+
+1. Ouvre l'adresse dans ton navigateur.
+2. En haut, un compteur rappelle le contenu du dossier : sigles, interlocuteurs, ressources et situations traitées.
+3. Choisis un onglet : **Abréviations**, **Acteurs de l'établissement**, **Sites utiles** ou **Problèmes & solutions**.
+4. Utilise la barre de recherche : elle s'adapte à l'onglet ouvert et filtre le contenu au fur et à mesure que tu tapes.
+
+Sur téléphone, tu peux ajouter l'application à ton écran d'accueil pour l'avoir toujours sous la main, en salle des profs comme en conseil de classe :
+
+- iPhone (Safari) : bouton Partager, puis « Sur l'écran d'accueil ».
+- Android (Chrome) : menu ⋮, puis « Ajouter à l'écran d'accueil ».
+
+## Décoder un sigle (onglet Abréviations)
+
+Les 93 sigles sont rangés en huit catégories :
+
+- Diplômes, examens et certifications
+- Structures et instances
+- Personnels et carrière
+- Numérique et vie scolaire
+- Handicap et inclusion
+- Programmes et dispositifs pédagogiques
+- Sécurité et vie de l'établissement
+- Réforme de la formation des enseignants (M2E, 2026)
+
+Pour chaque sigle, tu trouves sa forme complète et une courte explication. Par exemple : **CFG**, Certificat de Formation Générale, le diplôme de substitution au DNB pour les élèves de SEGPA ou d'ULIS. Tape le sigle entendu en réunion dans la barre de recherche (CPE, PPMS, LSU…) pour le retrouver tout de suite.
+
+## Savoir à qui s'adresser (onglet Acteurs de l'établissement)
+
+Chaque fiche présente un interlocuteur, du chef d'établissement à l'IA-IPR d'anglais, en passant par le CPE, l'AESH, l'infirmier scolaire, le PsyEN, le référent harcèlement ou le tuteur de terrain. Elle répond à trois questions :
+
+| Rubrique | Ce qu'elle t'apprend |
+| --- | --- |
+| Rôle | Ce que fait cette personne dans l'établissement |
+| Quand le/la solliciter | Les situations où c'est la bonne personne à contacter |
+| Quoi apporter / demander | Comment préparer ta démarche pour qu'elle soit efficace |
+
+Astuce : la recherche fonctionne aussi par situation. Tape « harcèlement », « absence » ou « handicap » pour trouver la bonne personne.
+
+## Trouver une ressource (onglet Sites utiles)
+
+Les 27 sites sont classés en quatre groupes : institutionnel national (Éduscol, Bulletin officiel, Légifrance, Canopé…), académique et local, ressources pédagogiques pour l'anglais, et outils numériques pratiques. Chaque lien est accompagné d'une phrase qui explique à quoi il sert, et s'ouvre dans un nouvel onglet.
+
+## Résoudre une difficulté (onglet Problèmes & solutions)
+
+Cet onglet rassemble 17 situations vécues par beaucoup de stagiaires, formulées à la première personne : « Je perds l'autorité sur une classe », « Je ne sais pas comment noter ou évaluer », « Je vais être inspecté(e) et je ne sais pas à quoi m'attendre », « Un parent d'élève me met en difficulté », « Je me sens isolé(e) et découragé(e) »…
+
+Touche une situation pour l'ouvrir. Tu y trouves une description des signes qui peuvent t'alerter, puis une liste de solutions concrètes, numérotées, à essayer dans l'ordre. Touche à nouveau le titre pour refermer la fiche.
+
+## Bon à savoir
+
+La Boîte à outils est un dossier de consultation : il n'y a rien à remplir, et aucune donnée n'est enregistrée ni envoyée. Tu peux l'ouvrir à tout moment, sans compte.
+
+Les usages, les sigles et l'organisation varient d'un établissement et d'une académie à l'autre. Le dossier donne des repères généraux : en cas de doute, vérifie toujours auprès de ta direction, de ton tuteur ou du rectorat.
+
+## Conseils d'utilisation
+
+**Pour les stagiaires.** Garde la Boîte à outils sur ton téléphone : elle est utile en réunion, quand un sigle tombe sans explication, ou avant de contacter quelqu'un pour la première fois. Quand une difficulté s'installe, ouvre la fiche correspondante dans Problèmes & solutions, puis parles-en à ton tuteur : les fiches ne remplacent pas un échange avec un collègue.
+
+**Pour les tuteurs.** Le dossier peut servir de support lors des premiers rendez-vous avec le stagiaire : faire le tour des acteurs de l'établissement, repérer ensemble les sigles qui reviendront souvent, ou partir d'une fiche Problèmes & solutions pour lancer un échange sur une situation vécue.
+
+**Pour les formateurs et l'équipe.** Les néo-titulaires, les contractuels ou les collègues qui arrivent dans l'établissement y trouveront aussi des repères. Le dossier peut être présenté lors d'une réunion d'accueil en début d'année.
+
+**À savoir.** Les informations sont des repères généraux, à jour au moment de leur rédaction, notamment sur la réforme de la formation des enseignants (M2E, 2026). Les textes officiels et les consignes de l'établissement restent la référence.
+</script>
+
 <script type="text/markdown" id="tuto-books-of-heroes">
 ## C'est quoi, Books of Heroes ?
 
@@ -613,6 +993,624 @@ L'espace **📋 Enseignant** rassemble des ressources pour l'enseignement des la
 **À savoir.** Aucune donnée n'est envoyée sur internet : tout reste dans le navigateur de l'appareil. Si l'élève change d'appareil ou efface les données de navigation, ses notions et son planning ne suivent pas.
 </script>
 
+<script type="text/markdown" id="tuto-culture-corner">
+## C'est quoi, Culture Corner ?
+
+Culture Corner est une bibliothèque de ressources culturelles anglophones pour la classe d'anglais : près de 1 150 documents authentiques (articles de presse, films, œuvres d'art et de littérature, podcasts, chansons, séries), classés selon les axes culturels des programmes du BO 2025, de la 6e à la terminale.
+
+L'application est gratuite, sans inscription, et fonctionne dans le navigateur, sur ordinateur, tablette ou téléphone. Elle propose deux profils :
+
+| Profil | Pour qui | Ce qu'on y trouve |
+| --- | --- | --- |
+| Élève | Les élèves, du collège au lycée | Explorer les ressources, lire leur présentation et ouvrir le document |
+| Prof | Les enseignants d'anglais | Tout ce que voit l'élève, plus une suggestion d'exploitation pédagogique pour chaque ressource et la possibilité d'ajouter ses propres ressources |
+
+Les ressources viennent surtout du Royaume-Uni et des États-Unis, mais aussi d'Irlande, d'Australie, de Nouvelle-Zélande, d'Afrique du Sud, du Canada, du Nigeria ou d'Inde.
+
+## Premiers pas
+
+1. Ouvre l'adresse dans ton navigateur.
+2. Choisis ton profil : **Je suis élève** ou le profil enseignant.
+3. Tu arrives sur la bibliothèque. En haut, l'étiquette **ÉLÈVE** ou **PROF** rappelle ton profil.
+4. Pour passer d'un profil à l'autre, appuie sur **Changer de profil**.
+
+Sur téléphone, tu peux ajouter l'application à ton écran d'accueil :
+
+- iPhone (Safari) : bouton Partager, puis « Sur l'écran d'accueil ».
+- Android (Chrome) : menu ⋮, puis « Ajouter à l'écran d'accueil ».
+
+## Trouver une ressource
+
+La barre du haut permet de combiner plusieurs filtres. Le nombre de ressources trouvées s'affiche juste en dessous.
+
+| Filtre | Ce qu'il permet |
+| --- | --- |
+| 🔍 Recherche | Chercher un titre, un mot-clé ou un thème (par exemple : climate, Banksy, identity) |
+| Type | Musique, Cinéma, Presse, Podcast, Art & Lit ou Séries |
+| Niveau de classe | De la 6e à la terminale |
+| Axe | Les axes culturels du programme pour le niveau choisi (par exemple « Le Royaume-Uni » en 5e, ou « Art et pouvoir » au lycée) |
+| Niveau CECRL | A1-A2, B1-B2 ou C1-C2 |
+
+Astuce : choisis d'abord le niveau de classe, puis l'axe. La liste des axes s'adapte automatiquement au niveau.
+
+## Consulter la fiche d'une ressource
+
+Touche une ressource pour ouvrir sa fiche. Tu y trouves son type, son titre, son pays et son année, son niveau CECRL, le niveau de classe, l'axe du programme, une courte présentation et des mots-clés. Le bouton principal ouvre le document original (vidéo, article, podcast…) dans un nouvel onglet.
+
+## La suggestion d'exploitation (profil Prof)
+
+En profil enseignant, chaque fiche propose en plus une **📋 Suggestion d'exploitation pédagogique**, adaptée au type de document et à son niveau :
+
+- **🎯 Objectifs** : culturel, communicatif et linguistique.
+- **📋 Mise en œuvre** en trois étapes : anticiper avant le document, vérifier avec une stratégie outillée, réinvestir.
+- **🔧 Consignes guidées** en anglais, une par étape.
+- **📖 Lexique clé** à partir des mots-clés de la ressource.
+- **Tâche finale suggérée** et pistes de **différenciation** (étayage et enrichissement).
+
+Ces suggestions sont des points de départ : à toi de les adapter à ta classe et à ta séquence.
+
+## Ajouter ses propres ressources (profil Prof)
+
+Tu as trouvé une vidéo, un article ou une chanson qui manque ? Tu peux l'ajouter à ta bibliothèque.
+
+1. Appuie sur **+ Ajouter** en haut de l'écran.
+2. Remplis la fiche : titre, type, niveau, axe du programme, pays (sous forme de drapeau emoji), année, niveau CECRL, lien, description et mots-clés. Le titre, le lien et la description sont obligatoires.
+3. Appuie sur **Ajouter une ressource**.
+
+Ta ressource apparaît dans la bibliothèque avec une étiquette spéciale, et le compteur indique combien de ressources tu as ajoutées. Elle reçoit aussi sa suggestion d'exploitation. Pour la retirer, ouvre sa fiche et appuie sur **Supprimer**.
+
+À savoir : tes ressources ajoutées sont enregistrées dans le navigateur de ton appareil. Elles ne sont visibles que sur cet appareil, et ne sont pas partagées avec tes élèves ni avec tes collègues.
+
+## Conseils d'utilisation
+
+**Pour les enseignants.** Au moment de construire une séquence, filtre par niveau et par axe pour trouver rapidement des documents qui s'y rattachent, puis appuie-toi sur la suggestion d'exploitation pour préparer tes étapes. Pense à vérifier chaque document avant de le montrer en classe : extrait choisi, durée, et disponibilité du lien, qui peut changer avec le temps.
+
+**En classe.** On peut laisser les élèves explorer un axe en autonomie et choisir une ressource à présenter à la classe, en exposé ou en binôme. Les filtres CECRL aident à orienter chacun vers des documents à sa portée.
+
+**Pour les élèves et à la maison.** Le profil élève permet de découvrir des chansons, des films, des séries ou des podcasts en anglais selon ses goûts, pour pratiquer en dehors du cours.
+
+**À savoir.** L'application ne demande aucune inscription. Les ressources sont des liens vers des sites extérieurs (YouTube, BBC, The Guardian, TED…), qui ont leurs propres conditions d'utilisation : certains contenus peuvent nécessiter un abonnement ou ne plus être disponibles.
+</script>
+
+<script type="text/markdown" id="tuto-didactics-ai-coach">
+## C'est quoi, Didactics AI Coach ?
+
+Didactics AI Coach (« Didactique Anglais — Compagnon MEEF ») est un assistant conversationnel spécialisé en didactique de l'anglais, pensé pour les étudiants de MEEF 1 et 2. Il permet de poser ses questions sur les programmes du collège et du lycée, de réfléchir à la construction d'une séance ou d'une séquence, et de préparer les concours (CAPES).
+
+L'application est gratuite et fonctionne dans le navigateur, sur ordinateur, tablette ou téléphone. Ses réponses sont produites par une intelligence artificielle (Lovable AI).
+
+Elle est organisée par espaces de travail :
+
+| Espace | Pour quoi faire |
+| --- | --- |
+| Collège · 6ème | Les programmes et la didactique du cycle 3 |
+| Collège · 5e — 4e — 3e | Les programmes et la didactique du cycle 4 |
+| Lycée · Seconde | Le programme de seconde |
+| Lycée · 1ère — Terminale | Le cycle terminal |
+| Concours · Préparation concours | La préparation aux épreuves du CAPES |
+| Chat libre | Toute autre question de didactique |
+
+## Premiers pas
+
+1. Ouvre l'adresse dans ton navigateur.
+2. Dans le menu, choisis l'espace qui correspond à ta question : un niveau de collège ou de lycée, la préparation au concours, ou le **Chat libre**.
+3. Sur la page d'accueil, des **suggestions** de questions te donnent des idées pour démarrer : appuie sur l'une d'elles, ou écris ta propre question.
+4. Pour repartir de zéro sur un autre sujet, appuie sur **+ Nouvelle conversation**.
+
+Sur téléphone, tu peux ajouter l'application à ton écran d'accueil :
+
+- iPhone (Safari) : bouton Partager, puis « Sur l'écran d'accueil ».
+- Android (Chrome) : menu ⋮, puis « Ajouter à l'écran d'accueil ».
+
+## Bien utiliser l'assistant
+
+Plus ta question est précise, plus la réponse sera utile. Donne le contexte : le niveau de classe, l'axe ou la thématique du programme, l'activité langagière visée, la durée de la séance, et ce que tu as déjà prévu.
+
+| Au lieu de… | Essaie plutôt… |
+| --- | --- |
+| « Une séance sur la nourriture » | « Je prépare une séance de 55 minutes en 5e sur la nourriture, axe « Le quotidien ». Je veux travailler la compréhension de l'oral. Propose-moi une démarche en trois étapes. » |
+| « C'est quoi la tâche finale ? » | « Explique-moi la différence entre tâche finale et activité de production, avec un exemple pour une séquence de 3e. » |
+| « Aide-moi pour le concours » | « Je prépare l'épreuve de didactique du CAPES. Pose-moi des questions comme un jury, à partir d'un document sur le Royaume-Uni. » |
+
+N'hésite pas à poursuivre la conversation : demande une variante, une différenciation pour des élèves en difficulté, une version plus courte, ou une justification didactique de chaque étape.
+
+Quelques idées d'usages :
+
+- vérifier ce que disent les programmes pour un niveau donné ;
+- construire ou critiquer le déroulé d'une séance ;
+- trouver des pistes de différenciation ;
+- préparer un entretien ou un oral de concours en se faisant interroger ;
+- reformuler une notion de didactique (progression spiralaire, tâche intermédiaire, évaluation positive…).
+
+## Ce qu'il faut savoir
+
+**L'IA peut se tromper.** L'application le rappelle elle-même : vérifie toujours les références aux programmes officiels sur Éduscol et dans le Bulletin officiel, en particulier les citations et les numéros de textes. L'assistant est un partenaire de réflexion, pas une source officielle.
+
+**Tes messages sont envoyés à un service d'intelligence artificielle** pour produire les réponses. Contrairement aux applications BROT2YOU hébergées sur GitHub, l'outil ne fonctionne donc pas uniquement dans ton navigateur. N'y écris jamais d'informations personnelles : pas de nom d'élève, de collègue ou d'établissement, pas de situation identifiable.
+
+**Une conversation ne remplace pas la formation.** Les propositions de l'assistant sont des pistes à discuter avec ton tuteur ou ton formateur, et à adapter à tes élèves.
+
+## Conseils d'utilisation
+
+**Pour les étudiants MEEF et les stagiaires.** Utilise l'assistant pour préparer, pas pour remplacer ton travail : formule d'abord ta propre idée de séance, puis demande-lui de la critiquer ou de l'enrichir. Garde une trace des réponses utiles, et vérifie chaque référence au programme avant de l'utiliser dans un écrit ou à l'oral.
+
+**Pour les tuteurs et les formateurs.** L'outil peut servir de point de départ à un échange : le stagiaire présente une proposition de l'assistant, et on en discute ensemble (est-elle adaptée à la classe ? cohérente avec les programmes ? réaliste en 55 minutes ?). C'est aussi une bonne occasion de travailler l'esprit critique face aux réponses d'une IA.
+
+**Pour la préparation au concours.** L'espace dédié permet de s'entraîner à formuler des analyses et à répondre à des questions de type jury, en complément des annales et des rapports de jury.
+</script>
+
+<script type="text/markdown" id="tuto-didalangues">
+## C'est quoi, DidaLangues ?
+
+DidaLangues est une bibliothèque de fiches de didactique des langues : les concepts, les démarches, les activités langagières, les outils numériques, la mise en œuvre en classe, les formes de travail et les grands auteurs de référence (Tricot, Roussel, Meirieu, Krashen, Ellis, Puren…). Elle s'adresse aux étudiants MEEF, aux stagiaires, aux formateurs et à tous les enseignants de langues qui veulent clarifier une notion ou trouver une idée pour la classe.
+
+L'application est gratuite, sans inscription ni collecte de données, et fonctionne dans le navigateur, sur ordinateur, tablette ou téléphone.
+
+Elle rassemble 190 fiches réparties en sept rubriques :
+
+| Rubrique | Contenu | Fiches |
+| --- | --- | --- |
+| 📖 Glossaire | Les concepts fondamentaux : didactique, compétences, cognition, évaluation, acquisition, phonologie, grammaire, lexique… | 109 |
+| 🧭 Démarches | Les approches et méthodes, de l'audio-oral à l'actionnel (approche communicative, TBLT, EMILE, projets…) | 14 |
+| 🎯 Activités langagières | La didactique propre à chaque activité du CECRL | 8 |
+| 💡 Innovations & TICE | IA générative, classe inversée, podcasting, eTwinning, corpus, jeux sérieux… | 14 |
+| ⚙️ Mise en œuvre | Des fiches pratiques : tâche finale, évaluation de l'oral, séquence, hétérogénéité… | 19 |
+| 👥 Formes de travail | Binômes, îlots, tutorat, ateliers tournants, simulation globale… | 11 |
+| 📚 Publications & auteurs | Ouvrages et articles de référence, résumés et mis en perspective | 15 |
+
+## Premiers pas
+
+1. Ouvre l'adresse dans ton navigateur.
+2. L'**Accueil** affiche le nombre de fiches de chaque rubrique, puis une carte par rubrique avec ses grandes catégories. Touche une carte pour ouvrir la rubrique.
+3. Sur ordinateur, le menu **Navigation** à gauche permet de passer d'une rubrique à l'autre. Sur téléphone, une barre en bas de l'écran donne accès à l'Accueil, au Glossaire, aux Activités, aux TICE et aux Auteurs.
+
+Sur téléphone, tu peux ajouter l'application à ton écran d'accueil :
+
+- iPhone (Safari) : bouton Partager, puis « Sur l'écran d'accueil ».
+- Android (Chrome) : menu ⋮, puis « Ajouter à l'écran d'accueil ».
+
+## Parcourir une rubrique
+
+Chaque rubrique présente ses fiches sous forme de cartes : la catégorie, le titre, un résumé en une phrase et des mots-clés. En haut, des étiquettes permettent de filtrer par catégorie. Par exemple, dans le Glossaire : **Tous**, Didactique, Compétences, Cognition, Évaluation, Acquisition, Phonologie, Grammaire, Lexique, Affect, Culture.
+
+## Lire une fiche
+
+Touche une carte pour ouvrir la fiche complète. Elle rappelle sa rubrique et sa catégorie, puis développe la notion : définition, explications, exemples pour la classe d'anglais et mots-clés associés. Par exemple, la fiche « Accentuation lexicale et phrastique » explique pourquoi le word stress change le sens des mots (a REcord / to reCORD) et comment le travailler.
+
+Pour fermer la fiche, touche la croix ✕, touche en dehors de la fiche, ou appuie sur la touche Échap.
+
+## Chercher dans toutes les fiches
+
+La barre de recherche, en haut de l'écran, cherche dans les 190 fiches à la fois : titres, résumés, contenus et mots-clés. Les résultats indiquent leur nombre et les rubriques d'où ils viennent. Appuie sur **Effacer** pour revenir à l'accueil.
+
+Astuce : la recherche est idéale pour retrouver une notion entendue en formation ou lue dans un texte officiel : « tâche finale », « médiation », « input », « différenciation », « Krashen »…
+
+## Bon à savoir
+
+DidaLangues est un outil de consultation : il n'y a pas de compte, rien à remplir, et aucune donnée n'est enregistrée ni envoyée. Toutes les fiches sont contenues dans la page, ce qui la rend rapide à ouvrir.
+
+Les fiches sont des synthèses : elles donnent des repères et des pistes, mais ne remplacent pas la lecture des ouvrages cités ni les textes officiels (programmes et BO), qui restent la référence.
+
+## Conseils d'utilisation
+
+**Pour les étudiants MEEF et les stagiaires.** Utilise le Glossaire pour clarifier une notion avant un cours ou un écrit, puis les fiches **Mise en œuvre** pour la transposer en classe. Pour le mémoire ou le concours, la rubrique **Publications & auteurs** donne une première entrée dans les ouvrages de référence, avant de les lire.
+
+**Pour les tuteurs et les formateurs.** Une fiche peut servir de support à un échange : on lit ensemble la notion, puis on cherche comment elle se traduit dans une séance observée. Les fiches **Formes de travail** et **Mise en œuvre** donnent des pistes concrètes à proposer après une observation.
+
+**Pour tous les enseignants de langues.** La recherche permet de retrouver rapidement une notion ou une idée d'activité. Les fiches sont rédigées pour l'anglais, mais la plupart des concepts valent pour toutes les langues vivantes.
+</script>
+
+<script type="text/markdown" id="tuto-dys-college">
+## C'est quoi, DysCollège ?
+
+DysCollège aide les enseignants à accompagner les élèves présentant un trouble dys ou un trouble de l'attention. On choisit un trouble, puis une discipline, et l'application affiche aussitôt des conseils concrets pour la classe. Elle propose aussi un outil pour adapter la mise en forme d'un texte (consigne, énoncé, extrait) en quelques secondes.
+
+L'application est gratuite et sans inscription. Elle n'utilise aucune IA : les conseils sont tirés de cinq sources de référence (Golliet, Peneveyre, Willig pour l'AFPA, le guide LFZ Zurich, Ducos-Filippi chez ESF), et chaque conseil indique sa source.
+
+Elle couvre huit troubles :
+
+| Trouble | Domaine concerné |
+| --- | --- |
+| 📖 Dyslexie | Lecture, déchiffrage |
+| ✍️ Dysorthographie | Orthographe, copie |
+| 💬 Dysphasie | Langage oral |
+| ✋ Dyspraxie | Gestes, espace |
+| ✏️ Dysgraphie | Geste graphique |
+| 🧩 Fonctions exécutives | Planification, mémoire |
+| ⚡ TDA/H | Attention, agitation |
+| 🔢 Dyscalculie | Nombres, calcul |
+
+Et huit contextes : conseils généraux, français, langues vivantes, mathématiques-physique-SVT, musique, arts plastiques, EPS et histoire-géographie.
+
+## Premiers pas
+
+1. Ouvre l'adresse dans ton navigateur.
+2. Sur l'accueil, choisis le trouble qui t'intéresse (étape **1. Quel trouble ?**).
+3. Choisis ensuite le contexte (étape **2. Dans quel contexte ?**) : les conseils généraux ou ta discipline.
+4. Pour revenir à l'étape précédente, appuie sur **‹ Retour** en haut de l'écran.
+
+La barre du bas permet d'aller à tout moment vers l'**Accueil**, l'outil **Adapter**, la **Recherche**, les **Fiches** de principes universels, ou **Plus** pour retrouver la liste de tous les troubles.
+
+Sur téléphone, tu peux ajouter l'application à ton écran d'accueil :
+
+- iPhone (Safari) : bouton Partager, puis « Sur l'écran d'accueil ».
+- Android (Chrome) : menu ⋮, puis « Ajouter à l'écran d'accueil ».
+
+## Lire les conseils
+
+Une fois le trouble et le contexte choisis, les conseils s'affichent par blocs thématiques (par exemple « Comprendre », puis des pistes d'adaptation). Chaque conseil est court et concret, et se termine par sa source : Willig, LFZ, Golliet, Peneveyre ou Ducos-Filippi. Par exemple, pour la dyslexie : un élève dyslexique ne peut pas écrire et écouter en même temps, et recopier un texte au tableau lui demande trois tâches à la fois, sans l'aider à mémoriser.
+
+En bas de la page, deux encarts complètent les conseils : les **principes universels**, valables dans toutes les disciplines, et la **mise en forme recommandée** des documents. Au total, l'application rassemble plus de 350 conseils.
+
+## Adapter un texte (outil Adapter)
+
+Cet outil transforme la présentation d'un texte en direct.
+
+1. Ouvre **✨ Adapter mon texte**, depuis l'accueil ou la barre du bas.
+2. Colle ton texte dans la zone **Ton texte original** : une consigne, une dictée, un énoncé, un extrait…
+3. Règle les **options de présentation** :
+
+| Option | Choix possibles |
+| --- | --- |
+| Police | OpenDyslexic, Lexend, Andika, Comic Sans MS, Arial, Verdana, Tahoma, Century Gothic |
+| Taille | 12-14 pt, 14-16 pt ou 16-18 pt |
+| Interligne | 1,5 (recommandé), 1,8 ou 2 |
+| Fond | Blanc, crème (anti-éblouissement) ou bleu très pâle |
+| Mise en forme | Mots-clés en gras, découpage syllabique en couleurs, numérotation des lignes, alignement à gauche |
+
+4. L'**aperçu adapté** se met à jour à chaque réglage.
+5. Appuie sur **📋 Copier le texte adapté** pour le coller ailleurs, ou sur **🖨️ Imprimer** pour obtenir une version papier.
+
+L'encart **💡 Pourquoi ces choix ?** explique chaque recommandation et sa source : police sans empattement, alignement à gauche jamais justifié, fond légèrement coloré, mots-clés en gras, syllabes en couleurs alternées.
+
+## Chercher un conseil (Recherche)
+
+La **🔍 Recherche libre** fouille dans tous les conseils, tous troubles et toutes disciplines confondus. Tape au moins deux lettres (par exemple « dictée », « tableau », « consigne », « temps ») : les résultats indiquent le trouble et la discipline de chaque conseil.
+
+## Les fiches de principes universels
+
+L'onglet **Fiches** rassemble les grands principes à garder en tête pour tous les élèves à besoins particuliers, par exemple les cinq principes clés du guide LFZ Zurich : évolutivité, encouragement, acceptation, différence et coordination entre enseignants, famille et thérapeutes. On y trouve aussi la méthode multisensorielle de Golliet (combiner le visuel, l'auditif et le kinesthésique).
+
+## Bon à savoir
+
+DysCollège ne demande aucun compte et n'enregistre rien : les textes collés dans l'outil Adapter restent dans ton navigateur et disparaissent quand tu fermes la page. Pense donc à copier ou imprimer ton texte adapté avant de partir.
+
+Les conseils sont des pistes générales tirées des sources citées. Ils ne remplacent pas le PAP, le PPS ou les préconisations des professionnels qui suivent l'élève (orthophoniste, ergothérapeute, médecin scolaire), qui restent la référence pour chaque situation.
+
+## Conseils d'utilisation
+
+**Pour les enseignants.** Quand un PAP ou un PPS arrive, ouvre le trouble concerné dans ta discipline pour repérer quelques adaptations simples à mettre en place dès le cours suivant. Avant une évaluation, passe tes consignes et tes énoncés dans l'outil Adapter : quelques réglages suffisent souvent à rendre un document bien plus lisible, pour l'élève dys comme pour toute la classe.
+
+**En conseil pédagogique ou en équipe.** L'application peut servir de base commune pour harmoniser les adaptations entre disciplines : chacun retrouve les conseils propres à sa matière, à partir des mêmes sources. Les fiches de principes universels sont un bon support pour une réunion d'équipe ou une formation.
+
+**Pour les stagiaires et les étudiants MEEF.** C'est une porte d'entrée rapide pour comprendre les différents troubles et leurs conséquences en classe, avec des références à approfondir.
+
+**À savoir.** Les adaptations se construisent toujours avec l'élève, sa famille et les professionnels qui le suivent : ce qui fonctionne pour un élève ne convient pas forcément à un autre.
+</script>
+
+<script type="text/markdown" id="tuto-dyscompagnon">
+## C'est quoi, DysCompagnon ?
+
+DysCompagnon est une boîte à outils pour les professeurs de collège qui accompagnent des élèves dys ou présentant un TDAH. Elle réunit quatre outils : une bibliothèque de fiches conseils, un adaptateur de texte, un assistant IA spécialisé et un carnet de suivi des élèves.
+
+L'application est gratuite et fonctionne dans le navigateur, sur ordinateur, tablette ou téléphone. Elle ne remplace ni un bilan, ni un PAP ou un PPS.
+
+| Outil | Ce qu'il permet |
+| --- | --- |
+| Fiches conseils | 27 fiches actionnables, filtrables par trouble, par catégorie et par délai de mise en place |
+| Adaptateur de texte | Reformater un texte en quelques secondes : police, taille, espacements, fond, syllabes colorées |
+| Assistant IA | Poser une question pédagogique et obtenir des pistes d'adaptation |
+| Mes élèves | Noter les aménagements de chaque élève et suivre ses progrès |
+
+## Premiers pas
+
+1. Ouvre l'adresse dans ton navigateur.
+2. Le menu en haut donne accès aux cinq pages : **Accueil**, **Fiches conseils**, **Adaptateur de texte**, **Assistant IA** et **Mes élèves**.
+3. Depuis l'accueil, les boutons **Explorer les fiches** et **Adapter un texte** mènent directement aux deux outils les plus utilisés.
+
+Sur téléphone, tu peux ajouter l'application à ton écran d'accueil :
+
+- iPhone (Safari) : bouton Partager, puis « Sur l'écran d'accueil ».
+- Android (Chrome) : menu ⋮, puis « Ajouter à l'écran d'accueil ».
+
+## Les fiches conseils
+
+La bibliothèque rassemble 27 fiches, synthétisées à partir de guides officiels et de ressources d'enseignants de terrain. Deux filtres permettent de trouver la bonne :
+
+- **par trouble** : dyslexie, dysorthographie, dyspraxie, dyscalculie, dysphasie, TDAH, ou « tous troubles dys » ;
+- **par catégorie** : aménagements en classe, évaluations et devoirs, lecture et écrit, langues vivantes, mathématiques, outils et numérique, posture enseignante, organisation et méthodologie.
+
+Chaque fiche indique aussi son délai de mise en place : **Immédiat**, **Court terme** ou **Sur l'année**. Pratique pour repérer ce qu'on peut changer dès demain (formuler des consignes courtes, éviter la double tâche, oraliser les consignes) et ce qui se construit dans la durée (différenciation, collaboration avec les familles). Appuie sur **Lire** pour ouvrir une fiche. Les fiches sont imprimables.
+
+Pour les professeurs de langues, plusieurs fiches sont dédiées : adapter l'anglais pour les élèves dyslexiques, approche multisensorielle des langues étrangères, limiter la confusion des mots et des sons, soutenir l'expression orale des élèves dysphasiques.
+
+## L'adaptateur de texte
+
+1. Colle ton texte dans la zone **Texte à adapter**.
+2. Règle l'affichage : police (Atkinson Hyperlegible, Lexend, OpenDyslexic ou Arial), taille, interligne, espacement des lettres et des mots, couleur de fond, et syllabes colorées.
+3. L'**aperçu adapté** s'affiche à côté du texte d'origine, pour comparer.
+4. Appuie sur **Copier** pour récupérer le texte adapté.
+
+Astuce de l'application : Atkinson Hyperlegible, interligne 1,8 et espacement des mots de 0,15 offrent un confort de lecture maximal.
+
+## L'assistant IA
+
+Pose une question concrète sur une situation de classe. Quelques exemples proposés par l'application :
+
+- « Comment adapter une évaluation d'histoire pour un élève dyslexique de 5e ? »
+- « Quels outils numériques pour un élève dyspraxique en cours de maths ? »
+- « Comment gérer un élève TDAH qui perturbe la classe ? »
+- « Idées pour faciliter l'apprentissage de l'anglais à un élève dys ? »
+
+Précise le niveau, la discipline et le type de difficulté pour obtenir des pistes adaptées, mais jamais le nom de l'élève (voir plus bas).
+
+## Mes élèves
+
+Cette page permet de créer une fiche par élève avec **Nouvel élève**, pour noter ses troubles, ses aménagements et des notes de progression. Les fiches sont enregistrées localement, sur l'appareil utilisé.
+
+## Protéger les données des élèves
+
+Les troubles et les aménagements d'un élève sont des informations de santé, particulièrement sensibles. Quelques règles simples :
+
+- **Dans l'assistant IA, ne donne jamais le nom ni aucun détail permettant de reconnaître un élève.** Tes questions sont envoyées à un service d'intelligence artificielle en ligne pour produire les réponses. Décris la situation de façon générale : « un élève dyslexique de 5e », pas son prénom.
+- **Dans Mes élèves, utilise des initiales ou un pseudonyme.** Les fiches restent sur l'appareil, mais toute personne qui l'utilise peut les voir. Évite de remplir ces fiches sur un ordinateur partagé (salle des profs, CDI), et vérifie que cet usage est compatible avec les consignes de ton établissement.
+- **Les fiches élèves ne suivent pas** si tu changes d'appareil ou si tu effaces les données de ton navigateur.
+
+## Les limites de l'outil
+
+L'assistant IA peut se tromper : l'application le rappelle elle-même. Ses réponses sont des pistes à vérifier et à adapter. Les fiches donnent des repères généraux. Dans tous les cas, le PAP ou le PPS de l'élève, et les préconisations des professionnels qui le suivent, restent la référence.
+
+## Conseils d'utilisation
+
+**Pour démarrer.** Filtre les fiches sur le délai « Immédiat » : tu trouveras des adaptations simples à mettre en place dès le prochain cours, comme raccourcir les consignes, oraliser les supports ou éviter de demander d'écouter et d'écrire en même temps.
+
+**Avant une évaluation.** Passe tes consignes et tes textes dans l'adaptateur. Une police plus lisible et un interligne plus grand profitent souvent à toute la classe, et pas seulement à l'élève dys.
+
+**Face à une situation particulière.** L'assistant IA peut t'aider à trouver des idées, à condition de décrire la situation sans identifier l'élève. Confronte ensuite ses propositions aux fiches et au PAP ou PPS.
+
+**En équipe.** Les fiches peuvent servir de support commun en conseil pédagogique ou lors d'une équipe éducative, pour harmoniser les adaptations entre disciplines, en lien avec la famille et les professionnels qui suivent l'élève.
+</script>
+
+<script type="text/markdown" id="tuto-evars-companion">
+## C'est quoi, EVARS Companion ?
+
+EVARS Companion aide les professeurs d'anglais de collège à croiser deux programmes : les axes culturels du programme d'anglais (BO 2025) et les objectifs de l'éducation à la vie affective et relationnelle, et à la sexualité (EVARS, programme de février 2025). Pour chaque croisement, l'outil propose un dossier pédagogique prêt à adapter : une activité de 45 minutes, une séquence, des idées de supports ou une tâche d'évaluation.
+
+L'application est gratuite, sans inscription ni collecte de données, et fonctionne entièrement hors ligne, dans le navigateur.
+
+Pour chaque niveau, trois objectifs EVARS sont proposés, un par axe du programme :
+
+| Niveau | Corps | Relation | Société |
+| --- | --- | --- | --- |
+| 6e (A1 → A1+) | Comprendre les changements de son corps | Entrer en relation avec les autres | Trouver sa place dans un groupe |
+| 5e (A1+ → A2) | Développer librement sa personnalité | Choisir ses relations | Distinguer vie publique et vie privée |
+| 4e (A1+ → A2+) | La sexualité comme réalité complexe | Compréhension critique des relations | Représentations de la sexualité |
+| 3e | Bonheur, émotions et sexualité | Relation réciproque et égalitaire | Sexualité et droits humains |
+
+Ces objectifs se croisent avec les 23 axes culturels du programme d'anglais, de « Personnes et personnages » en 6e à « L'Irlande » en 4e : soit 69 dossiers différents.
+
+## Premiers pas
+
+1. Ouvre l'adresse dans ton navigateur. Une fois la page chargée, elle fonctionne même sans connexion.
+2. Dans la colonne de gauche, choisis le **Niveau** : 6e, 5e, 4e ou 3e.
+3. Choisis ensuite le **Type d'activité**, c'est-à-dire le format de travail : discussion guidée, analyse de document, production créative ou jeu de rôle.
+4. La partie centrale affiche alors les axes du programme d'anglais et les objectifs EVARS du niveau choisi.
+
+Sur téléphone, tu peux ajouter l'application à ton écran d'accueil :
+
+- iPhone (Safari) : bouton Partager, puis « Sur l'écran d'accueil ».
+- Android (Chrome) : menu ⋮, puis « Ajouter à l'écran d'accueil ».
+
+## Générer un dossier pédagogique
+
+1. Dans **📚 Axe BO anglais**, choisis l'axe culturel de ta séquence (par exemple « Sport et société » ou « Le Royaume-Uni »).
+2. Dans **💬 Objectif EVARS**, choisis l'objectif à travailler. Chacun porte une étiquette de couleur : Corps, Relation ou Société.
+3. Le **✦ Générateur de séquence** s'active. Choisis ce que tu veux obtenir :
+
+| Choix | Ce que contient le dossier |
+| --- | --- |
+| Activité 45 min | Contexte, objectifs, déroulé minuté de la séance dans le format choisi, consignes en anglais |
+| Séquence 3-4 séances | Contexte, objectifs, organisation séance par séance (découverte, approfondissement, production, bilan), supports |
+| Supports | Contexte, idées de documents à exploiter, consignes en anglais |
+| Évaluation | Contexte, objectifs, tâche sommative adaptée au niveau, exemple de consigne en anglais, critères d'évaluation |
+
+4. Appuie sur **✦ Générer le dossier pédagogique**.
+
+Le dossier rappelle en en-tête le niveau, le niveau CECRL visé, l'axe, l'objectif EVARS et le format. Il se termine toujours par un encadré **⚠️ Points de vigilance pédagogique**, propre à chaque croisement : à lire attentivement avant de mener la séance.
+
+## Récupérer le dossier
+
+- **🖨 Imprimer** pour une version papier ou un PDF.
+- **⎘ Copier** pour coller le texte dans ton traitement de texte ou ton cahier de textes, et l'adapter.
+
+## Bon à savoir
+
+EVARS Companion fonctionne entièrement hors ligne : aucune IA, aucun compte, et rien n'est enregistré ni envoyé. Les dossiers sont rédigés à l'avance pour chaque croisement entre un axe du programme d'anglais et un objectif EVARS. Ils ne sont pas conservés : pense à imprimer ou copier ton dossier avant de fermer la page.
+
+Les dossiers sont des propositions de départ. Ils sont à relire et à adapter à ta classe, à l'âge et à la maturité des élèves, et au cadre fixé par ton établissement pour l'EVARS.
+
+## Conseils d'utilisation
+
+**Partir de sa séquence d'anglais.** Le plus simple est de choisir l'axe culturel que tu travailles déjà avec ta classe, puis de regarder quel objectif EVARS s'y rattache naturellement. L'EVARS vient alors enrichir la séquence, sans être plaquée.
+
+**Lire les points de vigilance avant la séance.** Ces sujets touchent à l'intime : poser un cadre clair dès le début (respect de la parole de chacun, droit de ne pas s'exprimer, pas de témoignage personnel exigé), et rester attentif aux réactions des élèves.
+
+**Travailler en équipe.** L'EVARS est un projet d'établissement. Il est utile d'en parler avec le CPE, l'infirmier ou l'infirmière scolaire et les collègues qui interviennent sur le même niveau, pour articuler les séances et savoir vers qui orienter un élève qui aurait besoin d'en parler.
+
+**Choisir le bon format.** La discussion guidée et l'analyse de document conviennent bien pour ouvrir un thème ; la production créative et le jeu de rôle permettent aux élèves de s'exprimer à travers un personnage, ce qui protège leur intimité.
+</script>
+
+<script type="text/markdown" id="tuto-grammar-arena">
+## C'est quoi, Grammar Arena ?
+
+Grammar Arena est un donjon de grammaire anglaise. Quinze créatures le gardent, chacune maîtresse d'un point de grammaire. Pour les vaincre, tu dois d'abord découvrir la règle par toi-même, puis l'affronter en combat en répondant juste.
+
+L'application est gratuite, sans inscription ni collecte de données, et fonctionne dans le navigateur, sur ordinateur, tablette ou téléphone.
+
+| Créature | Point de grammaire | Niveau |
+| --- | --- | --- |
+| 🧙 Lord Modal | Les modaux (can, could, must, should, might…) | Collège / Lycée |
+| ⚔️ Tense Titan | Présent, passé et futur | Collège |
+| 🐉 Perfect Beast | Le present perfect | Lycée |
+| Passive Phantom | La voix passive | Lycée |
+| Condition Crusher | Les conditionnelles (if) | Lycée |
+| Report Reaper | Le discours rapporté | Lycée |
+| Article Archer | Les articles (a, an, the, Ø) | Collège |
+| Comparator | Comparatifs et superlatifs | Collège / Lycée |
+| Question Queen | Les questions | Collège |
+| Pronoun Prowler | Les pronoms | Collège |
+| Plural Predator | Les pluriels | Collège |
+| Quantifier Knight | Les quantifieurs (some, any, much, many…) | Collège / Lycée |
+| Gerund Goblin | Gérondif ou infinitif | Lycée |
+| Wish Wraith | I wish / if only | Lycée |
+| Inversion Imp | L'inversion | Lycée |
+
+## Premiers pas
+
+1. Ouvre l'adresse dans ton navigateur.
+2. Choisis ton mode de jeu :
+   - **📜 Mode exploration** : tu réponds à ton rythme, sans limite de temps.
+   - **⚡ Mode combat rapide** : un sablier de 20 secondes par question.
+3. Le **📖 Grimoire des Créatures** affiche les quinze créatures. Filtre-les avec **Tous**, **Collège** ou **Lycée**, puis touche celle que tu veux affronter.
+4. Pour revenir en arrière, utilise **← Retour au grimoire** ou **← Retour à la taverne** (l'accueil).
+
+Sur téléphone, tu peux ajouter l'application à ton écran d'accueil :
+
+- iPhone (Safari) : bouton Partager, puis « Sur l'écran d'accueil ».
+- Android (Chrome) : menu ⋮, puis « Ajouter à l'écran d'accueil ».
+
+## Étape 1 : la prophétie (découvrir la règle)
+
+Avant chaque combat, appuie sur **📜 Consulter la prophétie**. C'est le moment le plus important : tu vas trouver la règle par toi-même.
+
+1. **Observe** les phrases d'exemple. Que remarques-tu ?
+2. **🔮 Déduis la règle** : choisis, parmi les propositions, celle qui correspond aux exemples, puis appuie sur **VALIDER MA DÉDUCTION**.
+3. **📖 Lis la vraie règle** pour vérifier ta déduction.
+4. Quand tu es prêt, appuie sur **⚔️ ENTRER EN COMBAT**.
+
+## Étape 2 : le combat
+
+Ta barre de vie (**TOI**) et celle de la créature (**BOSS**) commencent à 100. Les épreuves arrivent l'une après l'autre, sous quatre formes :
+
+| Type d'épreuve | Ce que tu fais |
+| --- | --- |
+| ⚔️ Choix | Choisir la bonne réponse parmi plusieurs propositions |
+| ✒️ À compléter | Écrire le mot qui manque dans la phrase |
+| 🔍 À corriger | Trouver et corriger l'erreur dans une phrase |
+| 🔄 Transformation | Réécrire une phrase selon une consigne (passif, discours rapporté…) |
+
+Pour les réponses à écrire, tape ta réponse puis appuie sur **LANCER** (ou sur Entrée). Si tu bloques, un **💡 Indice du sage** t'aide parfois.
+
+Après chaque réponse, la correction s'affiche avec la **RÉPONSE DU GRIMOIRE** et un **📖 SAVOIR ANCIEN** qui rappelle la règle. Appuie sur **ÉPREUVE SUIVANTE →** pour continuer.
+
+- **Bonne réponse** : la créature perd 12 points de vie, et tu gagnes 10 pièces d'or. À partir de 3 bonnes réponses d'affilée, c'est un coup critique 🔥 : la créature perd 20 points, et tu gagnes 15 pièces.
+- **Mauvaise réponse** : tu perds 20 points de vie. En mode combat rapide, laisser filer le temps compte aussi comme une erreur.
+
+## Le verdict
+
+À la fin du combat, l'écran affiche **VICTOIRE LÉGENDAIRE !** si tu as gardé des points de vie, ou **VAINCU !** si ta barre est tombée à zéro. Tu y retrouves ta vie restante, ton or gagné et ta meilleure série de bonnes réponses.
+
+Trois choix s'offrent ensuite à toi : **↺ RECOMMENCER** pour retenter la même créature, **AUTRE CRÉATURE** pour revenir au grimoire, ou **TAVERNE** pour retourner à l'accueil.
+
+À savoir : l'application n'enregistre pas ta progression. Chaque combat est une partie indépendante : rien n'est gardé quand tu fermes la page.
+
+## Conseils d'utilisation
+
+**Pour les élèves.** Ne saute jamais la prophétie : c'est elle qui te donne les armes pour le combat. Commence en mode exploration pour prendre le temps de lire le savoir ancien après chaque épreuve, puis passe au mode combat rapide quand tu te sens prêt. Si tu perds, recommence : les erreurs font partie de l'entraînement.
+
+**En classe.** La prophétie se prête très bien à un travail collectif : on projette les exemples, la classe formule une hypothèse sur la règle, puis on vérifie ensemble. Le combat peut ensuite se faire en binômes, ou en équipes au tableau, chaque bonne réponse faisant reculer la créature. Le mode combat rapide ajoute un peu de défi pour réactiver une notion en fin de séquence.
+
+**À la maison.** L'élève peut réviser seul, en autonomie : les règles, les indices et les corrections sont expliqués en français.
+
+**À savoir.** Aucune donnée n'est envoyée sur internet, et rien n'est enregistré : chaque combat repart de zéro.
+</script>
+
+<script type="text/markdown" id="tuto-make-me-read">
+## C'est quoi, Make Me Read ?
+
+Make Me Read t'entraîne à lire en anglais avec méthode. Tu choisis un texte à ton niveau, tu le lis avec un glossaire à portée de clic, puis tu t'exerces à une stratégie de lecture : survoler, chercher une information, déduire ce qui est sous-entendu… Un retour et des pistes t'aident à progresser.
+
+L'application est gratuite et sans inscription, et fonctionne dans le navigateur, sur ordinateur, tablette ou téléphone.
+
+Elle propose 58 textes de 3 niveaux et 6 genres :
+
+| Niveau | Ce que ça veut dire | Textes |
+| --- | --- | --- |
+| A2 | Basique : phrases simples et sujets familiers | 20 |
+| B1 | Intermédiaire : opinions et expérience personnelle | 20 |
+| B2 | Avancé : textes complexes et abstraits | 18 |
+
+Les genres : Fantasy, Science Fiction, Thriller & Suspense, Crime & Detective, Horror & Suspense, Contemporary Fiction. On y trouve des textes originaux, mais aussi des extraits adaptés de grands classiques (Sherlock Holmes, Frankenstein, Dracula, The Tell-Tale Heart…).
+
+## Premiers pas
+
+1. Ouvre l'adresse dans ton navigateur.
+2. Sur l'accueil, la bibliothèque présente les textes de deux façons : **Par niveau** (A2, B1, B2) ou **Par genre**. Choisis l'onglet qui te convient.
+3. Chaque carte indique le titre, le genre, le niveau, la durée de lecture, le nombre de mots et le début du texte. Appuie sur un texte pour l'ouvrir.
+4. Pour revenir à la liste, appuie sur **← Biblio** en haut de l'écran.
+
+Sur téléphone, tu peux ajouter l'application à ton écran d'accueil :
+
+- iPhone (Safari) : bouton Partager, puis « Sur l'écran d'accueil ».
+- Android (Chrome) : menu ⋮, puis « Ajouter à l'écran d'accueil ».
+
+Tes réglages de lecture sont enregistrés automatiquement sur ton appareil.
+
+## Lire un texte et utiliser le glossaire
+
+1. **Lis le texte.** En haut, tu retrouves son genre, sa source, sa durée de lecture et son nombre de mots.
+2. **Touche un mot souligné** quand il te bloque. Le **Glossaire**, à côté du texte (ou en dessous sur téléphone), affiche sa prononciation, sa nature (nom, verbe…), une définition simple en anglais et un exemple. Pour certains mots concrets, une petite image s'affiche aussi.
+3. Sous le glossaire, la liste **Vocabulaire clé** rassemble tous les mots importants du texte : touche-les pour revoir leur définition.
+
+## S'entraîner avec une stratégie de lecture
+
+Sous le texte, **Choisis une stratégie de lecture**. Chacune t'apprend une façon différente de lire :
+
+| Stratégie | Ce que tu fais |
+| --- | --- |
+| 📰 Survoler | Lire vite pour comprendre le sujet général, puis le résumer en 2 ou 3 phrases |
+| 🔍 Chercher | Retrouver une information précise (un nom, une date, un lieu) et dire comment tu l'as repérée |
+| Déduire | Trouver ce que le texte sous-entend, et citer les indices qui te le font penser |
+| Deviner les mots | Deviner le sens d'un mot grâce au contexte, avant de vérifier dans le glossaire |
+| Analyser le texte | Décrire le rôle de chaque paragraphe et repérer où le ton change |
+| L'auteur | Repérer un choix de l'auteur (un mot, une phrase, un détail) et son effet sur le lecteur |
+
+Pour chaque stratégie :
+
+1. Lis la consigne et les conseils.
+2. Écris ta réponse dans la zone de texte, en français ou en anglais. Il faut au moins 5 mots pour continuer.
+3. Appuie sur **Voir le feedback** : tu reçois un retour et des pistes de réflexion propres au texte.
+4. Appuie ensuite sur **Voir la solution** pour comparer avec des réponses modèles.
+
+Astuce : commence par **Survoler**, puis **Chercher**. Garde **Déduire**, **Analyser le texte** et **L'auteur** pour une deuxième lecture.
+
+## Adapter la lecture (bouton DYS)
+
+Le bouton **DYS**, en haut de l'écran, ouvre une barre d'outils pour lire plus confortablement. Tes choix sont gardés pour les prochaines fois.
+
+| Outil | Effet |
+| --- | --- |
+| OpenDyslexic | Une police conçue pour les lecteurs dyslexiques |
+| ↔ Espacement | Plus d'espace entre les lettres et les mots |
+| Taille (A− / A+) | Agrandir ou réduire le texte |
+| Fond | Choisir une couleur de fond moins éblouissante |
+| 📏 Règle | Une bande de lecture qui suit ton doigt ou ta souris, pour ne pas perdre la ligne |
+| ▮ Masque | Assombrit le reste de la page pour ne laisser visible que la zone que tu lis |
+| 🌈 Syllabation | Les syllabes des mots sont mises en valeur, pour mieux les découper |
+
+L'application ne garde pas de score : l'objectif est de lire et de comprendre, à ton rythme.
+
+## Conseils d'utilisation
+
+**Pour les élèves.** Choisis un texte à ton niveau dans un genre que tu aimes. Lis-le une première fois sans t'arrêter, puis fais la stratégie **Survoler**. Ne touche les mots soulignés que s'ils t'empêchent vraiment de comprendre : essaie d'abord de deviner leur sens.
+
+**En classe.** On peut projeter un texte et travailler une stratégie ensemble, puis laisser les élèves l'appliquer seuls à un autre texte du même niveau. Il est aussi possible de différencier facilement : chaque groupe lit un texte de son niveau, avec la même stratégie, puis on met en commun. Les outils DYS rendent la lecture accessible à tous sans changer de support.
+
+**À la maison.** L'élève peut lire en autonomie : les consignes, les retours et les solutions sont en français.
+
+**À savoir.** L'application ne demande aucune inscription et n'enregistre que les réglages de lecture, dans le navigateur de l'appareil. Pour afficher les images du glossaire, elle interroge Wikipédia : l'appareil a donc besoin d'une connexion internet pour les voir.
+</script>
+
 <script type="text/markdown" id="tuto-mind-the-mistake">
 ## C'est quoi, Mind the Mistake! ?
 
@@ -718,6 +1716,90 @@ Astuce : si le même numéro revient sur plusieurs copies, c'est ta priorité. R
 **En autonomie.** L'application convient aux devoirs, au CDI, à l'AP ou à devoirs faits. Un élève peut aussi la parcourir avant un contrôle pour réviser un point de grammaire.
 
 **À savoir.** Les scores ne sont pas enregistrés : pour garder une trace, on peut demander aux élèves de noter leur score au quiz et à l'exercice à côté du numéro sur leur copie.
+</script>
+
+<script type="text/markdown" id="tuto-my-survival-kit">
+## C'est quoi, My Survival Kit ?
+
+My Survival Kit, c'est ta trousse de survie pour le cours d'anglais : les consignes à comprendre, les petits mots qui bloquent, les bases de grammaire et les phrases utiles pour te débrouiller à l'oral. Plus de 230 expressions, chacune avec sa traduction, un emoji et une astuce pour la retenir.
+
+L'application est gratuite, sans inscription ni collecte de données, et fonctionne dans le navigateur, sur ordinateur, tablette ou téléphone.
+
+Elle est organisée en quatre thèmes :
+
+| Thème | Ce qu'on y trouve |
+| --- | --- |
+| Classroom English | Mots d'action (circle, underline…), vie de classe, consignes à l'oral, devoirs et matériel |
+| Mots qui bloquent | Mots interrogatifs, verbes courants, connecteurs, articles et quantité, l'heure, les chiffres en -teen / -ty, la date |
+| Grammaire | Pronoms, temps et aspects (simple, continu, parfait), modaux, prépositions de lieu |
+| Survival Phrases | Phrases de survie (« Can you repeat, please? ») et boîte à sentiments pour dire comment tu te sens |
+
+## Premiers pas
+
+1. Ouvre l'adresse dans ton navigateur.
+2. En haut de l'accueil, l'**Expédition du jour** te propose 5 mots tirés au hasard dans toutes les fiches.
+3. Juste en dessous, ta barre d'XP indique ton niveau, et ta série de jours d'affilée.
+4. Plus bas, **Choisis un thème** : appuie sur l'un des quatre thèmes pour l'ouvrir.
+5. Tout en bas, **Tes badges** : touche un badge pour savoir comment le débloquer.
+
+Sur téléphone, tu peux ajouter l'application à ton écran d'accueil :
+
+- iPhone (Safari) : bouton Partager, puis « Sur l'écran d'accueil ».
+- Android (Chrome) : menu ⋮, puis « Ajouter à l'écran d'accueil ».
+
+Ta progression est enregistrée automatiquement sur ton appareil.
+
+## Choisir un thème et une activité
+
+1. Ouvre un thème, puis choisis une partie avec les onglets du haut, ou **Tout** pour travailler sur le thème entier.
+2. Choisis ensuite une activité :
+
+| Activité | Ce que tu fais |
+| --- | --- |
+| Fiches & tips | Lire tranquillement chaque expression, sa traduction et son astuce |
+| Flashcards | Lire l'anglais, chercher la traduction dans ta tête, puis **Retourner la carte**. Réponds ensuite **😎 Facile** ou **😅 Pas encore** |
+| Quiz éclair | Un QCM rapide, avec la correction après chaque réponse |
+| Memory | Retrouver les paires anglais / français |
+| Carte mentale | Tout le thème récapitulé en un coup d'œil. Touche une branche pour la mettre en avant |
+
+Pour la partie **Dire l'heure**, une activité en plus t'attend : le **Cadran interactif**. Touche une heure pour voir les aiguilles bouger, consulte le mémo des expressions (o'clock, quarter past, half past…), puis entraîne-toi avec **⚡ Entraînement** : « How do you say this time in English? ».
+
+À la fin de chaque activité, un écran te montre ton résultat et les XP gagnés. Tu peux **Recommencer** ou revenir avec **Retour à l'accueil**.
+
+## L'expédition du jour
+
+C'est le petit défi quotidien : 5 mots tirés au hasard dans toutes les fiches, sous forme de fiches ou de quiz. Appuie sur **Partir en expédition** et va jusqu'au bout pour gagner un bonus d'XP et garder ton feu de camp allumé, c'est-à-dire ta série de jours d'affilée.
+
+## Suivre sa progression
+
+Chaque activité te rapporte des XP : 2 XP par fiche vue, 5 XP par bonne réponse au quiz, 10 XP par memory terminé (et 10 de plus sans erreur), 20 XP par expédition du jour réussie. En accumulant des XP, tu montes de niveau :
+
+| Niveau | XP nécessaires |
+| --- | --- |
+| 1. Apprenti des lettres | 0 |
+| 2. Explorateur de mots | 50 |
+| 3. Bâtisseur de phrases | 150 |
+| 4. Aventurier confiant | 300 |
+| 5. Champion du quotidien | 500 |
+| 6. Maître de l'ABC | 800 |
+
+Les badges sont rangés par familles :
+
+- **Niveaux d'expédition** : ta première activité, puis chaque nouveau niveau.
+- **Artefacts** : toutes les fiches d'un thème vues, un quiz ou un memory sans faute sur un thème.
+- **Carnet de bord** : revenir 3, 5, 7, 14 ou 30 jours d'affilée.
+- **Épreuves** : des séries de bonnes réponses au quiz, des memory parfaits, 10 parties de memory.
+- **Expéditions** : 5, 10 ou 25 expéditions du jour réussies.
+
+## Conseils d'utilisation
+
+**Pour les élèves.** Commence par **Classroom English** et **Survival Phrases** : ce sont les expressions dont tu as besoin dès le premier cours. Fais l'expédition du jour chaque soir, en quelques minutes : c'est la meilleure façon de garder ton feu de camp allumé, et de retenir les mots sans t'en rendre compte.
+
+**En classe.** En début d'année, l'application aide à installer les consignes et les phrases de survie : quelques minutes de flashcards ou de quiz éclair en début de cours suffisent. Quand une consigne bloque, on peut renvoyer l'élève vers la bonne fiche. La boîte à sentiments est aussi un bon point de départ pour un rituel d'accueil (« How do you feel today? »).
+
+**À la maison.** Chaque expression a sa traduction et une astuce en français : les parents peuvent faire réviser leur enfant sans parler anglais.
+
+**À savoir.** Aucune donnée n'est envoyée sur internet : tout reste dans le navigateur de l'appareil. Si l'élève change d'appareil ou efface les données de navigation, sa progression ne suit pas.
 </script>
 
 <script type="text/markdown" id="tuto-objectif-devoirs">
@@ -834,6 +1916,96 @@ Attention : le bouton **Réinitialiser tout** efface définitivement tes devoirs
 **À la maison.** Les parents peuvent demander à l'enfant de leur montrer son planning de la semaine, ou de leur expliquer une carte mentale qu'il a créée. C'est souvent un bon point de départ pour parler du travail sans tension.
 
 **À savoir.** Aucune donnée n'est envoyée sur internet : tout reste dans le navigateur de l'appareil utilisé. Si l'élève change d'appareil ou efface les données de navigation, sa progression ne suit pas.
+</script>
+
+<script type="text/markdown" id="tuto-phonix">
+## C'est quoi, Phonix ?
+
+Phonix t'aide à améliorer ta prononciation en anglais. Tu y découvres les 44 sons de l'anglais, tu les écoutes, tu t'enregistres pour les répéter, et tu t'entraînes à les reconnaître. Tu y trouves aussi les grandes règles de l'oral : la prononciation des terminaisons, l'accent de mot, les lettres muettes, l'intonation et les liaisons.
+
+L'application est gratuite et sans inscription. Elle fonctionne dans le navigateur, mais pour t'enregistrer et être corrigé, il faut utiliser **Google Chrome** et autoriser le micro.
+
+Elle s'organise en six onglets :
+
+| Onglet | À quoi il sert |
+| --- | --- |
+| 🔤 Sons | Le tableau des 44 phonèmes : voyelles courtes et longues, diphtongues, consonnes |
+| 👂 Entraînement | Passer en revue les 44 sons un par un, écouter et répéter |
+| ↔️ Paires | Écouter des paires de mots qui ne diffèrent que d'un son (ship / sheep) |
+| ❓ Quiz | Reconnaître le son entendu dans un mot |
+| 🎙 Libre | Lire un texte à voix haute et voir ce qui a été reconnu |
+| 📐 Règles | Les règles de l'oral, avec des exercices |
+
+## Premiers pas
+
+1. Ouvre l'adresse dans **Google Chrome**, sur ordinateur, tablette ou téléphone.
+2. En haut, choisis l'accent de la voix avec **🔊 Accent** : britannique, américain, australien, irlandais, sud-africain, indien, canadien ou néo-zélandais.
+3. Choisis un onglet pour commencer. Si c'est ta première fois, commence par **🔤 Sons**.
+4. La première fois que tu appuies sur un bouton **🎙 Enregistrer**, ton navigateur te demande l'autorisation d'utiliser le micro : accepte-la.
+
+En haut de l'écran, ta barre d'XP indique ton niveau. Toutes les 100 XP, tu passes au niveau suivant.
+
+Si la voix de l'accent choisi n'est pas installée sur ton appareil, un message te le signale, et une voix de secours est utilisée.
+
+## Découvrir les sons (onglet Sons)
+
+Le tableau présente les 44 phonèmes de l'anglais, rangés en quatre familles : voyelles courtes, voyelles longues, diphtongues et consonnes. Touche un son pour ouvrir sa fiche : son symbole phonétique (par exemple /ɪ/), un petit dessin de la bouche, une astuce pour bien le prononcer (« Bouche légèrement ouverte, langue haute. Court et détendu. ») et des mots-exemples. Appuie sur **▶ Écouter**, puis sur **🎙 Répéter** pour t'enregistrer.
+
+## S'entraîner son par son (onglet Entraînement)
+
+1. Le son s'affiche avec son mot-exemple, par exemple ship /ɪ/.
+2. Appuie sur **▶ Écouter** pour entendre le mot.
+3. Appuie sur **🎙 Enregistrer** et dis le mot à ton tour.
+4. Appuie sur **✓ Valider** : l'application t'indique si ton mot a été reconnu.
+5. Passe au son suivant avec **Suivant →**, ou reviens en arrière avec **← Précédent**.
+
+## Distinguer les paires minimales (onglet Paires)
+
+Une paire minimale, ce sont deux mots qui ne diffèrent que par un seul son : ship / sheep, pen / ben, wine / vine… Ce sont souvent eux qui posent problème aux francophones.
+
+Les paires sont classées en quatre groupes : voyelles, sons sourds ou voisés, consonnes et diphtongues. Pour chacune, écoute le premier mot, le deuxième, puis **▶▶ Les deux** à la suite, et lis l'astuce qui explique la différence (« Même position de langue, seule la vibration change »).
+
+## Reconnaître les sons (onglet Quiz)
+
+L'application prononce un mot : « Quel phonème entends-tu dans ce mot ? » Choisis le bon son parmi les propositions. Tu peux **▶ Réécouter** autant que tu veux, puis passer au **↺ Mot suivant**. Tes bonnes réponses, ton total et ta série s'affichent sous le quiz.
+
+## Lire à voix haute (onglet Libre)
+
+Un court texte s'affiche. Écoute d'abord le modèle avec **▶ Écouter le modèle**, puis appuie sur **🎙 Enregistrer** et lis le texte. L'application t'indique les mots bien reconnus, ta précision et ton score.
+
+## Les règles de l'oral (onglet Règles)
+
+| Règle | Ce que tu apprends |
+| --- | --- |
+| Terminaisons en -ed | Quand dire /t/ (walked), /d/ (played) ou /ɪd/ (wanted) |
+| Terminaisons en -s | Quand dire /s/ (books), /z/ (runs) ou /ɪz/ (watches) |
+| Accent de mot | Nom ou verbe selon la syllabe accentuée : a PREsent / to preSENT |
+| Lettres muettes | Les lettres qu'on ne prononce pas : knife, listen, island, Wednesday |
+| Intonation | La voix monte ↗ pour les questions fermées, descend ↘ pour les autres phrases |
+| Liaisons | Les mots qui s'enchaînent à l'oral : an‿apple, turn‿it‿off |
+
+Chaque règle propose un petit exercice : choisir la bonne prononciation, toucher la syllabe accentuée, repérer la lettre muette ou trouver la liaison. La bonne réponse s'affiche en vert.
+
+## Progression et enregistrement de la voix
+
+Chaque bonne réponse et chaque son bien répété te rapportent des XP, et les bonnes réponses d'affilée forment une série (« Combo »). Ta barre d'XP et ton niveau s'affichent en haut de l'écran.
+
+À savoir :
+
+- **Rien n'est enregistré** d'une fois sur l'autre : tes XP et ton niveau repartent de zéro quand tu fermes la page.
+- **La reconnaissance de la voix** passe par Google Chrome, qui envoie ton enregistrement aux serveurs de Google pour le transcrire. Elle ne fonctionne pas dans les autres navigateurs : un message « utilise Chrome » s'affiche alors.
+- **Si aucune voix anglaise n'est installée** sur l'appareil, l'application utilise une voix de secours en ligne, qui nécessite une connexion internet.
+- La reconnaissance vocale n'est pas un professeur : elle peut accepter un mot mal prononcé, ou refuser un mot correct, surtout avec un accent marqué ou du bruit autour.
+
+## Conseils d'utilisation
+
+**Pour les élèves.** Commence par les sons qui n'existent pas en français : le th (think, this), le /h/ (hello), le /r/ anglais, et la différence entre voyelles courtes et longues (ship / sheep). Écoute plusieurs fois avant de t'enregistrer, et exagère un peu au début : la bouche doit bouger plus qu'en français.
+
+**En classe.** Les paires minimales et le quiz se prêtent bien à un rituel de quelques minutes en début de cours, projetés au tableau : la classe vote pour le son entendu. L'onglet Règles est utile au moment de travailler le prétérit (terminaisons en -ed) ou le pluriel (terminaisons en -s). Pour les enregistrements, mieux vaut un travail individuel au casque, en salle informatique ou sur tablette, pour limiter le bruit.
+
+**À la maison.** L'élève peut s'entraîner seul, à son rythme, et réécouter les sons autant qu'il le souhaite. Les astuces de prononciation sont en français.
+
+**À savoir.** Avant de demander aux élèves de s'enregistrer, vérifier que l'usage de la reconnaissance vocale de Chrome est compatible avec les règles de l'établissement, puisque la voix est transmise à Google. Les autres activités (écoute, paires, quiz, règles) fonctionnent sans micro.
 </script>
 
 <script type="text/markdown" id="tuto-verb-dojo">
@@ -1380,9 +2552,22 @@ Attention : le bouton **🗑️ Réinitialiser ma progression** efface définiti
   // est rangé automatiquement dans la nouvelle rubrique.
   var ALIAS_RUBRIQUES = { outils: "apps", conseils: "classe", reflexions: "classe" };
 
+  // « rubrique » peut être un texte ("apps") ou une liste (["ia", "classe"]) :
+  // la première rubrique de la liste est la rubrique principale de l'article.
+  function rubriquesDe(a) {
+    var brut = a.rubrique;
+    var liste = Object.prototype.toString.call(brut) === "[object Array]" ? brut : [brut];
+    var res = [];
+    for (var i = 0; i < liste.length; i++) {
+      var id = String(liste[i] || "");
+      if (ALIAS_RUBRIQUES.hasOwnProperty(id)) id = ALIAS_RUBRIQUES[id];
+      if (id && res.indexOf(id) === -1) res.push(id);
+    }
+    return res;
+  }
+
   function rubriqueDe(a) {
-    var id = String(a.rubrique || "");
-    return ALIAS_RUBRIQUES.hasOwnProperty(id) ? ALIAS_RUBRIQUES[id] : id;
+    return rubriquesDe(a)[0] || "";
   }
 
   var ICONES_APPS = {
@@ -1392,7 +2577,18 @@ Attention : le bouton **🗑️ Réinitialiser ma progression** efface définiti
     cerveau: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjAwIj48ZGVmcz48Y2xpcFBhdGggaWQ9ImMiPjxjaXJjbGUgY3g9IjEwMCIgY3k9IjEwMCIgcj0iOTgiLz48L2NsaXBQYXRoPjwvZGVmcz48Y2lyY2xlIGN4PSIxMDAiIGN5PSIxMDAiIHI9Ijk4IiBmaWxsPSIjQkZGMERBIi8+PGcgY2xpcC1wYXRoPSJ1cmwoI2MpIj48Y2lyY2xlIGN4PSI3MCIgY3k9IjkyIiByPSIzMCIgZmlsbD0iIzFCMkE1RSIgc3Ryb2tlPSIjMUIyQTVFIiBzdHJva2Utd2lkdGg9IjEwIi8+PGNpcmNsZSBjeD0iMTAwIiBjeT0iNzYiIHI9IjMyIiBmaWxsPSIjMUIyQTVFIiBzdHJva2U9IiMxQjJBNUUiIHN0cm9rZS13aWR0aD0iMTAiLz48Y2lyY2xlIGN4PSIxMzAiIGN5PSI5MiIgcj0iMzAiIGZpbGw9IiMxQjJBNUUiIHN0cm9rZT0iIzFCMkE1RSIgc3Ryb2tlLXdpZHRoPSIxMCIvPjxjaXJjbGUgY3g9IjY2IiBjeT0iMTIwIiByPSIyNiIgZmlsbD0iIzFCMkE1RSIgc3Ryb2tlPSIjMUIyQTVFIiBzdHJva2Utd2lkdGg9IjEwIi8+PGNpcmNsZSBjeD0iMTM0IiBjeT0iMTIwIiByPSIyNiIgZmlsbD0iIzFCMkE1RSIgc3Ryb2tlPSIjMUIyQTVFIiBzdHJva2Utd2lkdGg9IjEwIi8+PGNpcmNsZSBjeD0iMTAwIiBjeT0iMTE4IiByPSIzNiIgZmlsbD0iIzFCMkE1RSIgc3Ryb2tlPSIjMUIyQTVFIiBzdHJva2Utd2lkdGg9IjEwIi8+PGNpcmNsZSBjeD0iODQiIGN5PSI3MCIgcj0iMjIiIGZpbGw9IiMxQjJBNUUiIHN0cm9rZT0iIzFCMkE1RSIgc3Ryb2tlLXdpZHRoPSIxMCIvPjxjaXJjbGUgY3g9IjExOCIgY3k9IjcwIiByPSIyMiIgZmlsbD0iIzFCMkE1RSIgc3Ryb2tlPSIjMUIyQTVFIiBzdHJva2Utd2lkdGg9IjEwIi8+PGNpcmNsZSBjeD0iNzAiIGN5PSI5MiIgcj0iMzAiIGZpbGw9IiNGRkIzQzciLz48Y2lyY2xlIGN4PSIxMDAiIGN5PSI3NiIgcj0iMzIiIGZpbGw9IiNGRkIzQzciLz48Y2lyY2xlIGN4PSIxMzAiIGN5PSI5MiIgcj0iMzAiIGZpbGw9IiNGRkIzQzciLz48Y2lyY2xlIGN4PSI2NiIgY3k9IjEyMCIgcj0iMjYiIGZpbGw9IiNGRkIzQzciLz48Y2lyY2xlIGN4PSIxMzQiIGN5PSIxMjAiIHI9IjI2IiBmaWxsPSIjRkZCM0M3Ii8+PGNpcmNsZSBjeD0iMTAwIiBjeT0iMTE4IiByPSIzNiIgZmlsbD0iI0ZGQjNDNyIvPjxjaXJjbGUgY3g9Ijg0IiBjeT0iNzAiIHI9IjIyIiBmaWxsPSIjRkZCM0M3Ii8+PGNpcmNsZSBjeD0iMTE4IiBjeT0iNzAiIHI9IjIyIiBmaWxsPSIjRkZCM0M3Ii8+PHBhdGggZD0iTTEwMCA1MiBDOTYgNjYgMTA0IDc0IDEwMCA4NiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRTg3RkEwIiBzdHJva2Utd2lkdGg9IjQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxwYXRoIGQ9Ik01OCA4NCBxOCAtNiAxNiAwIE0xMjYgODQgcTggLTYgMTYgMCBNNTYgMTI4IHE2IDYgMTQgMiBNMTMwIDEzMCBxOCA0IDE0IC0yIiBmaWxsPSJub25lIiBzdHJva2U9IiNFODdGQTAiIHN0cm9rZS13aWR0aD0iNCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PGVsbGlwc2UgY3g9IjgyIiBjeT0iMTA4IiByeD0iNS41IiByeT0iNy41IiBmaWxsPSIjMUIyQTVFIi8+PGNpcmNsZSBjeD0iODAuMiIgY3k9IjEwNS4wIiByPSIyLjQiIGZpbGw9IiNmZmYiLz48ZWxsaXBzZSBjeD0iNzMuMCIgY3k9IjExOS4wIiByeD0iNy4wIiByeT0iNC4yIiBmaWxsPSIjRkY4RkFCIiBvcGFjaXR5PSIuODUiLz48ZWxsaXBzZSBjeD0iMTE4IiBjeT0iMTA4IiByeD0iNS41IiByeT0iNy41IiBmaWxsPSIjMUIyQTVFIi8+PGNpcmNsZSBjeD0iMTE2LjIiIGN5PSIxMDUuMCIgcj0iMi40IiBmaWxsPSIjZmZmIi8+PGVsbGlwc2UgY3g9IjEyNy4wIiBjeT0iMTE5LjAiIHJ4PSI3LjAiIHJ5PSI0LjIiIGZpbGw9IiNGRjhGQUIiIG9wYWNpdHk9Ii44NSIvPjxwYXRoIGQ9Ik05NS4wIDExNy4wIHE1LjAgNi4wIDEwLjAgMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMUIyQTVFIiBzdHJva2Utd2lkdGg9IjMuMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PGcgdHJhbnNmb3JtPSJyb3RhdGUoLTEyIDEwMCA0MCkiPjxwYXRoIGQ9Ik03MCA0MCBMMTAwIDI4IEwxMzAgNDAgTDEwMCA1MiBaIiBmaWxsPSIjMUIyQTVFIiBzdHJva2U9IiMxQjJBNUUiIHN0cm9rZS13aWR0aD0iMyIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPjxwYXRoIGQ9Ik04NCA0NiB2MTAgcTE2IDggMzIgMCB2LTEwIiBmaWxsPSIjMUIyQTVFIi8+PHBhdGggZD0iTTEyOCA0MSB2MTYiIHN0cm9rZT0iI0ZGRDMyOSIgc3Ryb2tlLXdpZHRoPSIzIi8+PGNpcmNsZSBjeD0iMTI4IiBjeT0iNTkiIHI9IjMuNSIgZmlsbD0iI0ZGRDMyOSIvPjwvZz48cGF0aCBkPSJNNjAgMTY4IHE0MCAtMTQgODAgMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjAiLz48cGF0aCBkPSJNMzQgNTEgUTM1Ljk4IDU4LjAyIDQzIDYwIFEzNS45OCA2MS45OCAzNCA2OSBRMzIuMDIgNjEuOTggMjUgNjAgUTMyLjAyIDU4LjAyIDM0IDUxWiIgZmlsbD0iI0ZGRDMyOSIgc3Ryb2tlPSIjMUIyQTVFIiBzdHJva2Utd2lkdGg9IjIiLz48cGF0aCBkPSJNMTY4IDUwIFExNjkuNzYgNTYuMjQgMTc2IDU4IFExNjkuNzYgNTkuNzYgMTY4IDY2IFExNjYuMjQgNTkuNzYgMTYwIDU4IFExNjYuMjQgNTYuMjQgMTY4IDUwWiIgZmlsbD0iI0ZGRDMyOSIgc3Ryb2tlPSIjMUIyQTVFIiBzdHJva2Utd2lkdGg9IjIiLz48cGF0aCBkPSJNMTYwIDE1NCBRMTYxLjMyIDE1OC42OCAxNjYgMTYwIFExNjEuMzIgMTYxLjMyIDE2MCAxNjYgUTE1OC42OCAxNjEuMzIgMTU0IDE2MCBRMTU4LjY4IDE1OC42OCAxNjAgMTU0WiIgZmlsbD0iI2ZmZiIgc3Ryb2tlPSIjMUIyQTVFIiBzdHJva2Utd2lkdGg9IjIiLz48cGF0aCBkPSJNNDAgMTQ0IFE0MS4zMiAxNDguNjggNDYgMTUwIFE0MS4zMiAxNTEuMzIgNDAgMTU2IFEzOC42OCAxNTEuMzIgMzQgMTUwIFEzOC42OCAxNDguNjggNDAgMTQ0WiIgZmlsbD0iI2ZmZiIgc3Ryb2tlPSIjMUIyQTVFIiBzdHJva2Utd2lkdGg9IjIiLz48L2c+PC9zdmc+",
     dojo: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjAwIj48ZGVmcz48Y2xpcFBhdGggaWQ9ImMiPjxjaXJjbGUgY3g9IjEwMCIgY3k9IjEwMCIgcj0iOTgiLz48L2NsaXBQYXRoPjwvZGVmcz48Y2lyY2xlIGN4PSIxMDAiIGN5PSIxMDAiIHI9Ijk4IiBmaWxsPSIjRkZFM0E2Ii8+PGcgY2xpcC1wYXRoPSJ1cmwoI2MpIj48Y2lyY2xlIGN4PSIxMDAiIGN5PSIxMDAiIHI9IjYyIiBmaWxsPSIjRkY3QTZCIiBvcGFjaXR5PSIuNTUiLz48cGF0aCBkPSJNNTYgMTk2IEM1NiAxNTAgNzAgMTMyIDEwMCAxMzIgQzEzMCAxMzIgMTQ0IDE1MCAxNDQgMTk2IFoiIGZpbGw9IiNGRkZGRkYiIHN0cm9rZT0iIzFCMkE1RSIgc3Ryb2tlLXdpZHRoPSI1IiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+PHBhdGggZD0iTTg2IDEzNCBMMTAwIDE2MCBMMTE0IDEzNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMUIyQTVFIiBzdHJva2Utd2lkdGg9IjQuNSIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPjxyZWN0IHg9IjU4IiB5PSIxNjQiIHdpZHRoPSI4NCIgaGVpZ2h0PSIxNCIgcng9IjQiIGZpbGw9IiMxQjJBNUUiLz48cGF0aCBkPSJNOTYgMTc4IGwtMTAgMjAgTTEwNCAxNzggbDEwIDIwIiBzdHJva2U9IiMxQjJBNUUiIHN0cm9rZS13aWR0aD0iOCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PGNpcmNsZSBjeD0iMTAwIiBjeT0iOTIiIHI9IjQ2IiBmaWxsPSIjRkZFMEMyIiBzdHJva2U9IiMxQjJBNUUiIHN0cm9rZS13aWR0aD0iNSIvPjxwYXRoIGQ9Ik01NiA4MiBRNjAgNDQgMTAwIDQ0IFExNDAgNDQgMTQ0IDgyIFExMzAgNjIgMTAwIDYyIFE3MCA2MiA1NiA4MiBaIiBmaWxsPSIjM0IyQTIyIiBzdHJva2U9IiMxQjJBNUUiIHN0cm9rZS13aWR0aD0iNCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPjxwYXRoIGQ9Ik01NSA3NiBRMTAwIDYyIDE0NSA3NiBMMTQ1IDg4IFExMDAgNzQgNTUgODggWiIgZmlsbD0iI0U4NDIzRiIgc3Ryb2tlPSIjMUIyQTVFIiBzdHJva2Utd2lkdGg9IjQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz48cGF0aCBkPSJNMTQ1IDgwIGwyMiAtMTAgbC00IDE0IFogTTE0NSA4NCBsMjAgOCBsLTEyIDYgWiIgZmlsbD0iI0U4NDIzRiIgc3Ryb2tlPSIjMUIyQTVFIiBzdHJva2Utd2lkdGg9IjMuNSIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPjxjaXJjbGUgY3g9IjEwMCIgY3k9Ijc2IiByPSI2IiBmaWxsPSIjZmZmIiBzdHJva2U9IiMxQjJBNUUiIHN0cm9rZS13aWR0aD0iMi41Ii8+PGVsbGlwc2UgY3g9IjgzIiBjeT0iMTAyIiByeD0iNS41IiByeT0iNy41IiBmaWxsPSIjMUIyQTVFIi8+PGNpcmNsZSBjeD0iODEuMiIgY3k9Ijk5LjAiIHI9IjIuNCIgZmlsbD0iI2ZmZiIvPjxlbGxpcHNlIGN4PSI3NC4wIiBjeT0iMTEzLjAiIHJ4PSI3LjAiIHJ5PSI0LjIiIGZpbGw9IiNGRjhGQUIiIG9wYWNpdHk9Ii44NSIvPjxlbGxpcHNlIGN4PSIxMTciIGN5PSIxMDIiIHJ4PSI1LjUiIHJ5PSI3LjUiIGZpbGw9IiMxQjJBNUUiLz48Y2lyY2xlIGN4PSIxMTUuMiIgY3k9Ijk5LjAiIHI9IjIuNCIgZmlsbD0iI2ZmZiIvPjxlbGxpcHNlIGN4PSIxMjYuMCIgY3k9IjExMy4wIiByeD0iNy4wIiByeT0iNC4yIiBmaWxsPSIjRkY4RkFCIiBvcGFjaXR5PSIuODUiLz48cGF0aCBkPSJNOTUuMCAxMTEuMCBxNS4wIDYuMCAxMC4wIDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzFCMkE1RSIgc3Ryb2tlLXdpZHRoPSIzLjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxwYXRoIGQ9Ik0zNiA0MyBRMzcuOTggNTAuMDIgNDUgNTIgUTM3Ljk4IDUzLjk4IDM2IDYxIFEzNC4wMiA1My45OCAyNyA1MiBRMzQuMDIgNTAuMDIgMzYgNDNaIiBmaWxsPSIjRkZEMzI5IiBzdHJva2U9IiMxQjJBNUUiIHN0cm9rZS13aWR0aD0iMiIvPjxwYXRoIGQ9Ik0xNzAgMTMzIFExNzEuNTQgMTM4LjQ2IDE3NyAxNDAgUTE3MS41NCAxNDEuNTQgMTcwIDE0NyBRMTY4LjQ2IDE0MS41NCAxNjMgMTQwIFExNjguNDYgMTM4LjQ2IDE3MCAxMzNaIiBmaWxsPSIjZmZmIiBzdHJva2U9IiMxQjJBNUUiIHN0cm9rZS13aWR0aD0iMiIvPjxwYXRoIGQ9Ik0zMCAxMzQgUTMxLjMyIDEzOC42OCAzNiAxNDAgUTMxLjMyIDE0MS4zMiAzMCAxNDYgUTI4LjY4IDE0MS4zMiAyNCAxNDAgUTI4LjY4IDEzOC42OCAzMCAxMzRaIiBmaWxsPSIjRkZEMzI5IiBzdHJva2U9IiMxQjJBNUUiIHN0cm9rZS13aWR0aD0iMiIvPjwvZz48L3N2Zz4=",
     loupe: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjAwIj48ZGVmcz48Y2xpcFBhdGggaWQ9ImMiPjxjaXJjbGUgY3g9IjEwMCIgY3k9IjEwMCIgcj0iOTgiLz48L2NsaXBQYXRoPjwvZGVmcz48Y2lyY2xlIGN4PSIxMDAiIGN5PSIxMDAiIHI9Ijk4IiBmaWxsPSIjRjZFMkI4Ii8+PGcgY2xpcC1wYXRoPSJ1cmwoI2MpIj48ZyB0cmFuc2Zvcm09InJvdGF0ZSgtMjAgNDAgMTYwKSI+PGVsbGlwc2UgY3g9IjQwIiBjeT0iMTYwIiByeD0iNiIgcnk9IjkiIGZpbGw9IiNDOUEyNkIiIG9wYWNpdHk9Ii43Ii8+PC9nPjxnIHRyYW5zZm9ybT0icm90YXRlKC0yMCA2MCAxNDApIj48ZWxsaXBzZSBjeD0iNjAiIGN5PSIxNDAiIHJ4PSI2IiByeT0iOSIgZmlsbD0iI0M5QTI2QiIgb3BhY2l0eT0iLjciLz48L2c+PGcgdHJhbnNmb3JtPSJyb3RhdGUoMjAgMTUwIDE3MCkiPjxlbGxpcHNlIGN4PSIxNTAiIGN5PSIxNzAiIHJ4PSI2IiByeT0iOSIgZmlsbD0iI0M5QTI2QiIgb3BhY2l0eT0iLjciLz48L2c+PGcgdHJhbnNmb3JtPSJyb3RhdGUoMjAgMTY4IDE1MCkiPjxlbGxpcHNlIGN4PSIxNjgiIGN5PSIxNTAiIHJ4PSI2IiByeT0iOSIgZmlsbD0iI0M5QTI2QiIgb3BhY2l0eT0iLjciLz48L2c+PHBhdGggZD0iTTEyOCAxMjggTDE2MCAxNjAiIHN0cm9rZT0iIzFCMkE1RSIgc3Ryb2tlLXdpZHRoPSIyMCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PHBhdGggZD0iTTEyOCAxMjggTDE2MCAxNjAiIHN0cm9rZT0iI0I5Nzc0QSIgc3Ryb2tlLXdpZHRoPSIxMSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PGNpcmNsZSBjeD0iOTQiIGN5PSI5NiIgcj0iNDYiIGZpbGw9IiNERkYzRkYiIHN0cm9rZT0iIzFCMkE1RSIgc3Ryb2tlLXdpZHRoPSI2Ii8+PGNpcmNsZSBjeD0iOTQiIGN5PSI5NiIgcj0iMzgiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0ZGRkZGRiIgc3Ryb2tlLXdpZHRoPSIzIiBvcGFjaXR5PSIuOCIvPjxwYXRoIGQ9Ik02NiA3OCBxOCAtMTQgMjQgLTE2IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PGVsbGlwc2UgY3g9Ijc4IiBjeT0iMTAwIiByeD0iNS41IiByeT0iNy41IiBmaWxsPSIjMUIyQTVFIi8+PGNpcmNsZSBjeD0iNzYuMiIgY3k9Ijk3LjAiIHI9IjIuNCIgZmlsbD0iI2ZmZiIvPjxlbGxpcHNlIGN4PSI2OS4wIiBjeT0iMTExLjAiIHJ4PSI3LjAiIHJ5PSI0LjIiIGZpbGw9IiNGRjhGQUIiIG9wYWNpdHk9Ii44NSIvPjxlbGxpcHNlIGN4PSIxMTAiIGN5PSIxMDAiIHJ4PSI1LjUiIHJ5PSI3LjUiIGZpbGw9IiMxQjJBNUUiLz48Y2lyY2xlIGN4PSIxMDguMiIgY3k9Ijk3LjAiIHI9IjIuNCIgZmlsbD0iI2ZmZiIvPjxlbGxpcHNlIGN4PSIxMTkuMCIgY3k9IjExMS4wIiByeD0iNy4wIiByeT0iNC4yIiBmaWxsPSIjRkY4RkFCIiBvcGFjaXR5PSIuODUiLz48cGF0aCBkPSJNODkuMCAxMDkuMCBxNS4wIDYuMCAxMC4wIDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzFCMkE1RSIgc3Ryb2tlLXdpZHRoPSIzLjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxnIHRyYW5zZm9ybT0icm90YXRlKC04IDk0IDUwKSI+PHBhdGggZD0iTTU4IDU2IFE2MCAyMiA5NCAyMiBRMTI4IDIyIDEzMCA1NiBaIiBmaWxsPSIjOEI2QTQzIiBzdHJva2U9IiMxQjJBNUUiIHN0cm9rZS13aWR0aD0iNC41IiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+PHBhdGggZD0iTTUwIDU4IFE5NCA0NCAxMzggNTggUTEzOCA2NiAxMzAgNjYgUTk0IDU2IDU4IDY2IFE1MCA2NiA1MCA1OCBaIiBmaWxsPSIjNkU1MjMzIiBzdHJva2U9IiMxQjJBNUUiIHN0cm9rZS13aWR0aD0iNCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPjxwYXRoIGQ9Ik03NCAzMCBROTQgNDQgMTE0IDMwIE05NCAyMiBWNDQiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0M5QTI2QiIgc3Ryb2tlLXdpZHRoPSIzIi8+PGNpcmNsZSBjeD0iOTQiIGN5PSIyMCIgcj0iNCIgZmlsbD0iIzZFNTIzMyIgc3Ryb2tlPSIjMUIyQTVFIiBzdHJva2Utd2lkdGg9IjMiLz48L2c+PHRleHQgeD0iMCIgeT0iMCIgLz48cGF0aCBkPSJNMzQgMzkgUTM1Ljk4IDQ2LjAyIDQzIDQ4IFEzNS45OCA0OS45OCAzNCA1NyBRMzIuMDIgNDkuOTggMjUgNDggUTMyLjAyIDQ2LjAyIDM0IDM5WiIgZmlsbD0iI0ZGRDMyOSIgc3Ryb2tlPSIjMUIyQTVFIiBzdHJva2Utd2lkdGg9IjIiLz48cGF0aCBkPSJNMTY4IDQwIFExNjkuNzYgNDYuMjQgMTc2IDQ4IFExNjkuNzYgNDkuNzYgMTY4IDU2IFExNjYuMjQgNDkuNzYgMTYwIDQ4IFExNjYuMjQgNDYuMjQgMTY4IDQwWiIgZmlsbD0iI0ZGRDMyOSIgc3Ryb2tlPSIjMUIyQTVFIiBzdHJva2Utd2lkdGg9IjIiLz48cGF0aCBkPSJNMTcyIDk4IFExNzMuMzIgMTAyLjY4IDE3OCAxMDQgUTE3My4zMiAxMDUuMzIgMTcyIDExMCBRMTcwLjY4IDEwNS4zMiAxNjYgMTA0IFExNzAuNjggMTAyLjY4IDE3MiA5OFoiIGZpbGw9IiNmZmYiIHN0cm9rZT0iIzFCMkE1RSIgc3Ryb2tlLXdpZHRoPSIyIi8+PC9nPjwvc3ZnPg==",
-    livre: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjAwIj48ZGVmcz48Y2xpcFBhdGggaWQ9ImMiPjxjaXJjbGUgY3g9IjEwMCIgY3k9IjEwMCIgcj0iOTgiLz48L2NsaXBQYXRoPjwvZGVmcz48Y2lyY2xlIGN4PSIxMDAiIGN5PSIxMDAiIHI9Ijk4IiBmaWxsPSIjRkZENkU1Ii8+PGcgY2xpcC1wYXRoPSJ1cmwoI2MpIj48cGF0aCBkPSJNMzAgNzAgUTY1IDU4IDEwMCA3MiBRMTM1IDU4IDE3MCA3MCBMMTcwIDE1NiBRMTM1IDE0NiAxMDAgMTYwIFE2NSAxNDYgMzAgMTU2IFoiIGZpbGw9IiM3QjRCQzQiIHN0cm9rZT0iIzFCMkE1RSIgc3Ryb2tlLXdpZHRoPSI1IiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+PHBhdGggZD0iTTM4IDY2IFE3MCA1NCAxMDAgNjggTDEwMCAxNTIgUTcwIDE0MCAzOCAxNTAgWiIgZmlsbD0iI0ZGRkRGNSIgc3Ryb2tlPSIjMUIyQTVFIiBzdHJva2Utd2lkdGg9IjQuNSIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPjxwYXRoIGQ9Ik0xNjIgNjYgUTEzMCA1NCAxMDAgNjggTDEwMCAxNTIgUTEzMCAxNDAgMTYyIDE1MCBaIiBmaWxsPSIjRkZGREY1IiBzdHJva2U9IiMxQjJBNUUiIHN0cm9rZS13aWR0aD0iNC41IiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+PHBhdGggZD0iTTUwIDgwIFE3MCA3MiA4OCA4MCBNMTEyIDgwIFExMzAgNzIgMTUwIDgwIE01MCAxMzIgUTcwIDEyNCA4OCAxMzIgTTExMiAxMzIgUTEzMCAxMjQgMTUwIDEzMiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRDZDQkVBIiBzdHJva2Utd2lkdGg9IjMuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PGVsbGlwc2UgY3g9Ijc4IiBjeT0iMTA0IiByeD0iNS41IiByeT0iNy41IiBmaWxsPSIjMUIyQTVFIi8+PGNpcmNsZSBjeD0iNzYuMiIgY3k9IjEwMS4wIiByPSIyLjQiIGZpbGw9IiNmZmYiLz48ZWxsaXBzZSBjeD0iNjkuMCIgY3k9IjExNS4wIiByeD0iNy4wIiByeT0iNC4yIiBmaWxsPSIjRkY4RkFCIiBvcGFjaXR5PSIuODUiLz48ZWxsaXBzZSBjeD0iMTIyIiBjeT0iMTA0IiByeD0iNS41IiByeT0iNy41IiBmaWxsPSIjMUIyQTVFIi8+PGNpcmNsZSBjeD0iMTIwLjIiIGN5PSIxMDEuMCIgcj0iMi40IiBmaWxsPSIjZmZmIi8+PGVsbGlwc2UgY3g9IjEzMS4wIiBjeT0iMTE1LjAiIHJ4PSI3LjAiIHJ5PSI0LjIiIGZpbGw9IiNGRjhGQUIiIG9wYWNpdHk9Ii44NSIvPjxwYXRoIGQ9Ik05NS4wIDExMy4wIHE1LjAgNi4wIDEwLjAgMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMUIyQTVFIiBzdHJva2Utd2lkdGg9IjMuMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PHBhdGggZD0iTTc2IDU0IEw4MCAzMCBMOTIgNDQgTDEwMCAyNCBMMTA4IDQ0IEwxMjAgMzAgTDEyNCA1NCBaIiBmaWxsPSIjRkZEMzI5IiBzdHJva2U9IiMxQjJBNUUiIHN0cm9rZS13aWR0aD0iNCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPjxjaXJjbGUgY3g9IjEwMCIgY3k9IjQ2IiByPSIzLjUiIGZpbGw9IiNFODQyM0YiLz48Y2lyY2xlIGN4PSI4NiIgY3k9IjQ5IiByPSIyLjUiIGZpbGw9IiM0QkEzRkYiLz48Y2lyY2xlIGN4PSIxMTQiIGN5PSI0OSIgcj0iMi41IiBmaWxsPSIjNEJBM0ZGIi8+PHBhdGggZD0iTTE0MCAxNTAgdjI4IGw4IC03IGw4IDcgdi0zMSIgZmlsbD0iI0U4NDIzRiIgc3Ryb2tlPSIjMUIyQTVFIiBzdHJva2Utd2lkdGg9IjMuNSIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPjxwYXRoIGQ9Ik0zMCAzNSBRMzEuOTggNDIuMDIgMzkgNDQgUTMxLjk4IDQ1Ljk4IDMwIDUzIFEyOC4wMiA0NS45OCAyMSA0NCBRMjguMDIgNDIuMDIgMzAgMzVaIiBmaWxsPSIjRkZEMzI5IiBzdHJva2U9IiMxQjJBNUUiIHN0cm9rZS13aWR0aD0iMiIvPjxwYXRoIGQ9Ik0xNzIgMzQgUTE3My43NiA0MC4yNCAxODAgNDIgUTE3My43NiA0My43NiAxNzIgNTAgUTE3MC4yNCA0My43NiAxNjQgNDIgUTE3MC4yNCA0MC4yNCAxNzIgMzRaIiBmaWxsPSIjRkZEMzI5IiBzdHJva2U9IiMxQjJBNUUiIHN0cm9rZS13aWR0aD0iMiIvPjxwYXRoIGQ9Ik00MCAxNzAgUTQxLjMyIDE3NC42OCA0NiAxNzYgUTQxLjMyIDE3Ny4zMiA0MCAxODIgUTM4LjY4IDE3Ny4zMiAzNCAxNzYgUTM4LjY4IDE3NC42OCA0MCAxNzBaIiBmaWxsPSIjZmZmIiBzdHJva2U9IiMxQjJBNUUiIHN0cm9rZS13aWR0aD0iMiIvPjxwYXRoIGQ9Ik0xNzYgMTE0IFExNzcuMzIgMTE4LjY4IDE4MiAxMjAgUTE3Ny4zMiAxMjEuMzIgMTc2IDEyNiBRMTc0LjY4IDEyMS4zMiAxNzAgMTIwIFExNzQuNjggMTE4LjY4IDE3NiAxMTRaIiBmaWxsPSIjZmZmIiBzdHJva2U9IiMxQjJBNUUiIHN0cm9rZS13aWR0aD0iMiIvPjwvZz48L3N2Zz4="
+    livre: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjAwIj48ZGVmcz48Y2xpcFBhdGggaWQ9ImMiPjxjaXJjbGUgY3g9IjEwMCIgY3k9IjEwMCIgcj0iOTgiLz48L2NsaXBQYXRoPjwvZGVmcz48Y2lyY2xlIGN4PSIxMDAiIGN5PSIxMDAiIHI9Ijk4IiBmaWxsPSIjRkZENkU1Ii8+PGcgY2xpcC1wYXRoPSJ1cmwoI2MpIj48cGF0aCBkPSJNMzAgNzAgUTY1IDU4IDEwMCA3MiBRMTM1IDU4IDE3MCA3MCBMMTcwIDE1NiBRMTM1IDE0NiAxMDAgMTYwIFE2NSAxNDYgMzAgMTU2IFoiIGZpbGw9IiM3QjRCQzQiIHN0cm9rZT0iIzFCMkE1RSIgc3Ryb2tlLXdpZHRoPSI1IiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+PHBhdGggZD0iTTM4IDY2IFE3MCA1NCAxMDAgNjggTDEwMCAxNTIgUTcwIDE0MCAzOCAxNTAgWiIgZmlsbD0iI0ZGRkRGNSIgc3Ryb2tlPSIjMUIyQTVFIiBzdHJva2Utd2lkdGg9IjQuNSIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPjxwYXRoIGQ9Ik0xNjIgNjYgUTEzMCA1NCAxMDAgNjggTDEwMCAxNTIgUTEzMCAxNDAgMTYyIDE1MCBaIiBmaWxsPSIjRkZGREY1IiBzdHJva2U9IiMxQjJBNUUiIHN0cm9rZS13aWR0aD0iNC41IiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+PHBhdGggZD0iTTUwIDgwIFE3MCA3MiA4OCA4MCBNMTEyIDgwIFExMzAgNzIgMTUwIDgwIE01MCAxMzIgUTcwIDEyNCA4OCAxMzIgTTExMiAxMzIgUTEzMCAxMjQgMTUwIDEzMiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRDZDQkVBIiBzdHJva2Utd2lkdGg9IjMuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PGVsbGlwc2UgY3g9Ijc4IiBjeT0iMTA0IiByeD0iNS41IiByeT0iNy41IiBmaWxsPSIjMUIyQTVFIi8+PGNpcmNsZSBjeD0iNzYuMiIgY3k9IjEwMS4wIiByPSIyLjQiIGZpbGw9IiNmZmYiLz48ZWxsaXBzZSBjeD0iNjkuMCIgY3k9IjExNS4wIiByeD0iNy4wIiByeT0iNC4yIiBmaWxsPSIjRkY4RkFCIiBvcGFjaXR5PSIuODUiLz48ZWxsaXBzZSBjeD0iMTIyIiBjeT0iMTA0IiByeD0iNS41IiByeT0iNy41IiBmaWxsPSIjMUIyQTVFIi8+PGNpcmNsZSBjeD0iMTIwLjIiIGN5PSIxMDEuMCIgcj0iMi40IiBmaWxsPSIjZmZmIi8+PGVsbGlwc2UgY3g9IjEzMS4wIiBjeT0iMTE1LjAiIHJ4PSI3LjAiIHJ5PSI0LjIiIGZpbGw9IiNGRjhGQUIiIG9wYWNpdHk9Ii44NSIvPjxwYXRoIGQ9Ik05NS4wIDExMy4wIHE1LjAgNi4wIDEwLjAgMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMUIyQTVFIiBzdHJva2Utd2lkdGg9IjMuMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PHBhdGggZD0iTTc2IDU0IEw4MCAzMCBMOTIgNDQgTDEwMCAyNCBMMTA4IDQ0IEwxMjAgMzAgTDEyNCA1NCBaIiBmaWxsPSIjRkZEMzI5IiBzdHJva2U9IiMxQjJBNUUiIHN0cm9rZS13aWR0aD0iNCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPjxjaXJjbGUgY3g9IjEwMCIgY3k9IjQ2IiByPSIzLjUiIGZpbGw9IiNFODQyM0YiLz48Y2lyY2xlIGN4PSI4NiIgY3k9IjQ5IiByPSIyLjUiIGZpbGw9IiM0QkEzRkYiLz48Y2lyY2xlIGN4PSIxMTQiIGN5PSI0OSIgcj0iMi41IiBmaWxsPSIjNEJBM0ZGIi8+PHBhdGggZD0iTTE0MCAxNTAgdjI4IGw4IC03IGw4IDcgdi0zMSIgZmlsbD0iI0U4NDIzRiIgc3Ryb2tlPSIjMUIyQTVFIiBzdHJva2Utd2lkdGg9IjMuNSIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPjxwYXRoIGQ9Ik0zMCAzNSBRMzEuOTggNDIuMDIgMzkgNDQgUTMxLjk4IDQ1Ljk4IDMwIDUzIFEyOC4wMiA0NS45OCAyMSA0NCBRMjguMDIgNDIuMDIgMzAgMzVaIiBmaWxsPSIjRkZEMzI5IiBzdHJva2U9IiMxQjJBNUUiIHN0cm9rZS13aWR0aD0iMiIvPjxwYXRoIGQ9Ik0xNzIgMzQgUTE3My43NiA0MC4yNCAxODAgNDIgUTE3My43NiA0My43NiAxNzIgNTAgUTE3MC4yNCA0My43NiAxNjQgNDIgUTE3MC4yNCA0MC4yNCAxNzIgMzRaIiBmaWxsPSIjRkZEMzI5IiBzdHJva2U9IiMxQjJBNUUiIHN0cm9rZS13aWR0aD0iMiIvPjxwYXRoIGQ9Ik00MCAxNzAgUTQxLjMyIDE3NC42OCA0NiAxNzYgUTQxLjMyIDE3Ny4zMiA0MCAxODIgUTM4LjY4IDE3Ny4zMiAzNCAxNzYgUTM4LjY4IDE3NC42OCA0MCAxNzBaIiBmaWxsPSIjZmZmIiBzdHJva2U9IiMxQjJBNUUiIHN0cm9rZS13aWR0aD0iMiIvPjxwYXRoIGQ9Ik0xNzYgMTE0IFExNzcuMzIgMTE4LjY4IDE4MiAxMjAgUTE3Ny4zMiAxMjEuMzIgMTc2IDEyNiBRMTc0LjY4IDEyMS4zMiAxNzAgMTIwIFExNzQuNjggMTE4LjY4IDE3NiAxMTRaIiBmaWxsPSIjZmZmIiBzdHJva2U9IiMxQjJBNUUiIHN0cm9rZS13aWR0aD0iMiIvPjwvZz48L3N2Zz4=",
+    sac: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjAwIj48ZGVmcz48Y2xpcFBhdGggaWQ9ImMiPjxjaXJjbGUgY3g9IjEwMCIgY3k9IjEwMCIgcj0iOTgiLz48L2NsaXBQYXRoPjwvZGVmcz48Y2lyY2xlIGN4PSIxMDAiIGN5PSIxMDAiIHI9Ijk4IiBmaWxsPSIjRkZEREIwIi8+PGcgY2xpcC1wYXRoPSJ1cmwoI2MpIj48cGF0aCBkPSJNMjggMTc4IGwyNiAtMTAgTTMwIDE2OCBsMjQgMTAiIHN0cm9rZT0iIzhCNUEyQiIgc3Ryb2tlLXdpZHRoPSI3IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48cGF0aCBkPSJNNDEgMTY4IEMzMCAxNTQgNDAgMTQ0IDQyIDEzNCBDNDggMTQ2IDU0IDE1MCA1MCAxNjAgQzU2IDE1NiA1NiAxNTAgNTYgMTQ2IEM2NCAxNTYgNjAgMTY4IDUyIDE3MCBaIiBmaWxsPSIjRkY4QTNEIiBzdHJva2U9IiMxQjJBNUUiIHN0cm9rZS13aWR0aD0iMyIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPjxwYXRoIGQ9Ik03NiA2MiBRNzIgNDAgMTAwIDM4IFExMjggNDAgMTI0IDYyIiBmaWxsPSJub25lIiBzdHJva2U9IiMxQjJBNUUiIHN0cm9rZS13aWR0aD0iMTIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxwYXRoIGQ9Ik03NiA2MiBRNzIgNDAgMTAwIDM4IFExMjggNDAgMTI0IDYyIiBmaWxsPSJub25lIiBzdHJva2U9IiMyRThCNTciIHN0cm9rZS13aWR0aD0iNiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PHJlY3QgeD0iNTgiIHk9IjU2IiB3aWR0aD0iODQiIGhlaWdodD0iMTEwIiByeD0iMjYiIGZpbGw9IiMzQ0IzNzEiIHN0cm9rZT0iIzFCMkE1RSIgc3Ryb2tlLXdpZHRoPSI1Ii8+PHBhdGggZD0iTTU4IDkyIFExMDAgNzggMTQyIDkyIiBmaWxsPSJub25lIiBzdHJva2U9IiMxQjJBNUUiIHN0cm9rZS13aWR0aD0iNC41Ii8+PHBhdGggZD0iTTYwIDkyIFExMDAgNzkgMTQwIDkyIEwxNDAgODAgUTE0MCA1OCAxMTYgNTggTDg0IDU4IFE2MCA1OCA2MCA4MCBaIiBmaWxsPSIjMkU4QjU3Ii8+PHBhdGggZD0iTTU4IDkyIFExMDAgNzggMTQyIDkyIiBmaWxsPSJub25lIiBzdHJva2U9IiMxQjJBNUUiIHN0cm9rZS13aWR0aD0iNC41Ii8+PHJlY3QgeD0iOTIiIHk9Ijg0IiB3aWR0aD0iMTYiIGhlaWdodD0iMTIiIHJ4PSIzIiBmaWxsPSIjRkZEMzI5IiBzdHJva2U9IiMxQjJBNUUiIHN0cm9rZS13aWR0aD0iMyIvPjxyZWN0IHg9Ijc0IiB5PSIxMzIiIHdpZHRoPSI1MiIgaGVpZ2h0PSIyOCIgcng9IjkiIGZpbGw9IiMyRThCNTciIHN0cm9rZT0iIzFCMkE1RSIgc3Ryb2tlLXdpZHRoPSI0Ii8+PHBhdGggZD0iTTEwMCAxMzggdjE2IE05MiAxNDYgaDE2IiBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PGVsbGlwc2UgY3g9Ijg1IiBjeT0iMTEyIiByeD0iNS41IiByeT0iNy41IiBmaWxsPSIjMUIyQTVFIi8+PGNpcmNsZSBjeD0iODMuMiIgY3k9IjEwOS4wIiByPSIyLjQiIGZpbGw9IiNmZmYiLz48ZWxsaXBzZSBjeD0iNzYuMCIgY3k9IjEyMy4wIiByeD0iNy4wIiByeT0iNC4yIiBmaWxsPSIjRkY4RkFCIiBvcGFjaXR5PSIuODUiLz48ZWxsaXBzZSBjeD0iMTE1IiBjeT0iMTEyIiByeD0iNS41IiByeT0iNy41IiBmaWxsPSIjMUIyQTVFIi8+PGNpcmNsZSBjeD0iMTEzLjIiIGN5PSIxMDkuMCIgcj0iMi40IiBmaWxsPSIjZmZmIi8+PGVsbGlwc2UgY3g9IjEyNC4wIiBjeT0iMTIzLjAiIHJ4PSI3LjAiIHJ5PSI0LjIiIGZpbGw9IiNGRjhGQUIiIG9wYWNpdHk9Ii44NSIvPjxwYXRoIGQ9Ik05NS4wIDEyMS4wIHE1LjAgNi4wIDEwLjAgMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMUIyQTVFIiBzdHJva2Utd2lkdGg9IjMuMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PHBhdGggZD0iTTE0MiA3NCBWMzAiIHN0cm9rZT0iIzFCMkE1RSIgc3Ryb2tlLXdpZHRoPSI0IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48cmVjdCB4PSIxNDIiIHk9IjMwIiB3aWR0aD0iMzAiIGhlaWdodD0iMjAiIGZpbGw9IiMwQjJBN0EiIHN0cm9rZT0iIzFCMkE1RSIgc3Ryb2tlLXdpZHRoPSIzIi8+PHBhdGggZD0iTTE0MiAzMCBMMTcyIDUwIE0xNzIgMzAgTDE0MiA1MCIgc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjQiLz48cGF0aCBkPSJNMTQyIDMwIEwxNzIgNTAgTTE3MiAzMCBMMTQyIDUwIiBzdHJva2U9IiNFODQyM0YiIHN0cm9rZS13aWR0aD0iMS42Ii8+PHBhdGggZD0iTTE1NyAzMCBWNTAgTTE0MiA0MCBIMTcyIiBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iNiIvPjxwYXRoIGQ9Ik0xNTcgMzAgVjUwIE0xNDIgNDAgSDE3MiIgc3Ryb2tlPSIjRTg0MjNGIiBzdHJva2Utd2lkdGg9IjMiLz48cGF0aCBkPSJNMzYgNDMgUTM3Ljk4IDUwLjAyIDQ1IDUyIFEzNy45OCA1My45OCAzNiA2MSBRMzQuMDIgNTMuOTggMjcgNTIgUTM0LjAyIDUwLjAyIDM2IDQzWiIgZmlsbD0iI0ZGRDMyOSIgc3Ryb2tlPSIjMUIyQTVFIiBzdHJva2Utd2lkdGg9IjIiLz48cGF0aCBkPSJNMTcwIDE0MyBRMTcxLjU0IDE0OC40NiAxNzcgMTUwIFExNzEuNTQgMTUxLjU0IDE3MCAxNTcgUTE2OC40NiAxNTEuNTQgMTYzIDE1MCBRMTY4LjQ2IDE0OC40NiAxNzAgMTQzWiIgZmlsbD0iI2ZmZiIgc3Ryb2tlPSIjMUIyQTVFIiBzdHJva2Utd2lkdGg9IjIiLz48cGF0aCBkPSJNMTY2IDkyIFExNjcuMzIgOTYuNjggMTcyIDk4IFExNjcuMzIgOTkuMzIgMTY2IDEwNCBRMTY0LjY4IDk5LjMyIDE2MCA5OCBRMTY0LjY4IDk2LjY4IDE2NiA5MloiIGZpbGw9IiNGRkQzMjkiIHN0cm9rZT0iIzFCMkE1RSIgc3Ryb2tlLXdpZHRoPSIyIi8+PC9nPjwvc3ZnPg==",
+    lunettes: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjAwIj48ZGVmcz48Y2xpcFBhdGggaWQ9ImMiPjxjaXJjbGUgY3g9IjEwMCIgY3k9IjEwMCIgcj0iOTgiLz48L2NsaXBQYXRoPjwvZGVmcz48Y2lyY2xlIGN4PSIxMDAiIGN5PSIxMDAiIHI9Ijk4IiBmaWxsPSIjQkRFQkU1Ii8+PGcgY2xpcC1wYXRoPSJ1cmwoI2MpIj48ZyB0cmFuc2Zvcm09InJvdGF0ZSgtNiAxMDAgMTEyKSI+PHJlY3QgeD0iNDAiIHk9IjU4IiB3aWR0aD0iMTIwIiBoZWlnaHQ9IjExOCIgcng9IjEwIiBmaWxsPSIjRkZGREY1IiBzdHJva2U9IiMxQjJBNUUiIHN0cm9rZS13aWR0aD0iNSIvPjxwYXRoIGQ9Ik01NiAxMjggSDE0NCIgc3Ryb2tlPSIjQzlENkU4IiBzdHJva2Utd2lkdGg9IjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxwYXRoIGQ9Ik01NiAxNDIgSDE0NCIgc3Ryb2tlPSIjQzlENkU4IiBzdHJva2Utd2lkdGg9IjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxwYXRoIGQ9Ik01NiAxNTYgSDE0NCIgc3Ryb2tlPSIjQzlENkU4IiBzdHJva2Utd2lkdGg9IjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxwYXRoIGQ9Ik01NiAxNTYgSDExMiIgc3Ryb2tlPSIjRkZCMDIwIiBzdHJva2Utd2lkdGg9IjciIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgb3BhY2l0eT0iLjciLz48L2c+PHBhdGggZD0iTTI4IDkyIEw0NiA4OCBNMTcyIDkyIEwxNTQgODgiIHN0cm9rZT0iIzFCMkE1RSIgc3Ryb2tlLXdpZHRoPSI1IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48Y2lyY2xlIGN4PSI3MiIgY3k9Ijk2IiByPSIyNSIgZmlsbD0iI0U5RjZGRiIgc3Ryb2tlPSIjMUIyQTVFIiBzdHJva2Utd2lkdGg9IjYiLz48ZWxsaXBzZSBjeD0iNzIiIGN5PSI5OCIgcng9IjciIHJ5PSI5IiBmaWxsPSIjMUIyQTVFIi8+PGNpcmNsZSBjeD0iNjkuNSIgY3k9Ijk0IiByPSIzIiBmaWxsPSIjZmZmIi8+PGNpcmNsZSBjeD0iMTI4IiBjeT0iOTYiIHI9IjI1IiBmaWxsPSIjRTlGNkZGIiBzdHJva2U9IiMxQjJBNUUiIHN0cm9rZS13aWR0aD0iNiIvPjxlbGxpcHNlIGN4PSIxMjgiIGN5PSI5OCIgcng9IjciIHJ5PSI5IiBmaWxsPSIjMUIyQTVFIi8+PGNpcmNsZSBjeD0iMTI1LjUiIGN5PSI5NCIgcj0iMyIgZmlsbD0iI2ZmZiIvPjxwYXRoIGQ9Ik05NyA5MiBRMTAwIDg2IDEwMyA5MiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMUIyQTVFIiBzdHJva2Utd2lkdGg9IjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxlbGxpcHNlIGN4PSI1MiIgY3k9IjEyMiIgcng9IjgiIHJ5PSI0LjUiIGZpbGw9IiNGRjhGQUIiIG9wYWNpdHk9Ii44NSIvPjxlbGxpcHNlIGN4PSIxNDgiIGN5PSIxMjIiIHJ4PSI4IiByeT0iNC41IiBmaWxsPSIjRkY4RkFCIiBvcGFjaXR5PSIuODUiLz48cGF0aCBkPSJNOTMgMTIwIHE3IDcgMTQgMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMUIyQTVFIiBzdHJva2Utd2lkdGg9IjMuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PHBhdGggZD0iTTM2IDM5IFEzNy45OCA0Ni4wMiA0NSA0OCBRMzcuOTggNDkuOTggMzYgNTcgUTM0LjAyIDQ5Ljk4IDI3IDQ4IFEzNC4wMiA0Ni4wMiAzNiAzOVoiIGZpbGw9IiNGRkQzMjkiIHN0cm9rZT0iIzFCMkE1RSIgc3Ryb2tlLXdpZHRoPSIyIi8+PHBhdGggZD0iTTE2NiAzOCBRMTY3Ljc2IDQ0LjI0IDE3NCA0NiBRMTY3Ljc2IDQ3Ljc2IDE2NiA1NCBRMTY0LjI0IDQ3Ljc2IDE1OCA0NiBRMTY0LjI0IDQ0LjI0IDE2NiAzOFoiIGZpbGw9IiNGRkQzMjkiIHN0cm9rZT0iIzFCMkE1RSIgc3Ryb2tlLXdpZHRoPSIyIi8+PHBhdGggZD0iTTE3MCAxNjQgUTE3MS4zMiAxNjguNjggMTc2IDE3MCBRMTcxLjMyIDE3MS4zMiAxNzAgMTc2IFExNjguNjggMTcxLjMyIDE2NCAxNzAgUTE2OC42OCAxNjguNjggMTcwIDE2NFoiIGZpbGw9IiNmZmYiIHN0cm9rZT0iIzFCMkE1RSIgc3Ryb2tlLXdpZHRoPSIyIi8+PC9nPjwvc3ZnPg==",
+    dragon: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjAwIj48ZGVmcz48Y2xpcFBhdGggaWQ9ImMiPjxjaXJjbGUgY3g9IjEwMCIgY3k9IjEwMCIgcj0iOTgiLz48L2NsaXBQYXRoPjwvZGVmcz48Y2lyY2xlIGN4PSIxMDAiIGN5PSIxMDAiIHI9Ijk4IiBmaWxsPSIjRDRFQ0I0Ii8+PGcgY2xpcC1wYXRoPSJ1cmwoI2MpIj48cGF0aCBkPSJNNTIgMTEyIFEyMCA4NCAzMCA1NiBRNDggNzAgNjIgNzIgUTU4IDkyIDY2IDEwNCBaIiBmaWxsPSIjQjc5NEY2IiBzdHJva2U9IiMxQjJBNUUiIHN0cm9rZS13aWR0aD0iNC41IiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+PHBhdGggZD0iTTE0OCAxMTIgUTE4MCA4NCAxNzAgNTYgUTE1MiA3MCAxMzggNzIgUTE0MiA5MiAxMzQgMTA0IFoiIGZpbGw9IiNCNzk0RjYiIHN0cm9rZT0iIzFCMkE1RSIgc3Ryb2tlLXdpZHRoPSI0LjUiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz48cGF0aCBkPSJNMTMwIDE3MCBRMTY2IDE3NiAxNzAgMTUwIGwxMCAtNiBsLTQgMTIiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzFCMkE1RSIgc3Ryb2tlLXdpZHRoPSIxMSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+PHBhdGggZD0iTTEzMCAxNzAgUTE2NiAxNzYgMTcwIDE1MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjOEI1Q0Y2IiBzdHJva2Utd2lkdGg9IjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxlbGxpcHNlIGN4PSIxMDAiIGN5PSIxNTgiIHJ4PSI0MCIgcnk9IjMyIiBmaWxsPSIjOEI1Q0Y2IiBzdHJva2U9IiMxQjJBNUUiIHN0cm9rZS13aWR0aD0iNSIvPjxlbGxpcHNlIGN4PSIxMDAiIGN5PSIxNjQiIHJ4PSIyMiIgcnk9IjIwIiBmaWxsPSIjRkZFNkE4IiBzdHJva2U9IiMxQjJBNUUiIHN0cm9rZS13aWR0aD0iMy41Ii8+PHBhdGggZD0iTTcyIDY0IEw2NCAzNiBMODYgNTYgWiBNMTI4IDY0IEwxMzYgMzYgTDExNCA1NiBaIiBmaWxsPSIjRkZEMzI5IiBzdHJva2U9IiMxQjJBNUUiIHN0cm9rZS13aWR0aD0iNCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPjxjaXJjbGUgY3g9IjEwMCIgY3k9Ijk0IiByPSI0NCIgZmlsbD0iIzhCNUNGNiIgc3Ryb2tlPSIjMUIyQTVFIiBzdHJva2Utd2lkdGg9IjUiLz48cGF0aCBkPSJNOTIgNTIgbDggLTEwIGw4IDEwIiBmaWxsPSIjQjc5NEY2IiBzdHJva2U9IiMxQjJBNUUiIHN0cm9rZS13aWR0aD0iMy41IiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+PGVsbGlwc2UgY3g9IjEwMCIgY3k9IjExMiIgcng9IjI0IiByeT0iMTUiIGZpbGw9IiNCNzk0RjYiIG9wYWNpdHk9Ii43Ii8+PGVsbGlwc2UgY3g9IjgyIiBjeT0iOTUiIHJ4PSIxMCIgcnk9IjEyIiBmaWxsPSIjZmZmIiBzdHJva2U9IiMxQjJBNUUiIHN0cm9rZS13aWR0aD0iMi41Ii8+PGVsbGlwc2UgY3g9IjExOCIgY3k9Ijk1IiByeD0iMTAiIHJ5PSIxMiIgZmlsbD0iI2ZmZiIgc3Ryb2tlPSIjMUIyQTVFIiBzdHJva2Utd2lkdGg9IjIuNSIvPjxlbGxpcHNlIGN4PSI4MiIgY3k9Ijk2IiByeD0iNS41IiByeT0iNy41IiBmaWxsPSIjMUIyQTVFIi8+PGNpcmNsZSBjeD0iODAuMiIgY3k9IjkzLjAiIHI9IjIuNCIgZmlsbD0iI2ZmZiIvPjxlbGxpcHNlIGN4PSI3My4wIiBjeT0iMTA3LjAiIHJ4PSI3LjAiIHJ5PSI0LjIiIGZpbGw9IiNGRjhGQUIiIG9wYWNpdHk9Ii44NSIvPjxlbGxpcHNlIGN4PSIxMTgiIGN5PSI5NiIgcng9IjUuNSIgcnk9IjcuNSIgZmlsbD0iIzFCMkE1RSIvPjxjaXJjbGUgY3g9IjExNi4yIiBjeT0iOTMuMCIgcj0iMi40IiBmaWxsPSIjZmZmIi8+PGVsbGlwc2UgY3g9IjEyNy4wIiBjeT0iMTA3LjAiIHJ4PSI3LjAiIHJ5PSI0LjIiIGZpbGw9IiNGRjhGQUIiIG9wYWNpdHk9Ii44NSIvPjxwYXRoIGQ9Ik05NS4wIDEwNS4wIHE1LjAgNi4wIDEwLjAgMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMUIyQTVFIiBzdHJva2Utd2lkdGg9IjMuMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PHBhdGggZD0iTTE1MCA0MCBDMTQ0IDMwIDE1MCAyMiAxNTIgMTQgQzE1OCAyNCAxNjYgMjggMTYwIDQwIFoiIGZpbGw9IiNGRjhBM0QiIHN0cm9rZT0iIzFCMkE1RSIgc3Ryb2tlLXdpZHRoPSIzIi8+PHBhdGggZD0iTTMyIDE0MyBRMzMuNTQgMTQ4LjQ2IDM5IDE1MCBRMzMuNTQgMTUxLjU0IDMyIDE1NyBRMzAuNDYgMTUxLjU0IDI1IDE1MCBRMzAuNDYgMTQ4LjQ2IDMyIDE0M1oiIGZpbGw9IiNmZmYiIHN0cm9rZT0iIzFCMkE1RSIgc3Ryb2tlLXdpZHRoPSIyIi8+PHBhdGggZD0iTTM4IDIyIFEzOS43NiAyOC4yNCA0NiAzMCBRMzkuNzYgMzEuNzYgMzggMzggUTM2LjI0IDMxLjc2IDMwIDMwIFEzNi4yNCAyOC4yNCAzOCAyMloiIGZpbGw9IiNGRkQzMjkiIHN0cm9rZT0iIzFCMkE1RSIgc3Ryb2tlLXdpZHRoPSIyIi8+PHBhdGggZD0iTTE3NiAxMDIgUTE3Ny4zMiAxMDYuNjggMTgyIDEwOCBRMTc3LjMyIDEwOS4zMiAxNzYgMTE0IFExNzQuNjggMTA5LjMyIDE3MCAxMDggUTE3NC42OCAxMDYuNjggMTc2IDEwMloiIGZpbGw9IiNGRkQzMjkiIHN0cm9rZT0iIzFCMkE1RSIgc3Ryb2tlLXdpZHRoPSIyIi8+PC9nPjwvc3ZnPg==",
+    globe: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjAwIj48ZGVmcz48Y2xpcFBhdGggaWQ9ImMiPjxjaXJjbGUgY3g9IjEwMCIgY3k9IjEwMCIgcj0iOTgiLz48L2NsaXBQYXRoPjwvZGVmcz48Y2lyY2xlIGN4PSIxMDAiIGN5PSIxMDAiIHI9Ijk4IiBmaWxsPSIjRTZGMEMyIi8+PGcgY2xpcC1wYXRoPSJ1cmwoI2MpIj48cGF0aCBkPSJNNzYgMTc2IGg0OCBNMTAwIDE1MCB2MjYiIHN0cm9rZT0iIzFCMkE1RSIgc3Ryb2tlLXdpZHRoPSI4IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48cGF0aCBkPSJNNzYgMTc2IGg0OCIgc3Ryb2tlPSIjQzk4QTRCIiBzdHJva2Utd2lkdGg9IjMuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PHBhdGggZD0iTTUyIDkwIEE1MiA1MiAwIDAgMCAxNDggMTIwIiBmaWxsPSJub25lIiBzdHJva2U9IiNDOThBNEIiIHN0cm9rZS13aWR0aD0iNiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PGNpcmNsZSBjeD0iMTAwIiBjeT0iOTYiIHI9IjUwIiBmaWxsPSIjNUJCOEZGIiBzdHJva2U9IiMxQjJBNUUiIHN0cm9rZS13aWR0aD0iNSIvPjxwYXRoIGQ9Ik02MiA3MCBxMTQgLTEwIDI0IDIgcTQgMTIgLTEwIDE2IHEtMTIgMiAtMTYgMTQgcS0xMCAtMTYgMiAtMzIgWiBNMTE4IDU2IHExOCA0IDI2IDIyIHEtMTQgNCAtMjAgLTQgcS0xMCAtNiAtNiAtMTggWiBNMTEyIDEyOCBxMTIgLTEyIDI2IC00IHEtOCAxOCAtMjYgMTggcS02IC02IDAgLTE0IFoiIGZpbGw9IiM3RUQ5NTciIHN0cm9rZT0iIzFCMkE1RSIgc3Ryb2tlLXdpZHRoPSIzLjUiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz48ZWxsaXBzZSBjeD0iODIiIGN5PSI5OCIgcng9IjUuNSIgcnk9IjcuNSIgZmlsbD0iIzFCMkE1RSIvPjxjaXJjbGUgY3g9IjgwLjIiIGN5PSI5NS4wIiByPSIyLjQiIGZpbGw9IiNmZmYiLz48ZWxsaXBzZSBjeD0iNzMuMCIgY3k9IjEwOS4wIiByeD0iNy4wIiByeT0iNC4yIiBmaWxsPSIjRkY4RkFCIiBvcGFjaXR5PSIuODUiLz48ZWxsaXBzZSBjeD0iMTE4IiBjeT0iOTgiIHJ4PSI1LjUiIHJ5PSI3LjUiIGZpbGw9IiMxQjJBNUUiLz48Y2lyY2xlIGN4PSIxMTYuMiIgY3k9Ijk1LjAiIHI9IjIuNCIgZmlsbD0iI2ZmZiIvPjxlbGxpcHNlIGN4PSIxMjcuMCIgY3k9IjEwOS4wIiByeD0iNy4wIiByeT0iNC4yIiBmaWxsPSIjRkY4RkFCIiBvcGFjaXR5PSIuODUiLz48cGF0aCBkPSJNOTUuMCAxMDcuMCBxNS4wIDYuMCAxMC4wIDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzFCMkE1RSIgc3Ryb2tlLXdpZHRoPSIzLjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxwYXRoIGQ9Ik00OCA5MiBRNDggMzYgMTAwIDM2IFExNTIgMzYgMTUyIDkyIiBmaWxsPSJub25lIiBzdHJva2U9IiMxQjJBNUUiIHN0cm9rZS13aWR0aD0iMTAiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxwYXRoIGQ9Ik00OCA5MiBRNDggMzYgMTAwIDM2IFExNTIgMzYgMTUyIDkyIiBmaWxsPSJub25lIiBzdHJva2U9IiNFODQyM0YiIHN0cm9rZS13aWR0aD0iNC41IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48cmVjdCB4PSIzOCIgeT0iODQiIHdpZHRoPSIyMCIgaGVpZ2h0PSIzMCIgcng9IjkiIGZpbGw9IiNFODQyM0YiIHN0cm9rZT0iIzFCMkE1RSIgc3Ryb2tlLXdpZHRoPSI0LjUiLz48cmVjdCB4PSIxNDIiIHk9Ijg0IiB3aWR0aD0iMjAiIGhlaWdodD0iMzAiIHJ4PSI5IiBmaWxsPSIjRTg0MjNGIiBzdHJva2U9IiMxQjJBNUUiIHN0cm9rZS13aWR0aD0iNC41Ii8+PHBhdGggZD0iTTE2NCA0NiB2LTE4IGwxMiAtNCB2MTgiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzFCMkE1RSIgc3Ryb2tlLXdpZHRoPSIzLjUiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz48Y2lyY2xlIGN4PSIxNjEiIGN5PSI0NyIgcj0iNC41IiBmaWxsPSIjMUIyQTVFIi8+PGNpcmNsZSBjeD0iMTczIiBjeT0iNDMiIHI9IjQuNSIgZmlsbD0iIzFCMkE1RSIvPjxyZWN0IHg9IjIyIiB5PSIxMzIiIHdpZHRoPSIyNiIgaGVpZ2h0PSIyMCIgcng9IjMiIGZpbGw9IiMxQjJBNUUiLz48cGF0aCBkPSJNMjIgMTM4IGgyNiIgc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjIiLz48cGF0aCBkPSJNMjYgMTMyIGw0IDYgTTM0IDEzMiBsNCA2IE00MiAxMzIgbDQgNiIgc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjIiLz48cGF0aCBkPSJNMzYgMzcgUTM3Ljk4IDQ0LjAyIDQ1IDQ2IFEzNy45OCA0Ny45OCAzNiA1NSBRMzQuMDIgNDcuOTggMjcgNDYgUTM0LjAyIDQ0LjAyIDM2IDM3WiIgZmlsbD0iI0ZGRDMyOSIgc3Ryb2tlPSIjMUIyQTVFIiBzdHJva2Utd2lkdGg9IjIiLz48cGF0aCBkPSJNMTcwIDE0MyBRMTcxLjU0IDE0OC40NiAxNzcgMTUwIFExNzEuNTQgMTUxLjU0IDE3MCAxNTcgUTE2OC40NiAxNTEuNTQgMTYzIDE1MCBRMTY4LjQ2IDE0OC40NiAxNzAgMTQzWiIgZmlsbD0iI2ZmZiIgc3Ryb2tlPSIjMUIyQTVFIiBzdHJva2Utd2lkdGg9IjIiLz48L2c+PC9zdmc+",
+    micro: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjAwIj48ZGVmcz48Y2xpcFBhdGggaWQ9ImMiPjxjaXJjbGUgY3g9IjEwMCIgY3k9IjEwMCIgcj0iOTgiLz48L2NsaXBQYXRoPjwvZGVmcz48Y2lyY2xlIGN4PSIxMDAiIGN5PSIxMDAiIHI9Ijk4IiBmaWxsPSIjRkZGMUI4Ii8+PGcgY2xpcC1wYXRoPSJ1cmwoI2MpIj48cGF0aCBkPSJNMzggODYgQTYyIDYyIDAgMCAxIDY1LjkgMzQuNTQiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0ZGNkZBMCIgc3Ryb2tlLXdpZHRoPSI2IiBzdHJva2UtbGluZWNhcD0icm91bmQiIG9wYWNpdHk9IjEiLz48cGF0aCBkPSJNMTYyIDg2IEE2MiA2MiAwIDAgMCAxMzQuMSAzNC41NCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRkY2RkEwIiBzdHJva2Utd2lkdGg9IjYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgb3BhY2l0eT0iMSIvPjxwYXRoIGQ9Ik0yMiA4NiBBNzggNzggMCAwIDEgNTcuMDk5OTk5OTk5OTk5OTk0IDIxLjI2MDAwMDAwMDAwMDAwNSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRkY2RkEwIiBzdHJva2Utd2lkdGg9IjYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgb3BhY2l0eT0iMC42Ii8+PHBhdGggZD0iTTE3OCA4NiBBNzggNzggMCAwIDAgMTQyLjkgMjEuMjYwMDAwMDAwMDAwMDA1IiBmaWxsPSJub25lIiBzdHJva2U9IiNGRjZGQTAiIHN0cm9rZS13aWR0aD0iNiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBvcGFjaXR5PSIwLjYiLz48cGF0aCBkPSJNNjQgMTA0IFE2NCAxNDAgMTAwIDE0MCBRMTM2IDE0MCAxMzYgMTA0IiBmaWxsPSJub25lIiBzdHJva2U9IiMxQjJBNUUiIHN0cm9rZS13aWR0aD0iNyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PHBhdGggZD0iTTEwMCAxNDAgVjE2NCBNNzggMTY4IEgxMjIiIHN0cm9rZT0iIzFCMkE1RSIgc3Ryb2tlLXdpZHRoPSI4IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48cmVjdCB4PSI3MiIgeT0iMzYiIHdpZHRoPSI1NiIgaGVpZ2h0PSI5NCIgcng9IjI4IiBmaWxsPSIjOEZEM0ZGIiBzdHJva2U9IiMxQjJBNUUiIHN0cm9rZS13aWR0aD0iNSIvPjxwYXRoIGQ9Ik03MiA3NCBoNTYiIHN0cm9rZT0iIzFCMkE1RSIgc3Ryb2tlLXdpZHRoPSI0Ii8+PHBhdGggZD0iTTc4IDU0IGg0NCBNNzYgNjQgaDQ4IiBzdHJva2U9IiM1QkIwRTgiIHN0cm9rZS13aWR0aD0iMyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PGVsbGlwc2UgY3g9Ijg3IiBjeT0iOTYiIHJ4PSI0Ljk1IiByeT0iNi43NSIgZmlsbD0iIzFCMkE1RSIvPjxjaXJjbGUgY3g9Ijg1LjM4IiBjeT0iOTMuMyIgcj0iMi4xNiIgZmlsbD0iI2ZmZiIvPjxlbGxpcHNlIGN4PSI3OC45IiBjeT0iMTA1LjkiIHJ4PSI2LjMiIHJ5PSIzLjc4MDAwMDAwMDAwMDAwMDIiIGZpbGw9IiNGRjhGQUIiIG9wYWNpdHk9Ii44NSIvPjxlbGxpcHNlIGN4PSIxMTMiIGN5PSI5NiIgcng9IjQuOTUiIHJ5PSI2Ljc1IiBmaWxsPSIjMUIyQTVFIi8+PGNpcmNsZSBjeD0iMTExLjM4IiBjeT0iOTMuMyIgcj0iMi4xNiIgZmlsbD0iI2ZmZiIvPjxlbGxpcHNlIGN4PSIxMjEuMSIgY3k9IjEwNS45IiByeD0iNi4zIiByeT0iMy43ODAwMDAwMDAwMDAwMDAyIiBmaWxsPSIjRkY4RkFCIiBvcGFjaXR5PSIuODUiLz48cGF0aCBkPSJNOTUuNSAxMDQuMSBxNC41IDUuNCA5LjAgMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMUIyQTVFIiBzdHJva2Utd2lkdGg9IjIuODgwMDAwMDAwMDAwMDAwMyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PHRleHQgeD0iMjIiIHk9IjE2MCIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsIHNlcmlmIiBmb250LXNpemU9IjIyIiBmb250LXdlaWdodD0iYm9sZCIgZmlsbD0iIzFCMkE1RSI+L8mqLzwvdGV4dD48dGV4dCB4PSIxNDYiIHk9IjE2NiIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsIHNlcmlmIiBmb250LXNpemU9IjIyIiBmb250LXdlaWdodD0iYm9sZCIgZmlsbD0iIzFCMkE1RSI+L864LzwvdGV4dD48cGF0aCBkPSJNMzQgMzIgUTM1Ljc2IDM4LjI0IDQyIDQwIFEzNS43NiA0MS43NiAzNCA0OCBRMzIuMjQgNDEuNzYgMjYgNDAgUTMyLjI0IDM4LjI0IDM0IDMyWiIgZmlsbD0iI0ZGRDMyOSIgc3Ryb2tlPSIjMUIyQTVFIiBzdHJva2Utd2lkdGg9IjIiLz48cGF0aCBkPSJNMTY4IDI5IFExNjkuNTQgMzQuNDYgMTc1IDM2IFExNjkuNTQgMzcuNTQgMTY4IDQzIFExNjYuNDYgMzcuNTQgMTYxIDM2IFExNjYuNDYgMzQuNDYgMTY4IDI5WiIgZmlsbD0iI0ZGRDMyOSIgc3Ryb2tlPSIjMUIyQTVFIiBzdHJva2Utd2lkdGg9IjIiLz48L2c+PC9zdmc+",
+    boite: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjAwIj48ZGVmcz48Y2xpcFBhdGggaWQ9ImMiPjxjaXJjbGUgY3g9IjEwMCIgY3k9IjEwMCIgcj0iOTgiLz48L2NsaXBQYXRoPjwvZGVmcz48Y2lyY2xlIGN4PSIxMDAiIGN5PSIxMDAiIHI9Ijk4IiBmaWxsPSIjRjdEOUM0Ii8+PGcgY2xpcC1wYXRoPSJ1cmwoI2MpIj48ZyB0cmFuc2Zvcm09InJvdGF0ZSgtMjAgNzggNzApIj48cmVjdCB4PSI3MCIgeT0iMzYiIHdpZHRoPSIxNCIgaGVpZ2h0PSI1MiIgcng9IjQiIGZpbGw9IiM5QUE3QjgiIHN0cm9rZT0iIzFCMkE1RSIgc3Ryb2tlLXdpZHRoPSI0Ii8+PHBhdGggZD0iTTY0IDQwIGExMyAxMyAwIDEgMSAyNiAwIGwtNiA2IGgtMTQgWiIgZmlsbD0iIzlBQTdCOCIgc3Ryb2tlPSIjMUIyQTVFIiBzdHJva2Utd2lkdGg9IjQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz48cmVjdCB4PSI3MyIgeT0iMjgiIHdpZHRoPSI4IiBoZWlnaHQ9IjEyIiBmaWxsPSIjRjZFMkI4Ii8+PC9nPjxnIHRyYW5zZm9ybT0icm90YXRlKDE4IDEyNCA2NikiPjxyZWN0IHg9IjExNiIgeT0iMzIiIHdpZHRoPSIxNiIgaGVpZ2h0PSI1NiIgcng9IjMiIGZpbGw9IiNGRkQzMjkiIHN0cm9rZT0iIzFCMkE1RSIgc3Ryb2tlLXdpZHRoPSI0Ii8+PHBhdGggZD0iTTExNiAzMiBsOCAtMTQgbDggMTQgWiIgZmlsbD0iI0Y2RDdBNyIgc3Ryb2tlPSIjMUIyQTVFIiBzdHJva2Utd2lkdGg9IjQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz48cGF0aCBkPSJNMTIxIDIyIGwzIC01IGwzIDUgWiIgZmlsbD0iIzFCMkE1RSIvPjwvZz48cGF0aCBkPSJNNzggOTIgdi0xNCBhOCA4IDAgMCAxIDggLTggaDI4IGE4IDggMCAwIDEgOCA4IHYxNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMUIyQTVFIiBzdHJva2Utd2lkdGg9IjciLz48cmVjdCB4PSIzOCIgeT0iOTAiIHdpZHRoPSIxMjQiIGhlaWdodD0iODAiIHJ4PSIxMiIgZmlsbD0iI0U4NDIzRiIgc3Ryb2tlPSIjMUIyQTVFIiBzdHJva2Utd2lkdGg9IjUiLz48cGF0aCBkPSJNMzggMTEyIGgxMjQiIHN0cm9rZT0iIzFCMkE1RSIgc3Ryb2tlLXdpZHRoPSI0LjUiLz48cmVjdCB4PSI5MCIgeT0iMTA0IiB3aWR0aD0iMjAiIGhlaWdodD0iMTQiIHJ4PSIzIiBmaWxsPSIjRkZEMzI5IiBzdHJva2U9IiMxQjJBNUUiIHN0cm9rZS13aWR0aD0iMy41Ii8+PGVsbGlwc2UgY3g9IjgyIiBjeT0iMTM4IiByeD0iNS41IiByeT0iNy41IiBmaWxsPSIjMUIyQTVFIi8+PGNpcmNsZSBjeD0iODAuMiIgY3k9IjEzNS4wIiByPSIyLjQiIGZpbGw9IiNmZmYiLz48ZWxsaXBzZSBjeD0iNzMuMCIgY3k9IjE0OS4wIiByeD0iNy4wIiByeT0iNC4yIiBmaWxsPSIjRkY4RkFCIiBvcGFjaXR5PSIuODUiLz48ZWxsaXBzZSBjeD0iMTE4IiBjeT0iMTM4IiByeD0iNS41IiByeT0iNy41IiBmaWxsPSIjMUIyQTVFIi8+PGNpcmNsZSBjeD0iMTE2LjIiIGN5PSIxMzUuMCIgcj0iMi40IiBmaWxsPSIjZmZmIi8+PGVsbGlwc2UgY3g9IjEyNy4wIiBjeT0iMTQ5LjAiIHJ4PSI3LjAiIHJ5PSI0LjIiIGZpbGw9IiNGRjhGQUIiIG9wYWNpdHk9Ii44NSIvPjxwYXRoIGQ9Ik05NS4wIDE0Ny4wIHE1LjAgNi4wIDEwLjAgMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMUIyQTVFIiBzdHJva2Utd2lkdGg9IjMuMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PHBhdGggZD0iTTM0IDQzIFEzNS45OCA1MC4wMiA0MyA1MiBRMzUuOTggNTMuOTggMzQgNjEgUTMyLjAyIDUzLjk4IDI1IDUyIFEzMi4wMiA1MC4wMiAzNCA0M1oiIGZpbGw9IiNGRkQzMjkiIHN0cm9rZT0iIzFCMkE1RSIgc3Ryb2tlLXdpZHRoPSIyIi8+PHBhdGggZD0iTTE3MCA0MCBRMTcxLjc2IDQ2LjI0IDE3OCA0OCBRMTcxLjc2IDQ5Ljc2IDE3MCA1NiBRMTY4LjI0IDQ5Ljc2IDE2MiA0OCBRMTY4LjI0IDQ2LjI0IDE3MCA0MFoiIGZpbGw9IiNGRkQzMjkiIHN0cm9rZT0iIzFCMkE1RSIgc3Ryb2tlLXdpZHRoPSIyIi8+PHBhdGggZD0iTTE3MiAxNzQgUTE3My4zMiAxNzguNjggMTc4IDE4MCBRMTczLjMyIDE4MS4zMiAxNzIgMTg2IFExNzAuNjggMTgxLjMyIDE2NiAxODAgUTE3MC42OCAxNzguNjggMTcyIDE3NFoiIGZpbGw9IiNmZmYiIHN0cm9rZT0iIzFCMkE1RSIgc3Ryb2tlLXdpZHRoPSIyIi8+PHBhdGggZD0iTTI2IDE3MCBRMjcuMzIgMTc0LjY4IDMyIDE3NiBRMjcuMzIgMTc3LjMyIDI2IDE4MiBRMjQuNjggMTc3LjMyIDIwIDE3NiBRMjQuNjggMTc0LjY4IDI2IDE3MFoiIGZpbGw9IiNmZmYiIHN0cm9rZT0iIzFCMkE1RSIgc3Ryb2tlLXdpZHRoPSIyIi8+PC9nPjwvc3ZnPg==",
+    robot: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjAwIj48ZGVmcz48Y2xpcFBhdGggaWQ9ImMiPjxjaXJjbGUgY3g9IjEwMCIgY3k9IjEwMCIgcj0iOTgiLz48L2NsaXBQYXRoPjwvZGVmcz48Y2lyY2xlIGN4PSIxMDAiIGN5PSIxMDAiIHI9Ijk4IiBmaWxsPSIjRERFM0ZGIi8+PGcgY2xpcC1wYXRoPSJ1cmwoI2MpIj48cGF0aCBkPSJNMTMyIDMwIGg0MCBhMTAgMTAgMCAwIDEgMTAgMTAgdjIwIGExMCAxMCAwIDAgMSAtMTAgMTAgaC0yNCBsLTEwIDEwIHYtMTAgaC02IGExMCAxMCAwIDAgMSAtMTAgLTEwIHYtMjAgYTEwIDEwIDAgMCAxIDEwIC0xMCBaIiBmaWxsPSIjZmZmIiBzdHJva2U9IiMxQjJBNUUiIHN0cm9rZS13aWR0aD0iNCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPjx0ZXh0IHg9IjE1MiIgeT0iNTgiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLCBzZXJpZiIgZm9udC1zaXplPSIyMCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxQjJBNUUiPkVOPC90ZXh0PjxwYXRoIGQ9Ik05MiA1NCBWMzgiIHN0cm9rZT0iIzFCMkE1RSIgc3Ryb2tlLXdpZHRoPSI1IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48Y2lyY2xlIGN4PSI5MiIgY3k9IjM0IiByPSI3IiBmaWxsPSIjRkZEMzI5IiBzdHJva2U9IiMxQjJBNUUiIHN0cm9rZS13aWR0aD0iNCIvPjxyZWN0IHg9IjM4IiB5PSI4MiIgd2lkdGg9IjE0IiBoZWlnaHQ9IjMwIiByeD0iNiIgZmlsbD0iIzlEQzFGRiIgc3Ryb2tlPSIjMUIyQTVFIiBzdHJva2Utd2lkdGg9IjQuNSIvPjxyZWN0IHg9IjEzMiIgeT0iODIiIHdpZHRoPSIxNCIgaGVpZ2h0PSIzMCIgcng9IjYiIGZpbGw9IiM5REMxRkYiIHN0cm9rZT0iIzFCMkE1RSIgc3Ryb2tlLXdpZHRoPSI0LjUiLz48cmVjdCB4PSI1MCIgeT0iNTQiIHdpZHRoPSI4NCIgaGVpZ2h0PSI3NiIgcng9IjIyIiBmaWxsPSIjRUVGNEZGIiBzdHJva2U9IiMxQjJBNUUiIHN0cm9rZS13aWR0aD0iNSIvPjxyZWN0IHg9IjYwIiB5PSI2NiIgd2lkdGg9IjY0IiBoZWlnaHQ9IjQ4IiByeD0iMTQiIGZpbGw9IiMxQjJBNUUiLz48ZWxsaXBzZSBjeD0iODAiIGN5PSI4NiIgcng9IjYuNSIgcnk9IjguNSIgZmlsbD0iIzdGRjBGRiIvPjxjaXJjbGUgY3g9Ijc3LjUiIGN5PSI4Mi41IiByPSIyLjQiIGZpbGw9IiNmZmYiLz48ZWxsaXBzZSBjeD0iMTA0IiBjeT0iODYiIHJ4PSI2LjUiIHJ5PSI4LjUiIGZpbGw9IiM3RkYwRkYiLz48Y2lyY2xlIGN4PSIxMDEuNSIgY3k9IjgyLjUiIHI9IjIuNCIgZmlsbD0iI2ZmZiIvPjxlbGxpcHNlIGN4PSI3MCIgY3k9IjEwMSIgcng9IjYiIHJ5PSIzLjYiIGZpbGw9IiNGRjhGQUIiIG9wYWNpdHk9Ii45Ii8+PGVsbGlwc2UgY3g9IjExNCIgY3k9IjEwMSIgcng9IjYiIHJ5PSIzLjYiIGZpbGw9IiNGRjhGQUIiIG9wYWNpdHk9Ii45Ii8+PHBhdGggZD0iTTg2IDEwMCBxNiA2IDEyIDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzdGRjBGRiIgc3Ryb2tlLXdpZHRoPSIzLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxnIHRyYW5zZm9ybT0icm90YXRlKC0xMCA5MiA1MikiPjxwYXRoIGQ9Ik01OCA1MiBMOTIgNDAgTDEyNiA1MiBMOTIgNjQgWiIgZmlsbD0iIzFCMkE1RSIgc3Ryb2tlPSIjMUIyQTVFIiBzdHJva2Utd2lkdGg9IjMiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz48cGF0aCBkPSJNMTI0IDUzIHYxNiIgc3Ryb2tlPSIjRkZEMzI5IiBzdHJva2Utd2lkdGg9IjMiLz48Y2lyY2xlIGN4PSIxMjQiIGN5PSI3MSIgcj0iMy41IiBmaWxsPSIjRkZEMzI5Ii8+PC9nPjxyZWN0IHg9IjYyIiB5PSIxMzIiIHdpZHRoPSI2MCIgaGVpZ2h0PSI0NCIgcng9IjEyIiBmaWxsPSIjOURDMUZGIiBzdHJva2U9IiMxQjJBNUUiIHN0cm9rZS13aWR0aD0iNSIvPjxwYXRoIGQ9Ik03NCAxNDggcTE4IC02IDE4IDQgcTAgLTEwIDE4IC00IHYxOCBxLTE4IC02IC0xOCA0IHEwIC0xMCAtMTggLTQgWiIgZmlsbD0iI2ZmZiIgc3Ryb2tlPSIjMUIyQTVFIiBzdHJva2Utd2lkdGg9IjMiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz48cGF0aCBkPSJNMzAgMzggUTMxLjc2IDQ0LjI0IDM4IDQ2IFEzMS43NiA0Ny43NiAzMCA1NCBRMjguMjQgNDcuNzYgMjIgNDYgUTI4LjI0IDQ0LjI0IDMwIDM4WiIgZmlsbD0iI0ZGRDMyOSIgc3Ryb2tlPSIjMUIyQTVFIiBzdHJva2Utd2lkdGg9IjIiLz48cGF0aCBkPSJNMTY4IDEzMyBRMTY5LjU0IDEzOC40NiAxNzUgMTQwIFExNjkuNTQgMTQxLjU0IDE2OCAxNDcgUTE2Ni40NiAxNDEuNTQgMTYxIDE0MCBRMTY2LjQ2IDEzOC40NiAxNjggMTMzWiIgZmlsbD0iI2ZmZiIgc3Ryb2tlPSIjMUIyQTVFIiBzdHJva2Utd2lkdGg9IjIiLz48cGF0aCBkPSJNMzQgMTU0IFEzNS4zMiAxNTguNjggNDAgMTYwIFEzNS4zMiAxNjEuMzIgMzQgMTY2IFEzMi42OCAxNjEuMzIgMjggMTYwIFEzMi42OCAxNTguNjggMzQgMTU0WiIgZmlsbD0iI0ZGRDMyOSIgc3Ryb2tlPSIjMUIyQTVFIiBzdHJva2Utd2lkdGg9IjIiLz48L2c+PC9zdmc+",
+    hibou: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjAwIj48ZGVmcz48Y2xpcFBhdGggaWQ9ImMiPjxjaXJjbGUgY3g9IjEwMCIgY3k9IjEwMCIgcj0iOTgiLz48L2NsaXBQYXRoPjwvZGVmcz48Y2lyY2xlIGN4PSIxMDAiIGN5PSIxMDAiIHI9Ijk4IiBmaWxsPSIjRkZFOENDIi8+PGcgY2xpcC1wYXRoPSJ1cmwoI2MpIj48cmVjdCB4PSI0NiIgeT0iMTYwIiB3aWR0aD0iMTA4IiBoZWlnaHQ9IjE2IiByeD0iNCIgZmlsbD0iIzRCQTNGRiIgc3Ryb2tlPSIjMUIyQTVFIiBzdHJva2Utd2lkdGg9IjQiLz48cmVjdCB4PSI1NCIgeT0iMTQ2IiB3aWR0aD0iOTIiIGhlaWdodD0iMTUiIHJ4PSI0IiBmaWxsPSIjRTg0MjNGIiBzdHJva2U9IiMxQjJBNUUiIHN0cm9rZS13aWR0aD0iNCIvPjxwYXRoIGQ9Ik02MCAxNTMgaDgwIE01MiAxNjggaDk2IiBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iMiIgb3BhY2l0eT0iLjciLz48cGF0aCBkPSJNNjAgNTggTDU2IDMwIEw4MCA0NiBaIE0xNDAgNTggTDE0NCAzMCBMMTIwIDQ2IFoiIGZpbGw9IiNCMDdBNEYiIHN0cm9rZT0iIzFCMkE1RSIgc3Ryb2tlLXdpZHRoPSI0IiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+PGVsbGlwc2UgY3g9IjEwMCIgY3k9IjEwMCIgcng9IjQ4IiByeT0iNTQiIGZpbGw9IiNCMDdBNEYiIHN0cm9rZT0iIzFCMkE1RSIgc3Ryb2tlLXdpZHRoPSI1Ii8+PGVsbGlwc2UgY3g9IjEwMCIgY3k9IjExNiIgcng9IjMwIiByeT0iMzIiIGZpbGw9IiNGM0Q5QjEiLz48cGF0aCBkPSJNODYgMTEyIHE0IDQgOCAwIE0xMDYgMTEyIHE0IDQgOCAwIE05NCAxMjYgcTQgNCA4IDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0M5OUE2QiIgc3Ryb2tlLXdpZHRoPSIyLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxwYXRoIGQ9Ik01NCA5NiBRNDAgMTIwIDU4IDEzOCBRNjIgMTE2IDYwIDk2IFogTTE0NiA5NiBRMTYwIDEyMCAxNDIgMTM4IFExMzggMTE2IDE0MCA5NiBaIiBmaWxsPSIjOEM1QzM4IiBzdHJva2U9IiMxQjJBNUUiIHN0cm9rZS13aWR0aD0iNCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPjxjaXJjbGUgY3g9IjgwIiBjeT0iODAiIHI9IjE3IiBmaWxsPSIjZmZmIiBzdHJva2U9IiMxQjJBNUUiIHN0cm9rZS13aWR0aD0iNCIvPjxjaXJjbGUgY3g9IjgwIiBjeT0iODEiIHI9IjgiIGZpbGw9IiMxQjJBNUUiLz48Y2lyY2xlIGN4PSI3NyIgY3k9Ijc3IiByPSIzIiBmaWxsPSIjZmZmIi8+PGNpcmNsZSBjeD0iMTIwIiBjeT0iODAiIHI9IjE3IiBmaWxsPSIjZmZmIiBzdHJva2U9IiMxQjJBNUUiIHN0cm9rZS13aWR0aD0iNCIvPjxjaXJjbGUgY3g9IjEyMCIgY3k9IjgxIiByPSI4IiBmaWxsPSIjMUIyQTVFIi8+PGNpcmNsZSBjeD0iMTE3IiBjeT0iNzciIHI9IjMiIGZpbGw9IiNmZmYiLz48cGF0aCBkPSJNOTcgODAgaDYiIHN0cm9rZT0iIzFCMkE1RSIgc3Ryb2tlLXdpZHRoPSI0Ii8+PHBhdGggZD0iTTk0IDk2IEwxMDAgMTA2IEwxMDYgOTYgWiIgZmlsbD0iI0ZGQjAyMCIgc3Ryb2tlPSIjMUIyQTVFIiBzdHJva2Utd2lkdGg9IjMiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz48ZWxsaXBzZSBjeD0iNjYiIGN5PSIxMDIiIHJ4PSI2IiByeT0iMy41IiBmaWxsPSIjRkY4RkFCIiBvcGFjaXR5PSIuODUiLz48ZWxsaXBzZSBjeD0iMTM0IiBjeT0iMTAyIiByeD0iNiIgcnk9IjMuNSIgZmlsbD0iI0ZGOEZBQiIgb3BhY2l0eT0iLjg1Ii8+PHBhdGggZD0iTTg2IDE1MiB2LTYgTTkyIDE1MiB2LTYgTTEwOCAxNTIgdi02IE0xMTQgMTUyIHYtNiIgc3Ryb2tlPSIjRkZCMDIwIiBzdHJva2Utd2lkdGg9IjQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxwYXRoIGQ9Ik0zMiA0MSBRMzMuOTggNDguMDIgNDEgNTAgUTMzLjk4IDUxLjk4IDMyIDU5IFEzMC4wMiA1MS45OCAyMyA1MCBRMzAuMDIgNDguMDIgMzIgNDFaIiBmaWxsPSIjRkZEMzI5IiBzdHJva2U9IiMxQjJBNUUiIHN0cm9rZS13aWR0aD0iMiIvPjxwYXRoIGQ9Ik0xNjggNDQgUTE2OS43NiA1MC4yNCAxNzYgNTIgUTE2OS43NiA1My43NiAxNjggNjAgUTE2Ni4yNCA1My43NiAxNjAgNTIgUTE2Ni4yNCA1MC4yNCAxNjggNDRaIiBmaWxsPSIjRkZEMzI5IiBzdHJva2U9IiMxQjJBNUUiIHN0cm9rZS13aWR0aD0iMiIvPjxwYXRoIGQ9Ik0xNzAgMTIyIFExNzEuMzIgMTI2LjY4IDE3NiAxMjggUTE3MS4zMiAxMjkuMzIgMTcwIDEzNCBRMTY4LjY4IDEyOS4zMiAxNjQgMTI4IFExNjguNjggMTI2LjY4IDE3MCAxMjJaIiBmaWxsPSIjZmZmIiBzdHJva2U9IiMxQjJBNUUiIHN0cm9rZS13aWR0aD0iMiIvPjwvZz48L3N2Zz4=",
+    puzzle: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjAwIj48ZGVmcz48Y2xpcFBhdGggaWQ9ImMiPjxjaXJjbGUgY3g9IjEwMCIgY3k9IjEwMCIgcj0iOTgiLz48L2NsaXBQYXRoPjwvZGVmcz48Y2lyY2xlIGN4PSIxMDAiIGN5PSIxMDAiIHI9Ijk4IiBmaWxsPSIjRkZFMEU2Ii8+PGcgY2xpcC1wYXRoPSJ1cmwoI2MpIj48cGF0aCBkPSJNNTYgNjQgSDg2IGExNCAxNCAwIDEgMSAyOCAwIEgxNDQgVjk0IGExNCAxNCAwIDEgMSAwIDI4IFYxNTIgSDExNCBhMTQgMTQgMCAxIDAgLTI4IDAgSDU2IFYxMjIgYTE0IDE0IDAgMSAwIDAgLTI4IFoiIGZpbGw9IiM2Q0M0QTEiIHN0cm9rZT0iIzFCMkE1RSIgc3Ryb2tlLXdpZHRoPSI1IiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+PGVsbGlwc2UgY3g9Ijg0IiBjeT0iMTA4IiByeD0iNS41IiByeT0iNy41IiBmaWxsPSIjMUIyQTVFIi8+PGNpcmNsZSBjeD0iODIuMiIgY3k9IjEwNS4wIiByPSIyLjQiIGZpbGw9IiNmZmYiLz48ZWxsaXBzZSBjeD0iNzUuMCIgY3k9IjExOS4wIiByeD0iNy4wIiByeT0iNC4yIiBmaWxsPSIjRkY4RkFCIiBvcGFjaXR5PSIuODUiLz48ZWxsaXBzZSBjeD0iMTE2IiBjeT0iMTA4IiByeD0iNS41IiByeT0iNy41IiBmaWxsPSIjMUIyQTVFIi8+PGNpcmNsZSBjeD0iMTE0LjIiIGN5PSIxMDUuMCIgcj0iMi40IiBmaWxsPSIjZmZmIi8+PGVsbGlwc2UgY3g9IjEyNS4wIiBjeT0iMTE5LjAiIHJ4PSI3LjAiIHJ5PSI0LjIiIGZpbGw9IiNGRjhGQUIiIG9wYWNpdHk9Ii44NSIvPjxwYXRoIGQ9Ik05NS4wIDExNy4wIHE1LjAgNi4wIDEwLjAgMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMUIyQTVFIiBzdHJva2Utd2lkdGg9IjMuMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PHRleHQgeD0iMjIiIHk9IjYyIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMzAiIGZvbnQtd2VpZ2h0PSJib2xkIiBmaWxsPSIjNEJBM0ZGIiBzdHJva2U9IiMxQjJBNUUiIHN0cm9rZS13aWR0aD0iMS41Ij5iPC90ZXh0Pjx0ZXh0IHg9IjE0NCIgeT0iMTcwIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMzAiIGZvbnQtd2VpZ2h0PSJib2xkIiBmaWxsPSIjRkY4QTNEIiBzdHJva2U9IiMxQjJBNUUiIHN0cm9rZS13aWR0aD0iMS41Ij5kPC90ZXh0PjxwYXRoIGQ9Ik0xNjAgNTIgYy02IC0xMCAtMjAgLTQgLTE0IDYgbDE0IDEyIGwxNCAtMTIgYzYgLTEwIC04IC0xNiAtMTQgLTYgWiIgZmlsbD0iI0ZGNkZBMCIgc3Ryb2tlPSIjMUIyQTVFIiBzdHJva2Utd2lkdGg9IjMiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz48cGF0aCBkPSJNMzYgMTUyIFEzNy43NiAxNTguMjQgNDQgMTYwIFEzNy43NiAxNjEuNzYgMzYgMTY4IFEzNC4yNCAxNjEuNzYgMjggMTYwIFEzNC4yNCAxNTguMjQgMzYgMTUyWiIgZmlsbD0iI0ZGRDMyOSIgc3Ryb2tlPSIjMUIyQTVFIiBzdHJva2Utd2lkdGg9IjIiLz48cGF0aCBkPSJNMTc2IDEwMiBRMTc3LjMyIDEwNi42OCAxODIgMTA4IFExNzcuMzIgMTA5LjMyIDE3NiAxMTQgUTE3NC42OCAxMDkuMzIgMTcwIDEwOCBRMTc0LjY4IDEwNi42OCAxNzYgMTAyWiIgZmlsbD0iI2ZmZiIgc3Ryb2tlPSIjMUIyQTVFIiBzdHJva2Utd2lkdGg9IjIiLz48L2c+PC9zdmc+",
+    coeur: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjAwIj48ZGVmcz48Y2xpcFBhdGggaWQ9ImMiPjxjaXJjbGUgY3g9IjEwMCIgY3k9IjEwMCIgcj0iOTgiLz48L2NsaXBQYXRoPjwvZGVmcz48Y2lyY2xlIGN4PSIxMDAiIGN5PSIxMDAiIHI9Ijk4IiBmaWxsPSIjREZGNEVDIi8+PGcgY2xpcC1wYXRoPSJ1cmwoI2MpIj48cGF0aCBkPSJNNDggMTEyIHEtMTQgNiAtMTIgMjIgTTE1MiAxMTIgcTE0IDYgMTIgMjIiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzFCMkE1RSIgc3Ryb2tlLXdpZHRoPSI2IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48cGF0aCBkPSJNMTAwIDE2OCBDNjAgMTM4IDM2IDExNiAzOCA4NiBDNDAgNjAgNzAgNTAgODYgNjQgQzkyIDY5IDk2IDc0IDEwMCA4MCBDMTA0IDc0IDEwOCA2OSAxMTQgNjQgQzEzMCA1MCAxNjAgNjAgMTYyIDg2IEMxNjQgMTE2IDE0MCAxMzggMTAwIDE2OCBaIiBmaWxsPSIjRkY3RkE4IiBzdHJva2U9IiMxQjJBNUUiIHN0cm9rZS13aWR0aD0iNSIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPjxwYXRoIGQ9Ik02MCA4MCBxOCAtMTIgMjAgLTEwIiBmaWxsPSJub25lIiBzdHJva2U9IiNGRkMyRDYiIHN0cm9rZS13aWR0aD0iNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PGVsbGlwc2UgY3g9IjgyIiBjeT0iMTA4IiByeD0iNS41IiByeT0iNy41IiBmaWxsPSIjMUIyQTVFIi8+PGNpcmNsZSBjeD0iODAuMiIgY3k9IjEwNS4wIiByPSIyLjQiIGZpbGw9IiNmZmYiLz48ZWxsaXBzZSBjeD0iNzMuMCIgY3k9IjExOS4wIiByeD0iNy4wIiByeT0iNC4yIiBmaWxsPSIjRkY4RkFCIiBvcGFjaXR5PSIuODUiLz48ZWxsaXBzZSBjeD0iMTE4IiBjeT0iMTA4IiByeD0iNS41IiByeT0iNy41IiBmaWxsPSIjMUIyQTVFIi8+PGNpcmNsZSBjeD0iMTE2LjIiIGN5PSIxMDUuMCIgcj0iMi40IiBmaWxsPSIjZmZmIi8+PGVsbGlwc2UgY3g9IjEyNy4wIiBjeT0iMTE5LjAiIHJ4PSI3LjAiIHJ5PSI0LjIiIGZpbGw9IiNGRjhGQUIiIG9wYWNpdHk9Ii44NSIvPjxwYXRoIGQ9Ik05NS4wIDExNy4wIHE1LjAgNi4wIDEwLjAgMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMUIyQTVFIiBzdHJva2Utd2lkdGg9IjMuMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PGcgdHJhbnNmb3JtPSJyb3RhdGUoMzAgMTY2IDEzOCkiPjxyZWN0IHg9IjE2MCIgeT0iMTEyIiB3aWR0aD0iMTIiIGhlaWdodD0iNDAiIHJ4PSIyIiBmaWxsPSIjRkZEMzI5IiBzdHJva2U9IiMxQjJBNUUiIHN0cm9rZS13aWR0aD0iMy41Ii8+PHBhdGggZD0iTTE2MCAxNTIgbDYgMTIgbDYgLTEyIFoiIGZpbGw9IiNGNkQ3QTciIHN0cm9rZT0iIzFCMkE1RSIgc3Ryb2tlLXdpZHRoPSIzLjUiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz48L2c+PHBhdGggZD0iTTI0IDQwIGgxMCBhNSA1IDAgMSAxIDEwIDAgaDEwIHYxMCBhNSA1IDAgMSAxIDAgMTAgdjEwIGgtMzAgWiIgZmlsbD0iIzZDQzRBMSIgc3Ryb2tlPSIjMUIyQTVFIiBzdHJva2Utd2lkdGg9IjMiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz48cGF0aCBkPSJNMTY2IDM1IFExNjcuOTggNDIuMDIgMTc1IDQ0IFExNjcuOTggNDUuOTggMTY2IDUzIFExNjQuMDIgNDUuOTggMTU3IDQ0IFExNjQuMDIgNDIuMDIgMTY2IDM1WiIgZmlsbD0iI0ZGRDMyOSIgc3Ryb2tlPSIjMUIyQTVFIiBzdHJva2Utd2lkdGg9IjIiLz48cGF0aCBkPSJNMzQgMTU0IFEzNS4zMiAxNTguNjggNDAgMTYwIFEzNS4zMiAxNjEuMzIgMzQgMTY2IFEzMi42OCAxNjEuMzIgMjggMTYwIFEzMi42OCAxNTguNjggMzQgMTU0WiIgZmlsbD0iI2ZmZiIgc3Ryb2tlPSIjMUIyQTVFIiBzdHJva2Utd2lkdGg9IjIiLz48L2c+PC9zdmc+",
+    duo: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjAwIj48ZGVmcz48Y2xpcFBhdGggaWQ9ImMiPjxjaXJjbGUgY3g9IjEwMCIgY3k9IjEwMCIgcj0iOTgiLz48L2NsaXBQYXRoPjwvZGVmcz48Y2lyY2xlIGN4PSIxMDAiIGN5PSIxMDAiIHI9Ijk4IiBmaWxsPSIjRkZGMEQ2Ii8+PGcgY2xpcC1wYXRoPSJ1cmwoI2MpIj48cGF0aCBkPSJNMTAwIDY2IEM4OCA1MiA2NiA1NiA3MCA3NCBDNzIgODQgODYgOTIgMTAwIDEwMiBDMTE0IDkyIDEyOCA4NCAxMzAgNzQgQzEzNCA1NiAxMTIgNTIgMTAwIDY2IFoiIGZpbGw9IiNGRjdGQTgiIHN0cm9rZT0iIzFCMkE1RSIgc3Ryb2tlLXdpZHRoPSI0IiBzdHJva2UtbGluZWpvaW49InJvdW5kIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwIC0zMCkiLz48cGF0aCBkPSJNODYgMTQwIFExMDAgMTUyIDExNCAxNDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzFCMkE1RSIgc3Ryb2tlLXdpZHRoPSI2IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48Y2lyY2xlIGN4PSI2NiIgY3k9IjEyNiIgcj0iMzQiIGZpbGw9IiM4RkQzRkYiIHN0cm9rZT0iIzFCMkE1RSIgc3Ryb2tlLXdpZHRoPSI1Ii8+PGVsbGlwc2UgY3g9IjU0IiBjeT0iMTI0IiByeD0iNC42NzUiIHJ5PSI2LjM3NSIgZmlsbD0iIzFCMkE1RSIvPjxjaXJjbGUgY3g9IjUyLjQ3IiBjeT0iMTIxLjQ1IiByPSIyLjA0IiBmaWxsPSIjZmZmIi8+PGVsbGlwc2UgY3g9IjQ2LjM1IiBjeT0iMTMzLjM1IiByeD0iNS45NSIgcnk9IjMuNTciIGZpbGw9IiNGRjhGQUIiIG9wYWNpdHk9Ii44NSIvPjxlbGxpcHNlIGN4PSI3OCIgY3k9IjEyNCIgcng9IjQuNjc1IiByeT0iNi4zNzUiIGZpbGw9IiMxQjJBNUUiLz48Y2lyY2xlIGN4PSI3Ni40NyIgY3k9IjEyMS40NSIgcj0iMi4wNCIgZmlsbD0iI2ZmZiIvPjxlbGxpcHNlIGN4PSI4NS42NSIgY3k9IjEzMy4zNSIgcng9IjUuOTUiIHJ5PSIzLjU3IiBmaWxsPSIjRkY4RkFCIiBvcGFjaXR5PSIuODUiLz48cGF0aCBkPSJNNjEuNzUgMTMxLjY1IHE0LjI1IDUuMSA4LjUgMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMUIyQTVFIiBzdHJva2Utd2lkdGg9IjIuNzIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxjaXJjbGUgY3g9IjEzNCIgY3k9IjEyNiIgcj0iMzQiIGZpbGw9IiNGRkQ5NjYiIHN0cm9rZT0iIzFCMkE1RSIgc3Ryb2tlLXdpZHRoPSI1Ii8+PGVsbGlwc2UgY3g9IjEyMiIgY3k9IjEyNCIgcng9IjQuNjc1IiByeT0iNi4zNzUiIGZpbGw9IiMxQjJBNUUiLz48Y2lyY2xlIGN4PSIxMjAuNDciIGN5PSIxMjEuNDUiIHI9IjIuMDQiIGZpbGw9IiNmZmYiLz48ZWxsaXBzZSBjeD0iMTE0LjM1IiBjeT0iMTMzLjM1IiByeD0iNS45NSIgcnk9IjMuNTciIGZpbGw9IiNGRjhGQUIiIG9wYWNpdHk9Ii44NSIvPjxlbGxpcHNlIGN4PSIxNDYiIGN5PSIxMjQiIHJ4PSI0LjY3NSIgcnk9IjYuMzc1IiBmaWxsPSIjMUIyQTVFIi8+PGNpcmNsZSBjeD0iMTQ0LjQ3IiBjeT0iMTIxLjQ1IiByPSIyLjA0IiBmaWxsPSIjZmZmIi8+PGVsbGlwc2UgY3g9IjE1My42NSIgY3k9IjEzMy4zNSIgcng9IjUuOTUiIHJ5PSIzLjU3IiBmaWxsPSIjRkY4RkFCIiBvcGFjaXR5PSIuODUiLz48cGF0aCBkPSJNMTI5Ljc1IDEzMS42NSBxNC4yNSA1LjEgOC41IDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzFCMkE1RSIgc3Ryb2tlLXdpZHRoPSIyLjcyIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48cGF0aCBkPSJNMjIgNjQgaDI4IGE4IDggMCAwIDEgOCA4IHYxMiBhOCA4IDAgMCAxIC04IDggaC0xNCBsLTggOCB2LTggaC02IGE4IDggMCAwIDEgLTggLTggdi0xMiBhOCA4IDAgMCAxIDggLTggWiIgZmlsbD0iI2ZmZiIgc3Ryb2tlPSIjMUIyQTVFIiBzdHJva2Utd2lkdGg9IjMuNSIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPjx0ZXh0IHg9IjM2IiB5PSI4NCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsIHNlcmlmIiBmb250LXNpemU9IjEzIiBmb250LXdlaWdodD0iYm9sZCIgZmlsbD0iIzFCMkE1RSI+SGkhPC90ZXh0PjxwYXRoIGQ9Ik0xNzAgNTAgUTE3MS43NiA1Ni4yNCAxNzggNTggUTE3MS43NiA1OS43NiAxNzAgNjYgUTE2OC4yNCA1OS43NiAxNjIgNTggUTE2OC4yNCA1Ni4yNCAxNzAgNTBaIiBmaWxsPSIjRkZEMzI5IiBzdHJva2U9IiMxQjJBNUUiIHN0cm9rZS13aWR0aD0iMiIvPjxwYXRoIGQ9Ik0xNzIgMTcwIFExNzMuMzIgMTc0LjY4IDE3OCAxNzYgUTE3My4zMiAxNzcuMzIgMTcyIDE4MiBRMTcwLjY4IDE3Ny4zMiAxNjYgMTc2IFExNzAuNjggMTc0LjY4IDE3MiAxNzBaIiBmaWxsPSIjZmZmIiBzdHJva2U9IiMxQjJBNUUiIHN0cm9rZS13aWR0aD0iMiIvPjxwYXRoIGQ9Ik0zMCAxNjQgUTMxLjMyIDE2OC42OCAzNiAxNzAgUTMxLjMyIDE3MS4zMiAzMCAxNzYgUTI4LjY4IDE3MS4zMiAyNCAxNzAgUTI4LjY4IDE2OC42OCAzMCAxNjRaIiBmaWxsPSIjRkZEMzI5IiBzdHJva2U9IiMxQjJBNUUiIHN0cm9rZS13aWR0aD0iMiIvPjwvZz48L3N2Zz4="
   };
 
   var ICONES = {
@@ -1456,7 +2652,7 @@ Attention : le bouton **🗑️ Réinitialiser ma progression** efface définiti
   }
   function compter(id) {
     var n = 0;
-    for (var i = 0; i < articles.length; i++) if (rubriqueDe(articles[i]) === id) n++;
+    for (var i = 0; i < articles.length; i++) if (rubriquesDe(articles[i]).indexOf(id) !== -1) n++;
     return n;
   }
   function iconeArticle(a) {
@@ -1564,7 +2760,7 @@ Attention : le bouton **🗑️ Réinitialiser ma progression** efface définiti
   function vueListe(idRubrique) {
     var r = idRubrique ? rubrique(idRubrique) : null;
     var liste = trier(articles);
-    if (r) liste = liste.filter(function (a) { return rubriqueDe(a) === r.id; });
+    if (r) liste = liste.filter(function (a) { return rubriquesDe(a).indexOf(r.id) !== -1; });
     if (recherche) {
       var q = sansAccents(recherche);
       liste = liste.filter(function (a) {
