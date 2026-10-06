@@ -19,17 +19,25 @@ Le fichier `.nojekyll` commence par un point : sur Mac et Windows il peut être 
 4. Modifie les champs :
    - `id` : court, sans espace ni accent, par exemple `phonix`. Il devient l'adresse de l'article : `.../articles/#/phonix`.
    - `date` : au format `AAAA-MM-JJ`. Les articles sont triés du plus récent au plus ancien.
-   - `rubrique` : une rubrique, ou plusieurs entre crochets, par exemple `["ia", "classe"]` (la première est la rubrique principale, affichée sur la carte). Rubriques possibles : `apps` (Mes apps & outils numériques), `classe` (Classe & pédagogie, qui regroupe aussi les conseils et les réflexions), `ia` (IA en classe), `ressources` (Ressources à télécharger), `liens` (Liens utiles) ou `culture` (English & Culture).
+   - `rubrique` : une rubrique, ou plusieurs entre crochets, par exemple `["ia", "classe"]` (la première est la rubrique principale, affichée sur la carte). Rubriques possibles : `apps` (Mes apps & outils numériques), `classe` (Classe & pédagogie, qui regroupe aussi les conseils et les réflexions), `ia` (IA en classe), `ressources` (Ressources à télécharger), `liens` (Liens utiles), `culture` (English & Culture) ou `inter` (Interdisciplinaire & transversal : applis d'autres disciplines ou utiles à toutes).
    - `appNom` et `appUrl` : le nom et l'adresse de l'application, ou `""` pour un article sans appli (voyage, réflexion…).
    - `tutoUrl` : l'adresse d'un tuto, ou `""` s'il n'y en a pas.
    - `liens` : des boutons de téléchargement ou de liens, affichés à la fin de l'article. Exemple : `[{"texte": "Fiche élève (PDF)", "url": "ressources/fiche.pdf"}, {"texte": "BBC Learning English", "url": "https://www.bbc.co.uk/learningenglish"}]`. Pour un fichier à télécharger, dépose-le dans un dossier `ressources` du dépôt et indique son chemin : le bouton le télécharge directement. Laisse `[]` ou supprime la ligne s'il n'y en a pas.
-   - `icone` : l'icône kawaii de l'appli. Vingt-trois icônes sont intégrées : `"arbre"`, `"cible"`, `"gomme"`, `"cerveau"`, `"dojo"`, `"loupe"`, `"livre"`, `"sac"`, `"lunettes"`, `"dragon"`, `"globe"`, `"micro"`, `"boite"`, `"robot"`, `"hibou"`, `"puzzle"`, `"coeur"`, `"duo"`, `"agenda"`, `"boussole"`, `"table"`, `"tasse"` et `"corbeau"`. Pour une autre appli, dépose une image carrée dans un dossier `images` du dépôt et indique son chemin (par exemple `"images/phonix.png"`). Laisse `""` pour afficher la vignette de la rubrique.
+   - `icone` : l'icône kawaii de l'appli. Vingt-huit icônes sont intégrées : `"sablier"`, `"trophee"`, `"carnet"`, `"fichier"`, `"perle"`, `"arbre"`, `"cible"`, `"gomme"`, `"cerveau"`, `"dojo"`, `"loupe"`, `"livre"`, `"sac"`, `"lunettes"`, `"dragon"`, `"globe"`, `"micro"`, `"boite"`, `"robot"`, `"hibou"`, `"puzzle"`, `"coeur"`, `"duo"`, `"agenda"`, `"boussole"`, `"table"`, `"tasse"` et `"corbeau"`. Pour une autre appli, dépose une image carrée dans un dossier `images` du dépôt et indique son chemin (par exemple `"images/phonix.png"`). Laisse `""` pour afficher la vignette de la rubrique.
    - `public` : un ou plusieurs choix parmi `"Élèves"`, `"Collègues"`, `"Familles"`, ou `[]`.
    - `resume` : une ou deux phrases affichées sur la page d'accueil.
    - `contenu` : un paragraphe par ligne, entre guillemets, séparés par des virgules. Une ligne qui commence par `## ` devient un intertitre. `**texte**` met en gras, `[texte](https://...)` crée un lien.
 5. Clique sur « Commit changes ». Le site se met à jour en une à deux minutes.
 
 Si la page affiche un message d'erreur de format, vérifie les virgules entre les blocs (aucune après le dernier) et qu'aucun guillemet droit `"` n'apparaît à l'intérieur d'un texte : utilise plutôt les guillemets français « ».
+
+## Intégrer un contenu externe
+
+Dans le `contenu` d'un article, une ligne de la forme `"@integrer adresse | titre"` affiche le contenu directement dans l'article, avec en dessous un lien pour l'ouvrir dans un nouvel onglet. Exemple :
+
+`"@integrer https://www.pearltrees.com/t/anglais/docadida-ressources-didactiser/id39113460?embed=2 | DOCADIDA - Ressources à didactiser"`
+
+Pour une collection Pearltrees, reprends l'adresse qui figure dans `src="…"` du code d'intégration fourni par Pearltrees. Seuls ces sites sont acceptés : Pearltrees, YouTube (de préférence `youtube-nocookie.com/embed/…`), Genially, Padlet, LearningApps, Wordwall, Google Docs, Canva et H5P. Pour un autre site, la ligne devient un simple lien.
 
 ## Ajouter un tuto
 
@@ -48,7 +56,7 @@ Le bloc `<script type="application/json" id="reglages">` contient le titre, l'au
 
 ## Rubriques
 
-Les six vignettes sous la bannière servent de filtres. Un article encore classé avec une ancienne rubrique (`outils`, `conseils`, `reflexions`) est rangé automatiquement dans la nouvelle. Une pastille rouge indique le nombre d'articles de chaque rubrique ; une rubrique vide affiche un message invitant à voir tous les articles.
+Les sept vignettes sous la bannière servent de filtres. Un article encore classé avec une ancienne rubrique (`outils`, `conseils`, `reflexions`) est rangé automatiquement dans la nouvelle. Une pastille rouge indique le nombre d'articles de chaque rubrique ; une rubrique vide affiche un message invitant à voir tous les articles.
 
 ## Partager un article
 
