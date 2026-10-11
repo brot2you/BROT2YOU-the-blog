@@ -19,7 +19,8 @@ Le fichier `.nojekyll` commence par un point : sur Mac et Windows il peut être 
 4. Modifie les champs :
    - `id` : court, sans espace ni accent, par exemple `phonix`. Il devient l'adresse de l'article : `.../articles/#/phonix`.
    - `date` : au format `AAAA-MM-JJ`. Les articles sont triés du plus récent au plus ancien.
-   - `rubrique` : une rubrique, ou plusieurs entre crochets, par exemple `["ia", "classe"]` (la première est la rubrique principale, affichée sur la carte). Rubriques possibles : `apps` (Mes apps & outils numériques), `classe` (Classe & pédagogie, qui regroupe aussi les conseils et les réflexions), `ia` (IA en classe), `ressources` (Ressources à télécharger), `liens` (Liens utiles), `culture` (English & Culture) ou `inter` (Interdisciplinaire & transversal : applis d'autres disciplines ou utiles à toutes).
+   - `rubrique` : une rubrique, ou plusieurs entre crochets, par exemple `["ia", "classe"]` (la première est la rubrique principale, affichée sur la carte). Rubriques possibles : `apps` (Mes apps & outils numériques), `classe` (Classe & pédagogie, qui regroupe aussi les conseils et les réflexions), `ia` (IA en classe), `ressources` (Ressources à télécharger), `liens` (Liens utiles), `culture` (English & Culture), `disciplines` (Autres disciplines : une appli consacrée à UNE autre matière) ou `inter` (Transversal : une appli utile à plusieurs matières).
+   - `discipline` : uniquement pour la rubrique `disciplines`, la matière de l'appli : `francais`, `maths`, `histoire-geo`, `svt`, `physique-chimie`, `technologie`, `arts-plastiques`, `musique`, `eps`, `langues`, `lca` ou `documentation`. Exemple : `"rubrique": ["disciplines", "apps"]` et `"discipline": "maths"`. L'appli apparaît alors sous la vignette de sa matière, et sa carte affiche le nom et la couleur de la matière.
    - `appNom` et `appUrl` : le nom et l'adresse de l'application, ou `""` pour un article sans appli (voyage, réflexion…).
    - `tutoUrl` : l'adresse d'un tuto, ou `""` s'il n'y en a pas.
    - `liens` : des boutons de téléchargement ou de liens, affichés à la fin de l'article. Exemple : `[{"texte": "Fiche élève (PDF)", "url": "ressources/fiche.pdf"}, {"texte": "BBC Learning English", "url": "https://www.bbc.co.uk/learningenglish"}]`. Pour un fichier à télécharger, dépose-le dans un dossier `ressources` du dépôt et indique son chemin : le bouton le télécharge directement. Laisse `[]` ou supprime la ligne s'il n'y en a pas.
@@ -52,11 +53,21 @@ Dès que le bloc existe, un bouton jaune « 📘 Tuto » apparaît sur la carte 
 
 ## Réglages
 
-Le bloc `<script type="application/json" id="reglages">` contient le titre, l'auteur et les liens de la barre d'icônes : `hubUrl` (page de toutes tes apps), `email`, `instagram`, `youtube` et `x`. Chaque lien laissé vide (`""`) est masqué ; dès que tu le remplis, son icône apparaît.
+Le bloc `<script type="application/json" id="reglages">` contient le titre, l'auteur et les liens de la barre d'icônes : `hubUrl` (page de toutes tes apps), `email`, `instagram`, `youtube` et `x`. Chaque lien laissé vide (`""`) est masqué ; dès que tu le remplis, son icône apparaît. L'adresse `email` est renseignée : l'icône « Contact » de la barre ouvre la messagerie du visiteur avec cette adresse. Elle est donc visible publiquement sur le site.
 
 ## Rubriques
 
-Les sept vignettes sous la bannière servent de filtres. Un article encore classé avec une ancienne rubrique (`outils`, `conseils`, `reflexions`) est rangé automatiquement dans la nouvelle. Une pastille rouge indique le nombre d'articles de chaque rubrique ; une rubrique vide affiche un message invitant à voir tous les articles.
+Les huit vignettes sous la bannière servent de filtres, dans cet ordre : Mes apps, Classe & pédagogie, Ressources, English & Culture, IA en classe, Autres disciplines, Transversal, Liens utiles. Une pastille rouge indique le nombre d'articles de chaque rubrique ; une rubrique vide affiche un message invitant à voir tous les articles. Un article encore classé avec une ancienne rubrique (`outils`, `conseils`, `reflexions`) est rangé automatiquement dans la nouvelle.
+
+Les vignettes sont définies dans le bloc `var RUBRIQUES = [` du code, une ligne par rubrique : `id`, `nom`, `couleur` et `img` (l'image, intégrée au fichier). L'ordre des lignes est l'ordre d'affichage : pour déplacer une vignette, déplace sa ligne entière. Les vignettes montrent des objets sur un cercle de couleur, sans personnage. Pour changer une image, remplace la valeur de `img` par le chemin d'une image déposée dans le dépôt, par exemple `"images/ia.png"` (image carrée, environ 300 × 296 pixels, fond blanc).
+
+## Autres disciplines
+
+La vignette « Autres disciplines » ouvre une page avec douze vignettes de matières : Français, Maths, Histoire-Géo, SVT, Physique-Chimie, Techno, Arts plastiques, Musique, EPS, Langues vivantes, Latin-Grec et Documentation. Chacune affiche ses applis, avec une pastille rouge indiquant leur nombre ; une matière sans appli apparaît un peu estompée et renvoie vers le rayon Transversal. Chaque matière a sa propre adresse (par exemple `.../#/discipline/maths`).
+
+Les vignettes des matières sont définies dans le bloc `var DISCIPLINES = [` du code, sur le même modèle que les rubriques. Pour ajouter une matière, copie une ligne et change son `id`, son `nom`, sa `couleur` et son `img`.
+
+Pour ranger une appli dans une matière, indique dans son article `"rubrique": ["disciplines", "apps"]` et `"discipline": "maths"` (voir « Ajouter un article »). La rubrique Transversal (`inter`) reste réservée aux applis utiles à plusieurs matières.
 
 ## Partager un article
 
