@@ -796,8 +796,8 @@
   {
     "id": "grammar-arena",
     "icone": "dragon",
-    "titre": "Grammar Arena : affronter la grammaire anglaise dans un donjon",
-    "date": "2026-10-03",
+    "titre": "Grammar Arena : affronter la grammaire anglaise dans l'arène",
+    "date": "2026-10-18",
     "rubrique": "apps",
     "appNom": "Grammar Arena",
     "appUrl": "https://brot2you.github.io/Grammar-Arena/",
@@ -807,17 +807,17 @@
       "Collègues",
       "Familles"
     ],
-    "resume": "Quinze créatures, quinze points de grammaire : on découvre la règle par soi-même, puis on l'affronte en combat.",
+    "resume": "15 boss et 9 boss bonus, un par point de grammaire : on découvre la règle à l'échauffement, puis on combat avec son champion, ses pouvoirs et son coup spécial.",
     "contenu": [
-      "La grammaire a souvent mauvaise réputation auprès des élèves : une règle à apprendre, des exercices à trous, et la sensation de ne jamais vraiment comprendre pourquoi. Je me suis demandé comment changer un peu la façon de l'aborder, en laissant les élèves chercher la règle eux-mêmes, et en mettant un peu d'aventure dans l'entraînement. C'est ainsi qu'est né **Grammar Arena**.",
+      "La grammaire a souvent mauvaise réputation auprès des élèves : une règle à apprendre, des exercices à trous, et la sensation de ne jamais vraiment comprendre pourquoi. Avec **Grammar Arena**, j'avais voulu laisser les élèves chercher la règle eux-mêmes, et mettre un peu d'aventure dans l'entraînement. Je l'ai entièrement repensée : nouvelle arène, nouveaux boss, des combattants à choisir, et une vraie progression d'une séance à l'autre.",
       "## L'idée",
-      "L'application est un donjon gardé par quinze créatures, chacune maîtresse d'un point de grammaire : Lord Modal pour les modaux, Tense Titan pour les temps, Passive Phantom pour la voix passive, Article Archer pour les articles… Avant chaque combat, l'élève consulte une « prophétie » : il observe quelques phrases d'exemple, formule sa propre hypothèse sur la règle, puis la compare à la vraie règle.",
-      "Vient ensuite le combat. Les épreuves prennent quatre formes : choisir la bonne réponse, compléter une phrase, corriger une erreur ou transformer une phrase. Chaque bonne réponse fait perdre des points de vie à la créature, chaque erreur en fait perdre à l'élève, et une série de bonnes réponses déclenche un coup critique. Après chaque épreuve, la correction et un rappel de la règle s'affichent en français. Deux modes sont proposés : l'exploration, à son rythme, et le combat rapide, avec un sablier de vingt secondes.",
+      "Chaque boss incarne un point de grammaire : Inferno pour le present simple, Frost Queen pour le present continuous, Sir Perfecto pour le present perfect, Mistress Modal pour les modaux, jusqu'au Final Boss du discours indirect. Il y en a 15, plus 9 boss bonus sur d'autres notions (voix passive, articles, quantifieurs, inversion…). Avant chaque combat, l'élève s'échauffe : il observe des phrases correctes et incorrectes, puis choisit la règle qui les explique, avant d'entrer dans l'arène.",
+      "Le combat se joue en 8 rounds : choisir, compléter, corriger ou transformer une phrase. Chaque bonne réponse frappe le boss, les séries de bonnes réponses déclenchent des combos, et une jauge permet de lancer le coup spécial de son combattant, à choisir parmi six personnages. Au fil des niveaux, l'élève débloque des pouvoirs (indice du coach, bouclier, potion, sablier, double coup), collectionne les cartes des boss vaincus et gagne des badges. Deux modes sont proposés : l'entraînement, à son rythme, et le combat chrono, avec vingt secondes par question.",
       "## Et en classe ?",
-      "La prophétie se prête très bien à un travail collectif : on projette les exemples, la classe formule une hypothèse sur la règle, puis on vérifie ensemble avant de passer au combat. Celui-ci peut se faire en binômes, ou en équipes au tableau, chaque bonne réponse faisant reculer la créature. Le mode combat rapide permet de réactiver une notion en fin de séquence, et l'élève peut aussi s'entraîner seul chez lui, puisque tout est expliqué en français.",
+      "L'échauffement se prête très bien à un travail collectif : on projette les exemples, la classe dit ce qui est correct ou incorrect, formule une hypothèse sur la règle, puis on vérifie ensemble. Le combat peut ensuite se jouer en binômes, ou en équipes au tableau, et le mode chrono permet de réactiver une notion en fin de séquence. À la maison, l'élève révise seul : les règles sont expliquées en français, et sa progression est désormais gardée d'une fois sur l'autre.",
       "---",
       "Comme les autres applications BROT2YOU, elle est gratuite, sans inscription ni collecte de données, et fonctionne directement dans le navigateur, sur ordinateur comme sur téléphone.",
-      "Si vous la testez avec vos élèves, je serais vraiment content d'avoir vos retours : une créature trop coriace, un point de grammaire qui manque, ou une idée pour enrichir le donjon. Je suis sûr qu'il y a plein d'idées à partager !"
+      "Si vous la testez avec vos élèves, je serais vraiment content d'avoir vos retours : un boss trop coriace, un point de grammaire qui manque, ou les combattants préférés de vos élèves. Je suis sûr qu'il y a plein d'idées à partager !"
     ]
   },
   {
@@ -2364,86 +2364,90 @@ Une séance doit comporter au moins une phase active avec une activité pour êt
 <script type="text/markdown" id="tuto-grammar-arena">
 ## C'est quoi, Grammar Arena ?
 
-Grammar Arena est un donjon de grammaire anglaise. Quinze créatures le gardent, chacune maîtresse d'un point de grammaire. Pour les vaincre, tu dois d'abord découvrir la règle par toi-même, puis l'affronter en combat en répondant juste.
+Grammar Arena (« Level up your English! ») est une arène de combat où chaque boss incarne un point de grammaire anglaise. Avant chaque combat, l'élève s'échauffe en découvrant la règle par lui-même, puis il affronte le boss en répondant juste. Il choisit son combattant, débloque des pouvoirs, collectionne les cartes des boss vaincus et monte en niveau.
 
 L'application est gratuite, sans inscription ni collecte de données, et fonctionne dans le navigateur, sur ordinateur, tablette ou téléphone.
 
-| Créature | Point de grammaire | Niveau |
+Elle propose 15 boss principaux, et 9 boss bonus :
+
+| Boss | Point de grammaire | Niveau |
 | --- | --- | --- |
-| 🧙 Lord Modal | Les modaux (can, could, must, should, might…) | Collège / Lycée |
-| ⚔️ Tense Titan | Présent, passé et futur | Collège |
-| 🐉 Perfect Beast | Le present perfect | Lycée |
-| Passive Phantom | La voix passive | Lycée |
-| Condition Crusher | Les conditionnelles (if) | Lycée |
-| Report Reaper | Le discours rapporté | Lycée |
-| Article Archer | Les articles (a, an, the, Ø) | Collège |
-| Comparator | Comparatifs et superlatifs | Collège / Lycée |
-| Question Queen | Les questions | Collège |
-| Pronoun Prowler | Les pronoms | Collège |
-| Plural Predator | Les pluriels | Collège |
-| Quantifier Knight | Les quantifieurs (some, any, much, many…) | Collège / Lycée |
-| Gerund Goblin | Gérondif ou infinitif | Lycée |
-| Wish Wraith | I wish / if only | Lycée |
-| Inversion Imp | L'inversion | Lycée |
+| Inferno | Present simple | Collège |
+| Frost Queen | Present continuous | Collège |
+| Chronos | Past simple | Collège |
+| Shadowstrike | Past continuous | Collège |
+| Sir Perfecto | Present perfect | Collège / Lycée |
+| Mistress Modal | Modal verbs | Collège / Lycée |
+| Future Jack | Future forms | Collège |
+| Lady Relativa | Relative pronouns | Collège / Lycée |
+| The Comparison King | Comparatives & superlatives | Collège |
+| Mr. Question | Wh- questions | Collège |
+| Captain Negation | Negatives | Collège |
+| The Three Forms | Irregular verbs | Collège |
+| Sir Conditional | Conditionals | Collège / Lycée |
+| The Preposition Genie | Prepositions | Collège |
+| The Final Boss | Reported speech | Lycée |
+
+Les boss bonus reprennent d'autres notions : present simple ou continuous, voix passive, articles, pronoms, pluriels, quantifieurs, gérondif ou infinitif, wish et if only, inversion.
 
 ## Premiers pas
 
-1. Ouvre l'adresse dans ton navigateur.
-2. Choisis ton mode de jeu :
-   - **📜 Mode exploration** : tu réponds à ton rythme, sans limite de temps.
-   - **⚡ Mode combat rapide** : un sablier de 20 secondes par question.
-3. Le **📖 Grimoire des Créatures** affiche les quinze créatures. Filtre-les avec **Tous**, **Collège** ou **Lycée**, puis touche celle que tu veux affronter.
-4. Pour revenir en arrière, utilise **← Retour au grimoire** ou **← Retour à la taverne** (l'accueil).
+1. Ouvre l'adresse dans ton navigateur, puis appuie sur **Choisir mon combattant**.
+2. Choisis ton combattant parmi six : Léa, Sam, Lou, Noah, Iris… ou Le Prof. Chacun a ses qualités et son propre coup spécial.
+3. Écris un pseudo si tu veux (par exemple « Captain Verbs »), puis appuie sur **Combattre avec** ton combattant. Ton profil garde ton niveau et tes victoires.
+4. Choisis ton mode : **Entraînement**, à ton rythme, ou **Combat chrono**, avec 20 secondes par question.
+5. Dans la liste des adversaires, filtre par **Collège** ou **Lycée**, puis choisis ton boss.
 
-Sur téléphone, tu peux ajouter l'application à ton écran d'accueil :
+En haut de l'écran, tu retrouves ton niveau et ta barre d'expérience. Les boutons permettent de revenir à l'**Accueil**, d'ouvrir **Ma collection**, de couper ou d'activer le son, et de **changer de combattant**.
 
-- iPhone (Safari) : bouton Partager, puis « Sur l'écran d'accueil ».
-- Android (Chrome) : menu ⋮, puis « Ajouter à l'écran d'accueil ».
+## Étape 1 : s'échauffer (découvrir la règle)
 
-## Étape 1 : la prophétie (découvrir la règle)
-
-Avant chaque combat, appuie sur **📜 Consulter la prophétie**. C'est le moment le plus important : tu vas trouver la règle par toi-même.
-
-1. **Observe** les phrases d'exemple. Que remarques-tu ?
-2. **🔮 Déduis la règle** : choisis, parmi les propositions, celle qui correspond aux exemples, puis appuie sur **VALIDER MA DÉDUCTION**.
-3. **📖 Lis la vraie règle** pour vérifier ta déduction.
-4. Quand tu es prêt, appuie sur **⚔️ ENTRER EN COMBAT**.
+Sur la fiche d'un boss, appuie sur **S'échauffer**. Tu observes quelques phrases d'exemple, certaines **correctes**, d'autres **incorrectes**, avec une courte note (par exemple « she play the piano » → incorrect, « he / she / it → -S obligatoire »). Puis tu choisis la règle qui explique ces exemples, et tu valides avec **Valider ma réponse**. Quand tu es prêt, appuie sur **Entrer dans l'arène**. Le bouton **Voir la règle** permet aussi de la relire à tout moment.
 
 ## Étape 2 : le combat
 
-Ta barre de vie (**TOI**) et celle de la créature (**BOSS**) commencent à 100. Les épreuves arrivent l'une après l'autre, sous quatre formes :
+Un combat se joue en 8 rounds. Ta barre de vie et celle du boss s'affichent en haut. Chaque round est une question, de l'un de ces quatre types :
 
-| Type d'épreuve | Ce que tu fais |
+| Type | Ce que tu fais |
 | --- | --- |
-| ⚔️ Choix | Choisir la bonne réponse parmi plusieurs propositions |
-| ✒️ À compléter | Écrire le mot qui manque dans la phrase |
-| 🔍 À corriger | Trouver et corriger l'erreur dans une phrase |
-| 🔄 Transformation | Réécrire une phrase selon une consigne (passif, discours rapporté…) |
+| Choisis | Choisir la bonne réponse parmi quatre propositions |
+| Complète | Écrire la forme qui manque dans la phrase |
+| Corrige | Réécrire la phrase sans erreur |
+| Transforme | Réécrire la phrase selon une consigne |
 
-Pour les réponses à écrire, tape ta réponse puis appuie sur **LANCER** (ou sur Entrée). Si tu bloques, un **💡 Indice du sage** t'aide parfois.
+Après chaque réponse, la règle s'affiche avec un mot d'encouragement. Une bonne réponse frappe le boss, une erreur te fait perdre des points de vie. À partir de 3 bonnes réponses d'affilée, tu enchaînes un **combo** : tes coups deviennent plus forts et rapportent plus de points.
 
-Après chaque réponse, la correction s'affiche avec la **RÉPONSE DU GRIMOIRE** et un **📖 SAVOIR ANCIEN** qui rappelle la règle. Appuie sur **ÉPREUVE SUIVANTE →** pour continuer.
+## Le coup spécial
 
-- **Bonne réponse** : la créature perd 12 points de vie, et tu gagnes 10 pièces d'or. À partir de 3 bonnes réponses d'affilée, c'est un coup critique 🔥 : la créature perd 20 points, et tu gagnes 15 pièces.
-- **Mauvaise réponse** : tu perds 20 points de vie. En mode combat rapide, laisser filer le temps compte aussi comme une erreur.
+Chaque bonne réponse remplit ta **jauge de coup spécial**. Quand elle est pleine, arme ton coup spécial, puis réponds juste : ton combattant déclenche son attaque, plus puissante qu'un coup normal (par exemple le « Solar Uppercut » ou le « Wink Tornado »). Au niveau 6, il devient encore plus fort.
 
-## Le verdict
+## Les pouvoirs
 
-À la fin du combat, l'écran affiche **VICTOIRE LÉGENDAIRE !** si tu as gardé des points de vie, ou **VAINCU !** si ta barre est tombée à zéro. Tu y retrouves ta vie restante, ton or gagné et ta meilleure série de bonnes réponses.
+Au fil de tes niveaux, tu débloques cinq pouvoirs, utilisables une fois par combat :
 
-Trois choix s'offrent ensuite à toi : **↺ RECOMMENCER** pour retenter la même créature, **AUTRE CRÉATURE** pour revenir au grimoire, ou **TAVERNE** pour retourner à l'accueil.
+| Pouvoir | Niveau | Effet |
+| --- | --- | --- |
+| Indice du coach | 1 | Retire deux mauvaises réponses, ou montre le début de la réponse. La question rapporte moitié moins de points |
+| Bouclier | 2 | Ta prochaine erreur ne te coûte aucun point de vie |
+| Potion | 3 | Te rend 30 points de vie |
+| Sablier | 4 | En combat chrono, ajoute 10 secondes au round |
+| Double coup | 5 | Ta prochaine bonne réponse fait deux fois plus de dégâts |
 
-À savoir : l'application n'enregistre pas ta progression. Chaque combat est une partie indépendante : rien n'est gardé quand tu fermes la page.
+## Progression, collection et badges
+
+Chaque combat rapporte de l'expérience : tous les 200 points, tu montes d'un niveau. Tes titres évoluent de **Recrue** à **Légende de la grammaire**, en passant par Apprenti·e, Challenger, Combattant·e, Champion·ne et Grand·e champion·ne.
+
+Chaque boss vaincu te donne sa **carte**, à retrouver dans **Ma collection**. Des **badges** récompensent tes exploits : premier combat gagné, combat sans faute, K.O. parfait, combo ×5, premier coup spécial, victoire en mode chrono, revanche sur un boss qui t'avait battu, règle trouvée du premier coup lors des échauffements, collection de cartes, combats bonus… et le titre de **Grammar Champion** quand tu as les 15 cartes. Certains badges débloquent des cadres pour ton profil : Or, Flamme, Glace, Holo et Royal.
+
+Ton profil (combattant, niveau, victoires, cartes, badges) est enregistré automatiquement dans le navigateur de ton appareil. Il ne suit pas si tu changes d'appareil ou si tu effaces les données de navigation, et rien n'est envoyé sur internet.
 
 ## Conseils d'utilisation
 
-**Pour les élèves.** Ne saute jamais la prophétie : c'est elle qui te donne les armes pour le combat. Commence en mode exploration pour prendre le temps de lire le savoir ancien après chaque épreuve, puis passe au mode combat rapide quand tu te sens prêt. Si tu perds, recommence : les erreurs font partie de l'entraînement.
+**Pour les élèves.** Ne saute jamais l'échauffement : c'est là que tu comprends la règle avant de te battre. Commence en mode Entraînement, et lis bien la règle affichée après chaque réponse. Passe au Combat chrono quand tu te sens prêt. Si un boss te bat, prends ta revanche : il y a même un badge pour ça !
 
-**En classe.** La prophétie se prête très bien à un travail collectif : on projette les exemples, la classe formule une hypothèse sur la règle, puis on vérifie ensemble. Le combat peut ensuite se faire en binômes, ou en équipes au tableau, chaque bonne réponse faisant reculer la créature. Le mode combat rapide ajoute un peu de défi pour réactiver une notion en fin de séquence.
+**En classe.** L'échauffement se prête très bien à un travail collectif : on projette les exemples, la classe dit ce qui est correct ou incorrect, formule une hypothèse sur la règle, puis on vérifie ensemble. Le combat peut ensuite se jouer en binômes, ou en équipes au tableau. Le Combat chrono permet de réactiver une notion en fin de séquence.
 
-**À la maison.** L'élève peut réviser seul, en autonomie : les règles, les indices et les corrections sont expliqués en français.
-
-**À savoir.** Aucune donnée n'est envoyée sur internet, et rien n'est enregistré : chaque combat repart de zéro.
+**À la maison.** L'élève peut réviser seul, à son rythme : les règles et les corrections sont expliquées en français, et sa progression est gardée d'une fois sur l'autre.
 </script>
 
 <script type="text/markdown" id="tuto-la-frise">
