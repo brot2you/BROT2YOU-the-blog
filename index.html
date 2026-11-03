@@ -6363,12 +6363,28 @@ footer.site {background:#173d85;color:white;border-top:5px solid #e5b958;}
 .hero img {display:block;width:100%!important;max-width:1600px!important;height:auto!important;aspect-ratio:auto!important;object-fit:contain!important;object-position:center!important;margin:0 auto!important}
 @media(max-width:700px){.hero img{max-width:100%!important;height:auto!important;aspect-ratio:auto!important;object-fit:contain!important}}
 </style>
+
+<style id="brot2you-v9-cadrage">
+/* Bannière plein écran : pas de fond bleu latéral ni de rognage. */
+header .hero, .hero {background:transparent!important;border:0!important;overflow:visible!important;line-height:0!important;width:100%!important;max-width:none!important;}
+.hero picture,.hero picture img,.hero img {display:block!important;width:100%!important;max-width:none!important;height:auto!important;aspect-ratio:auto!important;object-fit:contain!important;margin:0!important;}
+/* Les images sont des boutons illustrés complets : aucun deuxième cadre. */
+.rubriques {grid-template-columns:repeat(7,minmax(0,165px));gap:10px;align-items:start;}
+.rubriques li {min-width:0;}
+.rubriques button,.rubriques button[aria-pressed="true"] {display:block!important;box-sizing:border-box!important;padding:0!important;border:0!important;border-radius:0!important;background:transparent!important;box-shadow:none!important;overflow:visible!important;line-height:0!important;transform:none!important;}
+.rubriques button img {display:block!important;width:100%!important;height:auto!important;aspect-ratio:1/1!important;object-fit:contain!important;transform:none!important;}
+.rubriques button:hover img {filter:brightness(1.08);transform:translateY(-3px)!important;}
+.rubriques button[aria-pressed="true"] img {filter:drop-shadow(0 0 5px #ffba27);}
+.rubriques .compte {display:none!important;}
+@media(max-width:900px){.rubriques{grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;}}
+@media(max-width:600px){.rubriques{grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;}}
+</style>
 </head>
 <body>
 <a class="sr-only" href="#main">Aller au contenu</a>
 <header>
   <a class="hero" href="#/" aria-label="Accueil du blog BROT2YOU">
-    <picture><source media="(max-width: 700px)" srcset="images/banniere-brot2you-mobile.webp?v=8"><img src="images/banniere-brot2you.webp?v=8" alt="BROT2YOU, le blog d'un prof d'anglais (et pas que !) : apps, conseils, ressources, réflexions, partage." width="1983" height="438"></picture>
+    <picture><source media="(max-width: 700px)" srcset="images/banniere-brot2you-mobile.webp?v=10"><img src="images/banniere-brot2you.webp?v=10" alt="BROT2YOU, le blog d'un prof d'anglais (et pas que !) : apps, conseils, ressources, réflexions, partage." width="1983" height="438"></picture>
   </a>
   <div class="wrap">
     <nav aria-label="Rubriques">
@@ -6397,13 +6413,13 @@ footer.site {background:#173d85;color:white;border-top:5px solid #e5b958;}
   "use strict";
 
   var RUBRIQUES = [
-    { id: "apps", nom: "Mes apps & outils numériques", couleur: "#0019A8", img: "images/categories/apps-chibi.webp?v=8" },
-    { id: "classe", nom: "Classe & pédagogie", couleur: "#6A3BA0", img: "images/categories/classe-chibi.webp?v=8" },
-    { id: "ressources", nom: "Ressources à télécharger", couleur: "#DC241F", img: "images/categories/ressources-chibi.webp?v=8" },
-    { id: "culture", nom: "English & Culture", couleur: "#0098D4", img: "images/categories/culture-chibi.webp?v=8" },
-    { id: "ia", nom: "IA en classe", couleur: "#00782A", img: "images/categories/ia-chibi.webp?v=8" },
-    { id: "inter", nom: "Interdisciplinaire & transversal", couleur: "#00A4A7", img: "images/categories/inter-chibi.webp?v=8" },
-    { id: "liens", nom: "Liens utiles", couleur: "#E8B500", img: "images/categories/liens-chibi.webp?v=8" }
+    { id: "apps", nom: "Mes apps & outils numériques", couleur: "#0019A8", img: "images/categories/apps-chibi.webp?v=10" },
+    { id: "classe", nom: "Classe & pédagogie", couleur: "#6A3BA0", img: "images/categories/classe-chibi.webp?v=10" },
+    { id: "ressources", nom: "Ressources à télécharger", couleur: "#DC241F", img: "images/categories/ressources-chibi.webp?v=10" },
+    { id: "culture", nom: "English & Culture", couleur: "#0098D4", img: "images/categories/culture-chibi.webp?v=10" },
+    { id: "ia", nom: "IA en classe", couleur: "#00782A", img: "images/categories/ia-chibi.webp?v=10" },
+    { id: "inter", nom: "Interdisciplinaire & transversal", couleur: "#00A4A7", img: "images/categories/inter-chibi.webp?v=10" },
+    { id: "liens", nom: "Liens utiles", couleur: "#E8B500", img: "images/categories/liens-chibi.webp?v=10" }
   ];
 
   // Anciennes rubriques regroupées : un article qui les utilise encore
@@ -6573,9 +6589,9 @@ footer.site {background:#173d85;color:white;border-top:5px solid #e5b958;}
       var n = articles ? compter(r.id) : 0;
       var etiquette = r.nom + (n ? ", " + n + " article" + (n > 1 ? "s" : "") : ", pas encore d'article");
       h += '<li><button type="button" data-rubrique="' + r.id + '" aria-pressed="' + (actif === r.id) + '" aria-label="' + echapper(etiquette) + '" style="--rubrique-couleur:' + r.couleur + '">';
-      if (r.img) h += '<img src="' + r.img + '" alt="" width="200" height="197">';
+      if (r.img) h += '<img src="' + r.img + '" alt="" width="340" height="455">';
       else h += '<span class="vignette"><img src="' + r.vignette + '" alt="" width="200" height="197"><span class="vignette-label" aria-hidden="true">' + echapper(r.court || r.nom) + "</span></span>";
-      if (n) h += '<span class="compte" aria-hidden="true">' + n + "</span>";
+      
       h += "</button></li>";
     }
     rubriquesEl.innerHTML = h;
@@ -7059,8 +7075,3 @@ footer.site {background:#173d85;color:white;border-top:5px solid #e5b958;}
 </script>
 </body>
 </html>
-
-<style id="brot2you-v8-banners">
-.hero img,.hero picture img{display:block;width:100%;height:auto;max-width:2172px;aspect-ratio:auto!important;object-fit:contain!important;object-position:center!important;margin:0 auto;}
-@media(max-width:700px){.hero img,.hero picture img{width:100%;height:auto;aspect-ratio:auto!important;object-fit:contain!important;}}
-</style>
