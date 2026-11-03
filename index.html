@@ -6382,6 +6382,12 @@ header .hero, .hero {background:transparent!important;border:0!important;overflo
 @media(max-width:900px){.rubriques{grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;}}
 @media(max-width:600px){.rubriques{grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;}}
 </style>
+<style id="brot2you-badges-v16">
+/* Badges circulaires : eviter les bordures rognees par le conteneur */
+.rubriques button {overflow:visible!important; padding:8px!important; background:transparent!important; border:0!important; box-shadow:none!important;}
+.rubriques button > img {display:block!important; width:100%!important; height:auto!important; aspect-ratio:1/1!important; object-fit:contain!important; border-radius:0!important; padding:0!important; max-width:100%!important; transform:none!important;}
+.rubriques button:hover > img {transform:scale(1.02)!important;}
+</style>
 </head>
 <body>
 <a class="sr-only" href="#main">Aller au contenu</a>
