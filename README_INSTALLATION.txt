@@ -1,7 +1,2 @@
-BROT2YOU BLOG V5 FANTASY
-
-Déposer index.html et le dossier images/ dans le dépôt GitHub Pages du blog.
-Conserve les autres fichiers du dépôt.
-Cette version conserve les articles, tutoriels, liens et la navigation de la V4.
-Les nouvelles images sont dans images/.
-La bannière est une illustration complète (avec texte intégré), adaptée automatiquement au mobile.
+BROT2YOU V5 CHIBI — nouvelle bannière et hauteur réduite.
+Importer index.html et images/banniere-brot2you.webp dans le dépôt GitHub BROT2YOU-the-blog, aux mêmes emplacements. Les autres fichiers restent inchangés.
