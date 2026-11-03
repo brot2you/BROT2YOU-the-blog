@@ -6388,6 +6388,13 @@ header .hero, .hero {background:transparent!important;border:0!important;overflo
 .rubriques button > img {display:block!important; width:100%!important; height:auto!important; aspect-ratio:1/1!important; object-fit:contain!important; border-radius:0!important; padding:0!important; max-width:100%!important; transform:none!important;}
 .rubriques button:hover > img {transform:scale(1.02)!important;}
 </style>
+<style id="brot2you-badges-v17">
+/* Liseré bleu continu superposé : les anciens fichiers sont déjà rognés */
+.rubriques button{position:relative!important;overflow:visible!important;border:0!important;background:transparent!important;box-shadow:none!important;padding:9px!important}
+.rubriques button>img{display:block!important;width:100%!important;height:auto!important;aspect-ratio:1/1!important;object-fit:cover!important;object-position:center!important;border-radius:50%!important;padding:0!important;box-sizing:border-box!important;clip-path:circle(49.5% at 50% 50%)!important}
+.rubriques button:after{content:"";pointer-events:none;position:absolute;inset:8px;border:5px solid #0879ed;border-radius:50%;box-shadow:inset 0 0 0 2px #61e4ff,0 0 0 1px #063fba;z-index:2}
+@media(max-width:600px){.rubriques button:after{border-width:3px;inset:8px}}
+</style>
 </head>
 <body>
 <a class="sr-only" href="#main">Aller au contenu</a>
