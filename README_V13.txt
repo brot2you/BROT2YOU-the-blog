@@ -1,0 +1,1 @@
+V13 : 7 badges circulaires individuels et nouvelle bannière PC. Bannière mobile V12 conservée en attendant sa déclinaison dans la nouvelle DA. Articles, tutoriels et liens conservés. Déployer le contenu du ZIP à la racine du dépôt GitHub.
