@@ -6356,6 +6356,9 @@ footer.site {background:#173d85;color:white;border-top:5px solid #e5b958;}
 @media(max-width:700px){.hero img {aspect-ratio:16/9;object-fit:contain;object-position:center;}.rubriques{gap:8px;padding:14px 0}.rubriques li{flex:0 0 calc(33.333% - 6px)}.rubriques button{border-radius:14px}.iconbar{border-radius:14px;margin:10px 0 16px}.carte{border-radius:18px}main.wrap{padding-top:20px}}
 @media(prefers-reduced-motion:reduce){.carte,.rubriques button{transition:none}}
 
+/* V15 : marges de securite pour les badges de categories */
+.rubriques button img {box-sizing:border-box!important;padding:5%!important;object-fit:contain!important;object-position:center!important;clip-path:none!important;}
+.rubriques button {overflow:visible!important;}
 </style>
 <style id="brot2you-responsive-banner">
 .hero {display:block;background:#c7e9ff!important;line-height:0;overflow:hidden}
