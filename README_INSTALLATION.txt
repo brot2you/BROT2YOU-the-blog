@@ -1,2 +1,3 @@
-BROT2YOU V5 CHIBI — nouvelle bannière et hauteur réduite.
-Importer index.html et images/banniere-brot2you.webp dans le dépôt GitHub BROT2YOU-the-blog, aux mêmes emplacements. Les autres fichiers restent inchangés.
+BROT2YOU V6 : banniere ordinateur + portrait smartphone.
+Transférer index.html et le dossier images/ dans le depot GitHub sans supprimer les autres fichiers.
+Les articles et tutoriels existants sont conserves.

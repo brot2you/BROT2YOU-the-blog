@@ -6357,12 +6357,18 @@ footer.site {background:#173d85;color:white;border-top:5px solid #e5b958;}
 @media(prefers-reduced-motion:reduce){.carte,.rubriques button{transition:none}}
 
 </style>
+<style id="brot2you-responsive-banner">
+.hero {display:block;background:#c7e9ff!important;line-height:0;overflow:hidden}
+.hero picture {display:block;width:100%}
+.hero img {display:block;width:100%!important;max-width:1600px!important;height:auto!important;aspect-ratio:auto!important;object-fit:contain!important;object-position:center!important;margin:0 auto!important}
+@media(max-width:700px){.hero img{max-width:100%!important;height:auto!important;aspect-ratio:auto!important;object-fit:contain!important}}
+</style>
 </head>
 <body>
 <a class="sr-only" href="#main">Aller au contenu</a>
 <header>
   <a class="hero" href="#/" aria-label="Accueil du blog BROT2YOU">
-    <img src="images/banniere-brot2you.webp" alt="BROT2YOU, le blog d'un prof d'anglais (et pas que !) : apps, conseils, ressources, réflexions, partage." width="1983" height="438">
+    <picture><source media="(max-width: 700px)" srcset="images/banniere-brot2you-mobile.webp"><img src="images/banniere-brot2you.webp" alt="BROT2YOU, le blog d'un prof d'anglais (et pas que !) : apps, conseils, ressources, réflexions, partage." width="1983" height="438"></picture>
   </a>
   <div class="wrap">
     <nav aria-label="Rubriques">
@@ -7053,9 +7059,3 @@ footer.site {background:#173d85;color:white;border-top:5px solid #e5b958;}
 </script>
 </body>
 </html>
-
-<style id="brot2you-chibi-banner-sizing">
-.hero {background:#c7e9ff!important;}
-.hero img {width:100%!important;max-width:1600px!important;height:clamp(160px,27vw,350px)!important;aspect-ratio:auto!important;object-fit:cover!important;object-position:center 44%!important;}
-@media(max-width:700px){.hero img{height:clamp(125px,34vw,210px)!important;object-position:center center!important;}}
-</style>
