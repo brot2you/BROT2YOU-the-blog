@@ -1,0 +1,1 @@
+V12 : 40 vignettes rondes issues de la planche, sans changement des articles ni des liens. Publication GitHub non effectuee. Les vignettes sont decoupees depuis une planche et peuvent demander des retouches individuelles.
