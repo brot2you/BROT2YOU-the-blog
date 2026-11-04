@@ -6671,6 +6671,40 @@ header nav[aria-label="Rubriques"]{background:transparent!important;background-i
 header nav[aria-label="Rubriques"]::before,header nav[aria-label="Rubriques"]::after{content:none!important;display:none!important}
 .rubriques,.rubriques li{background:transparent!important;background-image:none!important;box-shadow:none!important}
 </style>
+<style id="brot2you-header-harmony-v37">
+/* Fond clair uniforme derrière les catégories : aucun grand panneau bleu. */
+html body header > div.wrap{
+ background:#f5f8f5!important;
+ background-image:none!important;
+ border:0!important;
+ box-shadow:none!important;
+ padding:12px 18px 16px!important;
+}
+html body header > div.wrap > nav[aria-label="Rubriques"]{
+ background:transparent!important;background-image:none!important;
+ border:0!important;box-shadow:none!important;
+ padding:0!important;margin:0 0 8px!important;
+}
+html body header > div.wrap .rubriques{
+ background:transparent!important;background-image:none!important;
+ padding:3px 4px 12px!important;
+}
+/* Barre de navigation plus discrète, sans gros panneau bleu et or. */
+html body header > div.wrap .iconbar{
+ background:#e7edf6!important;
+ background-image:none!important;
+ border:1px solid #cad6e7!important;
+ border-radius:16px!important;
+ box-shadow:none!important;
+ padding:9px 8px!important;
+ margin:3px 0 0!important;
+}
+html body header > div.wrap .iconbar li::before{display:none!important}
+@media(max-width:700px){
+ html body header > div.wrap{padding:9px 9px 12px!important}
+ html body header > div.wrap .iconbar{border-radius:12px!important;padding:7px 5px!important}
+}
+</style>
 </head>
 <body>
 <a class="sr-only" href="#main">Aller au contenu</a>
