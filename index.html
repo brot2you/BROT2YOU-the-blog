@@ -6664,6 +6664,13 @@ html body header .rubriques li button:focus-visible .rubrique-texte{
  outline:2px solid #ffe376!important;outline-offset:3px!important;
 }
 </style>
+<style id="brot2you-roundel-transparent-backdrop-v36">
+/* Retirer le grand fond bleu derrière les emblèmes, sans toucher au bleu des bandeaux. */
+header .wrap{background:transparent!important;background-image:none!important;box-shadow:none!important}
+header nav[aria-label="Rubriques"]{background:transparent!important;background-image:none!important;border:0!important;box-shadow:none!important;outline:0!important}
+header nav[aria-label="Rubriques"]::before,header nav[aria-label="Rubriques"]::after{content:none!important;display:none!important}
+.rubriques,.rubriques li{background:transparent!important;background-image:none!important;box-shadow:none!important}
+</style>
 </head>
 <body>
 <a class="sr-only" href="#main">Aller au contenu</a>
