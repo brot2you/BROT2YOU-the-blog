@@ -6439,6 +6439,21 @@ header .search{background:#fff!important;border-radius:12px!important;padding:10
 main.wrap{padding-top:12px!important}
 }
 </style>
+<style id="brot2you-mobile-fixes-v22">
+/* Les commandes de navigation doivent rester jaunes, même sans survol */
+.iconbar a,.iconbar button{background:linear-gradient(180deg,#ffec86,#ffba29)!important;color:#143674!important;border:2px solid #f6d15b!important;box-shadow:0 3px 0 #bb8426!important;border-radius:12px!important}
+.iconbar a:hover,.iconbar button:hover,.iconbar [aria-current="page"],.iconbar [aria-expanded="true"]{background:linear-gradient(180deg,#fff5b6,#ffcb45)!important;color:#143674!important}
+/* Pas de masque qui coupe le liseré original */
+.rubriques button>img,.rubriques button img{clip-path:none!important;object-fit:contain!important;object-position:center!important;box-sizing:border-box!important;border:0!important;outline:0!important;border-radius:50%!important}
+.rubriques button,.rubriques button[aria-pressed="true"]{background:transparent!important;border:0!important;box-shadow:none!important;overflow:visible!important}
+@media(max-width:700px){
+.rubriques li{flex:0 0 142px!important;min-width:142px!important;max-width:142px!important}
+.rubriques button{padding:7px!important;min-height:140px!important}
+.rubriques button>img{width:100%!important;max-width:100%!important;height:auto!important;aspect-ratio:1/1!important}
+.iconbar{display:flex!important;justify-content:center!important;gap:6px!important;flex-wrap:wrap!important}
+.iconbar a,.iconbar button{min-width:62px!important;min-height:50px!important;padding:7px 6px!important}
+}
+</style>
 </head>
 <body>
 <a class="sr-only" href="#main">Aller au contenu</a>
