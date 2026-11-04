@@ -6454,6 +6454,16 @@ main.wrap{padding-top:12px!important}
 .iconbar a,.iconbar button{min-width:62px!important;min-height:50px!important;padding:7px 6px!important}
 }
 </style>
+<style id="brot2you-badges-no-white-v23">
+/* Le blanc est dans les images WebP : ne montrer que le disque imprimé. */
+.rubriques button>img,.rubriques button img{
+  -webkit-mask-image:radial-gradient(circle closest-side at 50% 50%,#000 0%,#000 91%,transparent 94%)!important;
+  mask-image:radial-gradient(circle closest-side at 50% 50%,#000 0%,#000 91%,transparent 94%)!important;
+  clip-path:none!important;
+  border-radius:0!important;
+  background:transparent!important;
+}
+</style>
 </head>
 <body>
 <a class="sr-only" href="#main">Aller au contenu</a>
