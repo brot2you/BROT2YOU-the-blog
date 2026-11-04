@@ -7126,6 +7126,22 @@ html body header .rubriques button[aria-pressed="true"] .rubrique-texte{
  html body header .rubriques button .rubrique-texte{width:108px!important;max-width:108px!important;min-height:25px!important;padding:4px 2px!important;font-size:9px!important}
 }
 </style>
+<style id="brot2you-apps-hover-glow-v42">
+/* Même éclat au survol pour Mes Apps que pour les six autres catégories. */
+html body header .rubriques li button[data-rubrique="apps"]:hover .underground-ring,
+html body header .rubriques li button[data-rubrique="apps"]:focus-visible .underground-ring{
+ animation-play-state:paused!important;
+ filter:brightness(1.55) saturate(1.2)!important;
+ box-shadow:0 0 8px #ffffffa6,0 0 18px var(--rubrique-couleur,#1234bc),0 0 28px var(--rubrique-couleur,#1234bc)!important;
+ transition:filter .2s ease,box-shadow .2s ease!important;
+}
+html body header .rubriques li button[data-rubrique="apps"]:hover .rubrique-texte{
+ filter:brightness(1.2)!important;
+}
+@media(prefers-reduced-motion:reduce){
+ html body header .rubriques li button[data-rubrique="apps"]:hover .underground-ring{transition:none!important}
+}
+</style>
 </head>
 <body>
 <a class="sr-only" href="#main">Aller au contenu</a>
