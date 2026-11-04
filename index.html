@@ -6546,6 +6546,14 @@ header nav[aria-label="Rubriques"]:before{display:none!important}
 .rubriques button .rubrique-texte{z-index:2!important;flex-shrink:0!important;background:#123c8c!important;color:white!important;box-shadow:0 2px 2px #08265c55!important}
 @media(max-width:700px){.rubriques button .underground-ring{width:76px!important;height:76px!important;border-width:13px!important}}
 </style>
+<style id="brot2you-underground-colors-v30">
+/* Les emblèmes reprennent la couleur officielle de chaque rubrique. */
+.rubriques button .underground-ring{border-color:var(--rubrique-couleur,#e52b33)!important}
+.rubriques button .rubrique-texte{background:var(--rubrique-couleur,#123c8c)!important;color:#fff!important;text-shadow:0 1px 2px #001a3d66!important}
+.rubriques button:hover .rubrique-texte{filter:brightness(1.13)!important}
+.rubriques button[aria-pressed="true"] .rubrique-texte{background:var(--rubrique-couleur,#123c8c)!important;box-shadow:0 0 0 2px #fff,0 0 0 4px #ffdb53!important}
+.rubriques button:focus-visible .rubrique-texte{outline:3px solid #ffdb53!important;outline-offset:3px!important}
+</style>
 </head>
 <body>
 <a class="sr-only" href="#main">Aller au contenu</a>
