@@ -6591,6 +6591,15 @@ header nav[aria-label="Rubriques"]:before{display:none!important}
 .rubriques button[aria-pressed="true"] .rubrique-texte{outline:2px solid #ffe376!important;outline-offset:1px!important}
 @media(prefers-reduced-motion:reduce){.rubriques button .rubrique-texte:after{animation:none!important;display:none!important}}
 </style>
+<style id="brot2you-underground-no-outline-v32">
+/* Retirer les liserés décoratifs des bandeaux sans toucher aux anneaux colorés. */
+.rubriques button .rubrique-texte,.rubriques button[aria-pressed="true"] .rubrique-texte{
+border:0!important;outline:0!important;outline-offset:0!important;
+box-shadow:0 2px 4px #001c4a55!important;
+}
+.rubriques button .rubrique-texte{background:linear-gradient(180deg,#3276cb 0%,#164c9f 33%,#0b347e 100%)!important}
+.rubriques button:focus-visible .rubrique-texte{outline:2px solid #ffe376!important;outline-offset:3px!important}
+</style>
 </head>
 <body>
 <a class="sr-only" href="#main">Aller au contenu</a>
