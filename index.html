@@ -7142,6 +7142,19 @@ html body header .rubriques li button[data-rubrique="apps"]:hover .rubrique-text
  html body header .rubriques li button[data-rubrique="apps"]:hover .underground-ring{transition:none!important}
 }
 </style>
+<style id="brot2you-apps-hover-balanced-v43">
+/* Mes Apps : même intensité de survol que les autres catégories, sans halo débordant. */
+html body header .rubriques li button[data-rubrique="apps"]:hover .underground-ring,
+html body header .rubriques li button[data-rubrique="apps"]:focus-visible .underground-ring{
+ animation-play-state:running!important;
+ filter:brightness(1.18)!important;
+ box-shadow:0 0 7px color-mix(in srgb,var(--rubrique-couleur,#1234bc) 55%,transparent)!important;
+ transition:filter .2s ease,box-shadow .2s ease!important;
+}
+html body header .rubriques li button[data-rubrique="apps"]:hover .rubrique-texte{
+ filter:brightness(1.08)!important;
+}
+</style>
 </head>
 <body>
 <a class="sr-only" href="#main">Aller au contenu</a>
