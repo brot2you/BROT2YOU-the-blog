@@ -7848,6 +7848,22 @@ html body header .rubriques li button[data-rubrique="apps"]:hover .rubrique-text
   router();
 })();
 </script>
+<style id="brot2you-no-vertical-scroll-v47">
+/* Rubriques : défilement horizontal uniquement, jamais vertical.
+   Les halos animés restent dans le diamètre des cocardes. */
+html body header .rubriques {
+  overflow-x:auto!important;
+  overflow-y:hidden!important;
+  overscroll-behavior-y:none;
+}
+html body header .rubriques li,
+html body header .rubriques li button {
+  overflow-y:clip;
+}
+html body header .rubriques li button {
+  overflow:visible!important;
+}
+</style>
 <style id="brot2you-light-wave-v46">
 /* Une vraie traînée de lumière mobile, sans liseré ni halo extérieur.
    Les 7 cocardes et les boutons Accueil / Rechercher / Archives sont concernés. */
