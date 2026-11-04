@@ -6475,6 +6475,21 @@ main.wrap{padding-top:12px!important}
 .rubriques button img[src*="apps-chibi"]{clip-path:circle(39.4% at 50% 50%)!important}
 .rubriques button img[src*="liens-chibi"]{clip-path:circle(49% at 50% 50%)!important}
 </style>
+<style id="brot2you-categories-buttons-v25">
+/* Catégories en boutons texte : aucune illustration ni détourage */
+.rubriques{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:10px!important;overflow:visible!important;padding:10px 0 14px!important}
+.rubriques li{min-width:0!important;max-width:none!important;flex:auto!important;list-style:none!important}
+.rubriques button,.rubriques button[aria-pressed="true"]{display:flex!important;align-items:center!important;justify-content:center!important;width:100%!important;min-height:66px!important;height:100%!important;padding:12px 9px!important;line-height:1.18!important;background:linear-gradient(180deg,#fff3a5,#ffcf48)!important;color:#102e6e!important;border:2px solid #edb839!important;border-radius:15px!important;box-shadow:0 4px 0 #bd8a28,0 7px 12px #052d7130!important;overflow:visible!important;transform:none!important;cursor:pointer!important}
+.rubriques button[aria-pressed="true"]{background:linear-gradient(180deg,#fffbd3,#ffdc65)!important;border-color:#fff!important;outline:3px solid #174dbb!important;outline-offset:0!important}
+.rubriques button:hover{filter:brightness(1.05)!important}
+.rubrique-texte{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif!important;font-size:clamp(12px,1.4vw,17px)!important;font-weight:850!important;line-height:1.15!important;text-align:center!important;white-space:normal!important}
+@media(max-width:700px){
+.rubriques{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:9px!important;overflow:visible!important;scroll-snap-type:none!important;padding:9px 2px 14px!important}
+.rubriques li{min-width:0!important;max-width:none!important;flex:auto!important}
+.rubriques button{min-height:58px!important;padding:9px 7px!important}
+.rubrique-texte{font-size:14px!important}
+}
+</style>
 </head>
 <body>
 <a class="sr-only" href="#main">Aller au contenu</a>
@@ -6685,8 +6700,7 @@ main.wrap{padding-top:12px!important}
       var n = articles ? compter(r.id) : 0;
       var etiquette = r.nom + (n ? ", " + n + " article" + (n > 1 ? "s" : "") : ", pas encore d'article");
       h += '<li><button type="button" data-rubrique="' + r.id + '" aria-pressed="' + (actif === r.id) + '" aria-label="' + echapper(etiquette) + '" style="--rubrique-couleur:' + r.couleur + '">';
-      if (r.img) h += '<img src="' + r.img + '" alt="" width="340" height="455">';
-      else h += '<span class="vignette"><img src="' + r.vignette + '" alt="" width="200" height="197"><span class="vignette-label" aria-hidden="true">' + echapper(r.court || r.nom) + "</span></span>";
+      h += '<span class="rubrique-texte">' + echapper(({apps:"Mes Apps",classe:"Classe & pédagogie",ressources:"Ressources",culture:"English & Culture",ia:"IA en classe",inter:"Transversal",liens:"Liens utiles"})[r.id] || r.nom) + '</span>';
       
       h += "</button></li>";
     }
