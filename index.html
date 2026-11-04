@@ -6539,6 +6539,13 @@ header nav[aria-label="Rubriques"]:before{display:none!important}
 .rubriques button:focus-visible .rubrique-texte{outline:3px solid #ffdc50!important}
 @media(max-width:700px){.rubriques li{flex:0 0 100px!important;min-width:100px!important;max-width:100px!important}.rubriques button,.rubriques button[aria-pressed="true"]{height:88px!important;min-height:88px!important}.rubriques button:before,.rubriques button[aria-pressed="true"]:before{width:76px!important;height:76px!important;border-width:13px!important}.rubrique-texte{font-size:10px!important;min-height:27px!important}}
 </style>
+<style id="brot2you-underground-visible-v29">
+/* Vrai élément HTML pour le cercle, sans dépendre des pseudo-éléments neutralisés par les anciens styles */
+.rubriques button:before,.rubriques button:after{content:none!important;display:none!important}
+.rubriques button .underground-ring{position:absolute!important;display:block!important;box-sizing:border-box!important;left:50%!important;top:50%!important;transform:translate(-50%,-50%)!important;width:82px!important;height:82px!important;border:15px solid #ed2939!important;border-radius:50%!important;background:transparent!important;box-shadow:0 2px 3px #08265c44!important;pointer-events:none!important;z-index:0!important}
+.rubriques button .rubrique-texte{z-index:2!important;flex-shrink:0!important;background:#123c8c!important;color:white!important;box-shadow:0 2px 2px #08265c55!important}
+@media(max-width:700px){.rubriques button .underground-ring{width:76px!important;height:76px!important;border-width:13px!important}}
+</style>
 </head>
 <body>
 <a class="sr-only" href="#main">Aller au contenu</a>
@@ -6749,7 +6756,7 @@ header nav[aria-label="Rubriques"]:before{display:none!important}
       var n = articles ? compter(r.id) : 0;
       var etiquette = r.nom + (n ? ", " + n + " article" + (n > 1 ? "s" : "") : ", pas encore d'article");
       h += '<li><button type="button" data-rubrique="' + r.id + '" aria-pressed="' + (actif === r.id) + '" aria-label="' + echapper(etiquette) + '" style="--rubrique-couleur:' + r.couleur + '">';
-      h += '<span class="rubrique-texte">' + echapper(({apps:"Mes Apps",classe:"Classe & pédagogie",ressources:"Ressources",culture:"English & Culture",ia:"IA en classe",inter:"Transversal",liens:"Liens utiles"})[r.id] || r.nom) + '</span>';
+      h += '<span class="underground-ring" aria-hidden="true"></span><span class="rubrique-texte">' + echapper(({apps:"Mes Apps",classe:"Classe & pédagogie",ressources:"Ressources",culture:"English & Culture",ia:"IA en classe",inter:"Transversal",liens:"Liens utiles"})[r.id] || r.nom) + '</span>';
       
       h += "</button></li>";
     }
