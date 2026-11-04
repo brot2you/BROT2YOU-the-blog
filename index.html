@@ -7848,121 +7848,148 @@ html body header .rubriques li button[data-rubrique="apps"]:hover .rubrique-text
   router();
 })();
 </script>
-<style id="brot2you-random-sparkles-v44">
-/* Un seul élément s'illumine à la fois, sans débordement. */
-@keyframes brot2youRandomRingFlash{
- 0%,100%{filter:brightness(1);box-shadow:none}
- 42%{filter:brightness(1.25);box-shadow:0 0 7px color-mix(in srgb,var(--rubrique-couleur,#e52b33) 55%,transparent)}
+<style id="brot2you-light-wave-v46">
+/* Une vraie traînée de lumière mobile, sans liseré ni halo extérieur.
+   Les 7 cocardes et les boutons Accueil / Rechercher / Archives sont concernés. */
+@keyframes brot2youSweep46{
+  0%{left:-48%;opacity:0}
+  12%{opacity:1}
+  76%{opacity:1}
+  100%{left:125%;opacity:0}
 }
-@keyframes brot2youRandomButtonFlash{
- 0%,100%{filter:brightness(1);box-shadow:none}
- 45%{filter:brightness(1.2);box-shadow:0 0 7px #ffdf7480}
+@keyframes brot2youOrbit46{
+  0%{transform:rotate(-135deg);opacity:0}
+  13%{opacity:1}
+  78%{opacity:1}
+  100%{transform:rotate(235deg);opacity:0}
 }
-html body header .rubriques button.brot2you-sparkle .underground-ring{
- animation:brot2youRandomRingFlash 950ms ease-in-out 1!important;
+/* Bande centrale des catégories : la lumière traverse réellement le texte. */
+html body header .rubriques li button .rubrique-texte{
+  position:relative!important;isolation:isolate!important;overflow:hidden!important;
 }
-html body header .rubriques button.brot2you-sparkle .rubrique-texte{
- filter:brightness(1.12)!important;
+html body header .rubriques li button .rubrique-texte::after{
+  content:""!important;display:block!important;position:absolute!important;
+  top:-65%!important;left:-48%!important;width:38%!important;height:230%!important;
+  transform:skewX(-22deg)!important;
+  background:linear-gradient(90deg,transparent 0%,rgba(255,255,255,.18) 22%,
+    rgba(255,255,255,.92) 49%,rgba(255,255,255,.27) 72%,transparent 100%)!important;
+  opacity:0!important;animation:none!important;animation-delay:0s!important;
+  pointer-events:none!important;z-index:5!important;
 }
-html body header .iconbar a.brot2you-sparkle,
-html body header .iconbar button.brot2you-sparkle{
- animation:brot2youRandomButtonFlash 950ms ease-in-out 1!important;
+html body header .rubriques li button.brot2you-wave .rubrique-texte::after{
+  animation:brot2youSweep46 1.2s cubic-bezier(.22,.61,.36,1) 1!important;
+  animation-delay:0s!important;
 }
-@media(prefers-reduced-motion:reduce){
- html body header .rubriques button.brot2you-sparkle .underground-ring,
- html body header .iconbar a.brot2you-sparkle,
- html body header .iconbar button.brot2you-sparkle{animation:none!important}
+/* Les anciennes règles masquaient la lumière des anneaux :
+   ici le reflet suit leur épaisseur réelle, y compris sur mobile. */
+html body header .rubriques li button .underground-ring{
+  --brot-ring-thickness:18px;
+  position:absolute!important;isolation:isolate!important;
+  animation:none!important;
 }
-</style>
-<script id="brot2you-random-sparkles-script-v44">
-(function(){
- if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
- var previous=null,active=null;
- function sparkle(){
-  if(document.hidden)return;
-  var items=Array.prototype.slice.call(document.querySelectorAll('#rubriques button, #iconbar a, #iconbar button'));
-  if(!items.length)return;
-  var candidates=items.filter(function(el){return el!==previous;});
-  if(!candidates.length)candidates=items;
-  var chosen=candidates[Math.floor(Math.random()*candidates.length)];
-  if(active)active.classList.remove('brot2you-sparkle');
-  chosen.classList.remove('brot2you-sparkle');
-  void chosen.offsetWidth;
-  chosen.classList.add('brot2you-sparkle');
-  active=chosen;previous=chosen;
-  window.setTimeout(function(){chosen.classList.remove('brot2you-sparkle');if(active===chosen)active=null;},1000);
- }
- function loop(){sparkle();window.setTimeout(loop,1800+Math.floor(Math.random()*2600));}
- if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',function(){window.setTimeout(loop,1100);});
- else window.setTimeout(loop,1100);
-})();
-</script>
-<style id="brot2you-light-wave-v45">
-/* Vague lumineuse visible sur les bandeaux, sans halo débordant. */
-@keyframes brot2youLightSweep{0%{transform:translateX(-160%) skewX(-22deg);opacity:0}12%{opacity:1}80%{opacity:1}100%{transform:translateX(480%) skewX(-22deg);opacity:0}}
-html body header .rubriques button .rubrique-texte,
+html body header .rubriques li button .underground-ring::before{
+  content:none!important;display:none!important;
+}
+html body header .rubriques li button .underground-ring::after{
+  content:""!important;display:block!important;position:absolute!important;
+  inset:calc(-1 * var(--brot-ring-thickness))!important;border-radius:50%!important;
+  background:conic-gradient(from 0deg,transparent 0deg,transparent 232deg,
+    rgba(255,255,255,.16) 249deg,rgba(255,255,255,.97) 269deg,
+    rgba(255,255,255,.27) 290deg,transparent 313deg,transparent 360deg)!important;
+  -webkit-mask-image:radial-gradient(farthest-side,
+    transparent calc(100% - var(--brot-ring-thickness) - 2px),
+    #000 calc(100% - var(--brot-ring-thickness) + 1px))!important;
+  mask-image:radial-gradient(farthest-side,
+    transparent calc(100% - var(--brot-ring-thickness) - 2px),
+    #000 calc(100% - var(--brot-ring-thickness) + 1px))!important;
+  opacity:0!important;transform:rotate(-135deg)!important;
+  animation:none!important;pointer-events:none!important;z-index:4!important;
+}
+html body header .rubriques li button.brot2you-wave .underground-ring::after{
+  animation:brot2youOrbit46 1.2s ease-in-out 1!important;
+}
+html body header .rubriques li button.brot2you-wave .underground-ring{
+  filter:brightness(1.15)!important;
+}
+@media(max-width:1150px){
+  html body header .rubriques li button .underground-ring{--brot-ring-thickness:17px}
+}
+@media(max-width:700px){
+  html body header .rubriques li button .underground-ring{--brot-ring-thickness:15px}
+}
+/* Le même effet en vague diagonale sur les trois boutons jaunes. */
 html body header .iconbar a,
-html body header .iconbar button{position:relative!important;isolation:isolate!important}
-html body header .rubriques button .rubrique-texte{overflow:hidden!important}
-html body header .rubriques button .rubrique-texte::after{
- content:""!important;display:block!important;position:absolute!important;
- top:-35%!important;left:0!important;width:38%!important;height:170%!important;
- background:linear-gradient(90deg,transparent,#ffffff20,#ffffffd9,#ffffff20,transparent)!important;
- transform:translateX(-160%) skewX(-22deg)!important;opacity:0!important;
- animation:none!important;pointer-events:none!important;z-index:3!important;
+html body header .iconbar button{
+  position:relative!important;isolation:isolate!important;overflow:hidden!important;
 }
-html body header .rubriques button.brot2you-wave .rubrique-texte::after{
- animation:brot2youLightSweep 1.25s ease-in-out 1!important;
+html body header .iconbar a::after,
+html body header .iconbar button::after{
+  content:""!important;display:block!important;position:absolute!important;
+  top:-65%!important;left:-48%!important;width:38%!important;height:230%!important;
+  transform:skewX(-22deg)!important;
+  background:linear-gradient(90deg,transparent 0%,rgba(255,255,255,.08) 22%,
+    rgba(255,255,255,.95) 49%,rgba(255,255,255,.26) 72%,transparent 100%)!important;
+  opacity:0!important;animation:none!important;pointer-events:none!important;z-index:5!important;
 }
-html body header .rubriques button .underground-ring{isolation:isolate!important}
-html body header .rubriques button .underground-ring::after{
- content:""!important;display:block!important;position:absolute!important;
- inset:-1px!important;border-radius:50%!important;
- background:conic-gradient(from 200deg,transparent 0deg,transparent 230deg,#ffffffa8 264deg,#ffffffed 280deg,transparent 312deg,transparent 360deg)!important;
- -webkit-mask:radial-gradient(farthest-side,transparent calc(100% - 18px),#000 calc(100% - 17px))!important;
- mask:radial-gradient(farthest-side,transparent calc(100% - 18px),#000 calc(100% - 17px))!important;
- opacity:0!important;pointer-events:none!important;z-index:1!important;
+html body header .iconbar a.brot2you-wave::after,
+html body header .iconbar button.brot2you-wave::after{
+  animation:brot2youSweep46 1.2s cubic-bezier(.22,.61,.36,1) 1!important;
 }
-@keyframes brot2youRingWave{0%{transform:rotate(-95deg);opacity:0}15%{opacity:.85}80%{opacity:.85}100%{transform:rotate(205deg);opacity:0}}
-html body header .rubriques button.brot2you-wave .underground-ring::after{
- animation:brot2youRingWave 1.25s ease-in-out 1!important;
-}
-html body header .iconbar a,html body header .iconbar button{overflow:hidden!important}
-html body header .iconbar a::after,html body header .iconbar button::after{
- content:""!important;display:block!important;position:absolute!important;
- left:0!important;top:-40%!important;width:38%!important;height:180%!important;
- background:linear-gradient(90deg,transparent,#ffffff26,#ffffffe8,#ffffff26,transparent)!important;
- transform:translateX(-160%) skewX(-22deg)!important;opacity:0!important;
- pointer-events:none!important;z-index:5!important;
-}
-html body header .iconbar a.brot2you-wave::after,html body header .iconbar button.brot2you-wave::after{
- animation:brot2youLightSweep 1.25s ease-in-out 1!important;
-}
+/* Réduction des animations selon les préférences d'accessibilité. */
 @media(prefers-reduced-motion:reduce){
- html body header .rubriques button.brot2you-wave .rubrique-texte::after,
- html body header .rubriques button.brot2you-wave .underground-ring::after,
- html body header .iconbar .brot2you-wave::after{animation:none!important}
+  html body header .rubriques li button .rubrique-texte::after,
+  html body header .rubriques li button .underground-ring::after,
+  html body header .iconbar a::after,
+  html body header .iconbar button::after{animation:none!important;opacity:0!important}
 }
 </style>
-<script id="brot2you-light-wave-script-v45">
+<script id="brot2you-light-wave-script-v46">
 (function(){
- if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
- var last=null;
- function wave(){
-  if(!document.hidden){
-   var all=Array.prototype.slice.call(document.querySelectorAll('#rubriques button, #iconbar a, #iconbar button'));
-   var pool=all.filter(function(el){return el!==last});
-   if(!pool.length)pool=all;
-   if(pool.length){
-    var el=pool[Math.floor(Math.random()*pool.length)];
-    el.classList.remove('brot2you-wave');void el.offsetWidth;
-    el.classList.add('brot2you-wave');last=el;
-    setTimeout(function(){el.classList.remove('brot2you-wave')},1300);
-   }
+  "use strict";
+  if(window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches)return;
+  var previous=null;
+  var queues={categories:[],navigation:[]};
+  var step=0;
+  function shuffle(items){
+    for(var i=items.length-1;i>0;i--){
+      var j=Math.floor(Math.random()*(i+1));
+      var tmp=items[i];items[i]=items[j];items[j]=tmp;
+    }
+    return items;
   }
-  setTimeout(wave,1700+Math.floor(Math.random()*1300));
- }
- setTimeout(wave,700);
+  function pick(group){
+    // Les catégories et les boutons sont reconstruits lors de la navigation.
+    var selector=group==="categories"?"#rubriques button":"#iconbar a, #iconbar button";
+    var existing=Array.prototype.slice.call(document.querySelectorAll(selector));
+    if(!existing.length)return null;
+    var queue=queues[group].filter(function(el){return existing.indexOf(el)!==-1;});
+    if(!queue.length)queue=shuffle(existing.slice());
+    var selected=queue.shift();
+    if(selected===previous&&queue.length){queue.push(selected);selected=queue.shift();}
+    queues[group]=queue;
+    return selected;
+  }
+  function wave(){
+    if(!document.hidden){
+      // Deux rubriques puis un bouton : le passage sur les icônes est bien visible.
+      var group=((step++%3)===2)?"navigation":"categories";
+      var el=pick(group)||pick(group==="categories"?"navigation":"categories");
+      if(el){
+        document.querySelectorAll(".brot2you-wave").forEach(function(active){
+          active.classList.remove("brot2you-wave");
+        });
+        el.classList.remove("brot2you-wave");
+        void el.offsetWidth;
+        el.classList.add("brot2you-wave");
+        previous=el;
+        window.setTimeout(function(){el.classList.remove("brot2you-wave");},1250);
+      }
+    }
+    window.setTimeout(wave,1450+Math.floor(Math.random()*300));
+  }
+  if(document.readyState==="loading"){
+    document.addEventListener("DOMContentLoaded",function(){window.setTimeout(wave,650);},{once:true});
+  }else window.setTimeout(wave,650);
 })();
 </script>
 </body>
