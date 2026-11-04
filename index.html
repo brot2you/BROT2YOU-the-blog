@@ -7848,5 +7848,54 @@ html body header .rubriques li button[data-rubrique="apps"]:hover .rubrique-text
   router();
 })();
 </script>
+<style id="brot2you-random-sparkles-v44">
+/* Un seul élément s'illumine à la fois, sans débordement. */
+@keyframes brot2youRandomRingFlash{
+ 0%,100%{filter:brightness(1);box-shadow:none}
+ 42%{filter:brightness(1.25);box-shadow:0 0 7px color-mix(in srgb,var(--rubrique-couleur,#e52b33) 55%,transparent)}
+}
+@keyframes brot2youRandomButtonFlash{
+ 0%,100%{filter:brightness(1);box-shadow:none}
+ 45%{filter:brightness(1.2);box-shadow:0 0 7px #ffdf7480}
+}
+html body header .rubriques button.brot2you-sparkle .underground-ring{
+ animation:brot2youRandomRingFlash 950ms ease-in-out 1!important;
+}
+html body header .rubriques button.brot2you-sparkle .rubrique-texte{
+ filter:brightness(1.12)!important;
+}
+html body header .iconbar a.brot2you-sparkle,
+html body header .iconbar button.brot2you-sparkle{
+ animation:brot2youRandomButtonFlash 950ms ease-in-out 1!important;
+}
+@media(prefers-reduced-motion:reduce){
+ html body header .rubriques button.brot2you-sparkle .underground-ring,
+ html body header .iconbar a.brot2you-sparkle,
+ html body header .iconbar button.brot2you-sparkle{animation:none!important}
+}
+</style>
+<script id="brot2you-random-sparkles-script-v44">
+(function(){
+ if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+ var previous=null,active=null;
+ function sparkle(){
+  if(document.hidden)return;
+  var items=Array.prototype.slice.call(document.querySelectorAll('#rubriques button, #iconbar a, #iconbar button'));
+  if(!items.length)return;
+  var candidates=items.filter(function(el){return el!==previous;});
+  if(!candidates.length)candidates=items;
+  var chosen=candidates[Math.floor(Math.random()*candidates.length)];
+  if(active)active.classList.remove('brot2you-sparkle');
+  chosen.classList.remove('brot2you-sparkle');
+  void chosen.offsetWidth;
+  chosen.classList.add('brot2you-sparkle');
+  active=chosen;previous=chosen;
+  window.setTimeout(function(){chosen.classList.remove('brot2you-sparkle');if(active===chosen)active=null;},1000);
+ }
+ function loop(){sparkle();window.setTimeout(loop,1800+Math.floor(Math.random()*2600));}
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',function(){window.setTimeout(loop,1100);});
+ else window.setTimeout(loop,1100);
+})();
+</script>
 </body>
 </html>
