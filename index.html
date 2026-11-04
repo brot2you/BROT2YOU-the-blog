@@ -6600,6 +6600,43 @@ box-shadow:0 2px 4px #001c4a55!important;
 .rubriques button .rubrique-texte{background:linear-gradient(180deg,#3276cb 0%,#164c9f 33%,#0b347e 100%)!important}
 .rubriques button:focus-visible .rubrique-texte{outline:2px solid #ffe376!important;outline-offset:3px!important}
 </style>
+<style id="brot2you-roundel-clean-v34">
+/* Anneaux parfaitement unis : aucun liseré intérieur ou extérieur. */
+.rubriques button .underground-ring,
+.rubriques button[aria-pressed="true"] .underground-ring{
+ border-style:solid!important;
+ border-color:var(--rubrique-couleur,#e52b33)!important;
+ background:none!important;
+ background-image:none!important;
+ box-shadow:none!important;
+ outline:none!important;
+ filter:none!important;
+}
+/* Bandeau central bleu uniforme, sans bordure ni trait de sélection décoratif. */
+.rubriques button .rubrique-texte,
+.rubriques button[aria-pressed="true"] .rubrique-texte{
+ border:0!important;
+ border-top:0!important;
+ border-bottom:0!important;
+ outline:0!important;
+ box-shadow:none!important;
+ background:linear-gradient(180deg,#3276cb,#164c9f 38%,#0b347e)!important;
+}
+/* Lumière brève et intermittente sur les anneaux, sans créer de contour fixe. */
+.rubriques button .underground-ring{animation:brot2youRoundelPulse 8s ease-in-out infinite!important}
+.rubriques li:nth-child(2) .underground-ring{animation-delay:-1.1s!important}
+.rubriques li:nth-child(3) .underground-ring{animation-delay:-2.2s!important}
+.rubriques li:nth-child(4) .underground-ring{animation-delay:-3.3s!important}
+.rubriques li:nth-child(5) .underground-ring{animation-delay:-4.4s!important}
+.rubriques li:nth-child(6) .underground-ring{animation-delay:-5.5s!important}
+.rubriques li:nth-child(7) .underground-ring{animation-delay:-6.6s!important}
+@keyframes brot2youRoundelPulse{
+ 0%,12%,29%,100%{filter:brightness(1);box-shadow:none}
+ 18%{filter:brightness(1.4);box-shadow:0 0 14px var(--rubrique-couleur,#e52b33)}
+ 23%{filter:brightness(1.08);box-shadow:none}
+}
+@media(prefers-reduced-motion:reduce){.rubriques button .underground-ring{animation:none!important}}
+</style>
 </head>
 <body>
 <a class="sr-only" href="#main">Aller au contenu</a>
