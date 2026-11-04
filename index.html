@@ -6705,6 +6705,17 @@ html body header > div.wrap .iconbar li::before{display:none!important}
  html body header > div.wrap .iconbar{border-radius:12px!important;padding:7px 5px!important}
 }
 </style>
+<style id="brot2you-compact-navigation-v38">
+/* Rubriques rapprochées et centrées comme sur la maquette, sans changer les liens. */
+html body header .rubriques{display:flex!important;justify-content:center!important;align-items:center!important;gap:3px!important;max-width:1160px!important;margin:0 auto!important;padding:3px 0 9px!important;overflow-x:auto!important}
+html body header .rubriques li{flex:0 0 158px!important;min-width:0!important;max-width:158px!important}
+html body header .rubriques button,html body header .rubriques button[aria-pressed="true"]{height:94px!important;min-height:94px!important}
+html body header .rubriques button .rubrique-texte{max-width:158px!important;font-size:11px!important}
+html body header .iconbar{width:max-content!important;max-width:100%!important;margin:5px auto 0!important;box-sizing:border-box!important;display:flex!important;justify-content:center!important;gap:5px!important;padding:7px 12px!important}
+html body header nav[aria-label="Navigation"]{display:flex!important;justify-content:center!important}
+@media(max-width:1150px){html body header .rubriques{justify-content:flex-start!important;max-width:100%!important}html body header .rubriques li{flex:0 0 133px!important;max-width:133px!important}html body header .rubriques button .rubrique-texte{max-width:133px!important}}
+@media(max-width:700px){html body header .rubriques{gap:3px!important;padding-bottom:8px!important}html body header .rubriques li{flex:0 0 108px!important;max-width:108px!important}html body header .rubriques button .rubrique-texte{max-width:108px!important;font-size:10px!important}html body header .iconbar{padding:6px 8px!important}}
+</style>
 </head>
 <body>
 <a class="sr-only" href="#main">Aller au contenu</a>
