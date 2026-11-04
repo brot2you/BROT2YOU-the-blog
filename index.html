@@ -6716,6 +6716,30 @@ html body header nav[aria-label="Navigation"]{display:flex!important;justify-con
 @media(max-width:1150px){html body header .rubriques{justify-content:flex-start!important;max-width:100%!important}html body header .rubriques li{flex:0 0 133px!important;max-width:133px!important}html body header .rubriques button .rubrique-texte{max-width:133px!important}}
 @media(max-width:700px){html body header .rubriques{gap:3px!important;padding-bottom:8px!important}html body header .rubriques li{flex:0 0 108px!important;max-width:108px!important}html body header .rubriques button .rubrique-texte{max-width:108px!important;font-size:10px!important}html body header .iconbar{padding:6px 8px!important}}
 </style>
+<style id="brot2you-larger-category-rings-v39">
+/* Cercles agrandis pour équilibrer la largeur des bandeaux centraux. */
+html body header .rubriques button,
+html body header .rubriques button[aria-pressed="true"]{
+ height:128px!important;min-height:128px!important;
+}
+html body header .rubriques button .underground-ring,
+html body header .rubriques button[aria-pressed="true"] .underground-ring{
+ width:114px!important;height:114px!important;
+ border-width:19px!important;border-radius:50%!important;
+}
+html body header .rubriques button .rubrique-texte{
+ min-height:33px!important;font-size:12px!important;
+}
+@media(max-width:1150px){
+ html body header .rubriques button,html body header .rubriques button[aria-pressed="true"]{height:114px!important;min-height:114px!important}
+ html body header .rubriques button .underground-ring{width:104px!important;height:104px!important;border-width:17px!important}
+}
+@media(max-width:700px){
+ html body header .rubriques button,html body header .rubriques button[aria-pressed="true"]{height:104px!important;min-height:104px!important}
+ html body header .rubriques button .underground-ring{width:94px!important;height:94px!important;border-width:16px!important}
+ html body header .rubriques button .rubrique-texte{min-height:29px!important;font-size:10px!important}
+}
+</style>
 </head>
 <body>
 <a class="sr-only" href="#main">Aller au contenu</a>
