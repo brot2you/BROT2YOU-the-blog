@@ -6637,6 +6637,33 @@ box-shadow:0 2px 4px #001c4a55!important;
 }
 @media(prefers-reduced-motion:reduce){.rubriques button .underground-ring{animation:none!important}}
 </style>
+<style id="brot2you-roundel-single-ring-v35">
+/* Éliminer définitivement l'ancien cercle CSS superposé derrière le nouvel anneau. */
+html body header .rubriques li button::before,
+html body header .rubriques li button[aria-pressed="true"]::before,
+html body header .rubriques li button::after,
+html body header .rubriques li button[aria-pressed="true"]::after{
+ content:none!important;display:none!important;border:0!important;box-shadow:none!important;background:none!important;
+}
+html body header .rubriques li button .underground-ring::before,
+html body header .rubriques li button .underground-ring::after{
+ content:none!important;display:none!important;
+}
+html body header .rubriques li button .underground-ring{
+ background:transparent!important;background-image:none!important;
+ border-color:var(--rubrique-couleur,#e52b33)!important;
+ outline:0!important;
+}
+/* Bandeau commun bleu sans contour. */
+html body header .rubriques li button .rubrique-texte,
+html body header .rubriques li button[aria-pressed="true"] .rubrique-texte{
+ border:0!important;outline:0!important;box-shadow:none!important;
+ background:linear-gradient(180deg,#3276cb,#164c9f 38%,#0b347e)!important;
+}
+html body header .rubriques li button:focus-visible .rubrique-texte{
+ outline:2px solid #ffe376!important;outline-offset:3px!important;
+}
+</style>
 </head>
 <body>
 <a class="sr-only" href="#main">Aller au contenu</a>
