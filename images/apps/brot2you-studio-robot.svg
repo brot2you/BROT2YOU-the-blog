@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<defs>
+<linearGradient id="bg" x2="1" y2="1"><stop stop-color="#2a47a6"/><stop offset=".52" stop-color="#403fb3"/><stop offset="1" stop-color="#ef8d57"/></linearGradient>
+<linearGradient id="desk" x2="0" y2="1"><stop stop-color="#ffc17a"/><stop offset="1" stop-color="#ad5481"/></linearGradient>
+<linearGradient id="screen" x2="0" y2="1"><stop stop-color="#6fe0fb"/><stop offset="1" stop-color="#0976d2"/></linearGradient>
+<linearGradient id="gold" x2="0" y2="1"><stop stop-color="#ffe99b"/><stop offset="1" stop-color="#ffa52b"/></linearGradient>
+<filter id="shadow"><feDropShadow dx="0" dy="9" stdDeviation="10" flood-color="#10135a" flood-opacity=".55"/></filter>
+</defs>
+<rect width="512" height="512" fill="url(#bg)"/>
+<g opacity=".25" stroke="#b2edff" stroke-width="12"><path d="M12 64h138v120H12M356 12v90h145M407 232h88"/></g>
+<circle cx="374" cy="65" r="49" fill="#fff5ba" opacity=".25"/>
+<g filter="url(#shadow)">
+<path d="M263 137Q260 111 288 102L447 65Q481 62 489 102L490 363Q487 387 453 388L267 380Z" fill="#171d69" stroke="#fff1cf" stroke-width="10"/>
+<path d="M280 151L468 110V344L277 347Z" fill="url(#screen)"/>
+<path d="M305 288L336 239L365 253L394 194L432 213L461 182V340H305Z" fill="#77d538"/>
+<path d="M301 282L344 227L371 247L399 196L431 212" stroke="#a4f863" stroke-width="6" fill="none"/>
+<rect x="401" y="128" width="55" height="49" rx="11" fill="#fa5ea0" stroke="#fff" stroke-width="4"/>
+<path d="M425 136v31m-15-16h31" stroke="#ffdf5f" stroke-width="10" stroke-linecap="round"/>
+<path d="M338 161l6 15 16 2-12 10 4 16-14-8-14 8 4-16-12-10 16-2Z" fill="#ffdd51" stroke="#fff7b5" stroke-width="4"/>
+</g>
+<g filter="url(#shadow)">
+<rect x="35" y="304" width="296" height="172" rx="69" fill="#f4f9ff" stroke="#1b4399" stroke-width="13"/>
+<path d="M64 340q7-21 36-25h166q31 2 42 29v35q-58 38-241 0Z" fill="#47bcf0"/>
+<rect x="64" y="319" width="231" height="96" rx="37" fill="#0e276b" stroke="#6edcff" stroke-width="11"/>
+<path d="M99 349q22-27 47 0M201 349q21-27 45 0" stroke="#70e8ff" stroke-width="10" stroke-linecap="round" fill="none"/>
+<path d="M156 374q27 29 48 0Z" fill="#ff7eb3"/>
+<rect x="71" y="290" width="220" height="35" rx="18" fill="#f3f8ff" stroke="#2b72c6" stroke-width="8"/>
+<path d="M112 293l-16-36 35-27 31 45m39 11 32-44 32 22-16 30" fill="#ffbe30" stroke="#e87d18" stroke-width="8"/>
+<ellipse cx="110" cy="279" rx="31" ry="17" fill="#69cafa" stroke="#fff" stroke-width="4" transform="rotate(-22 110 279)"/>
+<ellipse cx="239" cy="276" rx="29" ry="17" fill="#69cafa" stroke="#fff" stroke-width="4" transform="rotate(22 239 276)"/>
+<circle cx="35" cy="363" r="38" fill="#ffb13b" stroke="#1b4399" stroke-width="11"/>
+<circle cx="305" cy="363" r="38" fill="#ffb13b" stroke="#1b4399" stroke-width="11"/>
+<path d="M105 418h29m-14-14v29" stroke="#3569c4" stroke-width="12" stroke-linecap="round"/>
+<circle cx="243" cy="420" r="7" fill="#f86aa4"/><circle cx="267" cy="432" r="7" fill="#ffd04f"/>
+</g>
+<path d="M0 455Q210 429 512 450v62H0Z" fill="url(#desk)"/>
+<g filter="url(#shadow)">
+<path d="M21 421q31-26 67-3L468 397q21 2 28 24v74H19Z" fill="#fff9da" stroke="#234290" stroke-width="8"/>
+<text x="257" y="458" text-anchor="middle" font-family="Arial,sans-serif" font-weight="900" font-size="44" fill="#09296a" stroke="#09296a" stroke-width="1">BROT2YOU</text>
+<rect x="155" y="466" width="204" height="39" rx="17" fill="url(#gold)"/>
+<text x="257" y="494" text-anchor="middle" font-family="Arial,sans-serif" font-weight="900" font-style="italic" font-size="30" fill="#092a73">Studio</text>
+</g>
+</svg>
