@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="ttl dsc">
+<title id="ttl">BROT2YOU Studio</title><desc id="dsc">Création de jeux pédagogiques, manette et cartes de jeu multicolores</desc>
+<defs>
+<linearGradient id="back" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#513fe9"/><stop offset=".52" stop-color="#242b9f"/><stop offset="1" stop-color="#0a195e"/></linearGradient>
+<linearGradient id="panel" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#ffffff"/><stop offset="1" stop-color="#d5e6ff"/></linearGradient>
+<linearGradient id="button" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ff7eb3"/><stop offset="1" stop-color="#fa477f"/></linearGradient>
+<linearGradient id="aqua" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#9bf8fb"/><stop offset="1" stop-color="#3dbce9"/></linearGradient>
+<filter id="shadow" x="-30%" y="-30%" width="160%" height="175%"><feDropShadow dx="0" dy="11" stdDeviation="10" flood-color="#061044" flood-opacity=".55"/></filter>
+</defs>
+<rect x="10" y="10" width="492" height="492" rx="72" fill="url(#back)"/>
+<rect x="24" y="24" width="464" height="464" rx="59" fill="none" stroke="#8f95ff" stroke-width="5" opacity=".7"/>
+<path d="M46 152 C114 60 236 36 354 51" stroke="#ffffff" stroke-width="14" stroke-linecap="round" fill="none" opacity=".12"/>
+<g opacity=".8"><path d="M75 208v32m-16-16h32M437 173v24m-12-12h24M422 383v18m-9-9h18" stroke="#ffd56c" stroke-width="8" stroke-linecap="round"/></g>
+<g filter="url(#shadow)">
+<rect x="89" y="110" width="334" height="274" rx="31" fill="#111b63" stroke="#b3b5ff" stroke-width="7"/>
+<rect x="109" y="126" width="294" height="241" rx="22" fill="url(#panel)"/>
+<rect x="123" y="143" width="266" height="48" rx="14" fill="#252a92"/>
+<text x="256" y="175" font-family="Arial, sans-serif" font-weight="900" font-size="29" letter-spacing="1.4" fill="white" text-anchor="middle">BROT2YOU</text>
+<g>
+<rect x="135" y="207" width="102" height="117" rx="18" fill="#f96395"/>
+<rect x="251" y="207" width="102" height="117" rx="18" fill="#53c9ed"/>
+<path d="M177 242h18v14h14v18h-14v14h-18v-14h-14v-18h14z" fill="white"/>
+<circle cx="294" cy="250" r="11" fill="white"/><circle cx="317" cy="274" r="11" fill="white"/>
+<circle cx="281" cy="280" r="7" fill="#fff" opacity=".85"/>
+</g>
+<rect x="164" y="343" width="184" height="33" rx="16" fill="#ffca4d"/>
+<text x="256" y="366" font-family="Arial, sans-serif" font-size="23" font-weight="900" letter-spacing="2.2" fill="#17236a" text-anchor="middle">STUDIO</text>
+</g>
+<path d="M108 412h296" stroke="#7ed9ff" stroke-width="6" stroke-linecap="round" opacity=".6"/>
+<circle cx="124" cy="412" r="6" fill="#ff7bb0"/><circle cx="388" cy="412" r="6" fill="#ffcf61"/>
+</svg>
