@@ -596,6 +596,7 @@
       "Le bouton **Tuto** ouvre un guide détaillé avec une méthode de travail, une activité de transfert et des conseils de dépannage."
     ],
     "matieres": [
+      "Géographie",
       "Histoire-Géographie",
       "EMC"
     ]
@@ -792,7 +793,7 @@
       "Le bouton **Tuto** ouvre un guide détaillé avec une méthode de travail, une activité de transfert et des conseils de dépannage."
     ],
     "matieres": [
-      "Transversal"
+      "Anglais"
     ]
   },
   {
@@ -831,8 +832,7 @@
       "Le bouton **Tuto** ouvre un guide détaillé avec une méthode de travail, une activité de transfert et des conseils de dépannage."
     ],
     "matieres": [
-      "Français",
-      "Transversal"
+      "Français"
     ]
   },
   {
@@ -961,6 +961,7 @@
       "Collègues d'histoire-géographie, vos retours me seraient particulièrement précieux : un repère qui manque, une position à corriger, ou une idée de pack. Je ne suis pas géographe, et je suis sûr qu'il y a beaucoup à apprendre de vous !"
     ],
     "matieres": [
+      "Géographie",
       "Histoire-Géographie"
     ]
   },
@@ -1154,6 +1155,7 @@
       "Collègues d'histoire-géographie et professeurs documentalistes, vos retours me seraient particulièrement précieux : une publication à corriger, une idée d'enquête, ou la façon dont vous travaillez la critique de source avec vos élèves. Je ne suis pas historien, et je suis sûr qu'il y a beaucoup à apprendre de vous !"
     ],
     "matieres": [
+      "Histoire",
       "Histoire-Géographie",
       "EMC"
     ]
@@ -1251,6 +1253,7 @@
       "Collègues de toutes les disciplines, vos retours me seraient précieux : une carte à corriger, une notion qui manque dans votre matière, ou un piège classique que vos élèves rencontrent. Je suis loin d'être spécialiste de tout, et je suis sûr qu'à plusieurs, on peut en faire un vrai compagnon de révision !"
     ],
     "matieres": [
+      "Transversal",
       "Français",
       "Mathématiques",
       "Histoire-Géographie",
@@ -1287,6 +1290,7 @@
       "Collègues d'histoire-géographie, vos retours me seraient particulièrement précieux : un repère qui manque, une formulation à revoir, une idée d'atelier. Je ne suis pas historien, et je suis sûr qu'il y a beaucoup à apprendre de vous !"
     ],
     "matieres": [
+      "Histoire",
       "Histoire-Géographie"
     ]
   },
@@ -2053,7 +2057,7 @@
       "Je serais vraiment content d'avoir vos retours : une situation qui manque, un conseil maladroit, ou simplement la façon dont vous aidez vos élèves à se mettre au travail. Je suis sûr qu'il y a beaucoup à apprendre de vos pratiques !"
     ],
     "matieres": [
-      "Transversal"
+      "Anglais"
     ]
   },
   {
@@ -7923,7 +7927,7 @@ html body header .rubriques li button[data-rubrique="apps"]:hover .rubrique-text
     var filtreMatiere = "";
     if (r && r.id === "apps") {
       try { filtreMatiere = new URLSearchParams(window.location.search).get("matiere") || ""; } catch (e) {}
-      var matieres = ["Anglais", "Espagnol", "Français", "Mathématiques", "Histoire-Géographie", "EMC", "SVT", "Physique-Chimie", "Technologie", "Arts plastiques", "Éducation musicale", "EPS", "Langues vivantes", "Sciences", "Transversal"];
+      var matieres = ["Anglais", "Espagnol", "Allemand", "Italien", "Français", "Mathématiques", "Histoire", "Géographie", "Histoire-Géographie", "EMC", "SVT", "Physique-Chimie", "Technologie", "Arts plastiques", "Éducation musicale", "EPS", "Langues vivantes", "Sciences", "Transversal"];
       if (filtreMatiere && matieres.indexOf(filtreMatiere) !== -1) {
         liste = liste.filter(function(a) { return (a.matieres || []).indexOf(filtreMatiere) !== -1; });
       }
