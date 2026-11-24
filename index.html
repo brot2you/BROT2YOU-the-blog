@@ -10139,5 +10139,23 @@ html body header .iconbar button.brot2you-wave::after{
   }else window.setTimeout(wave,650);
 })();
 </script>
+<style id="b2y-balanced-actions">
+@media screen {
+html body .carte .actions{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px!important;align-items:stretch;margin-top:auto!important;padding-top:12px;width:100%;box-sizing:border-box}
+html body .carte .actions .btn{display:flex!important;align-items:center;justify-content:center;text-align:center;min-width:0;min-height:44px;height:auto!important;box-sizing:border-box;margin:0!important;padding:9px 8px!important;white-space:normal!important;overflow-wrap:anywhere;line-height:1.25}
+html body .carte .actions .btn:first-child{grid-column:1/-1}
+html body .carte .actions .btn:nth-child(2):last-child{grid-column:1/-1}
+html body header .rubriques{display:flex!important;flex-wrap:wrap!important;justify-content:center!important;align-items:stretch!important;overflow:visible!important;gap:10px!important}
+html body header .rubriques li{display:flex!important;justify-content:center!important}
+html body header .iconbar{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr));width:min(100%,420px)!important;gap:8px!important}
+html body header .iconbar li{min-width:0;display:flex!important}
+html body header .iconbar li a,html body header .iconbar li button{width:100%;box-sizing:border-box;min-width:0!important;min-height:54px!important;justify-content:center;text-align:center}
+@media(max-width:700px){
+html body header .rubriques li{flex:0 0 calc((100% - 20px)/3)!important;min-width:0!important;max-width:calc((100% - 20px)/3)!important}
+html body header .rubriques li button{width:100%!important;min-width:0!important}
+html body header .rubriques li button .rubrique-texte{max-width:100%!important;box-sizing:border-box}
+}
+}
+</style>
 </body>
 </html>
