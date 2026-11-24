@@ -60,6 +60,41 @@
 <script type="application/json" id="articles">
 [
   {
+    "id": "buzz-arena",
+    "icone": "images/apps/Ar%C3%A8ne%20Buzz%20_%20D%C3%A9fi%20du%20Quiz.png",
+    "titre": "BUZZ ARENA : des buzzers interactifs pour dynamiser la classe",
+    "date": "2026-11-24",
+    "rubrique": [
+      "apps",
+      "classe",
+      "inter"
+    ],
+    "appNom": "BUZZ ARENA",
+    "appUrl": "https://brot2you.github.io/Buzz-arena/",
+    "tutoUrl": "",
+    "public": [
+      "Élèves",
+      "Collègues"
+    ],
+    "matieres": [
+      "Transversal",
+      "Anglais"
+    ],
+    "resume": "Transformez les appareils des élèves en buzzers connectés : parties individuelles ou par équipes, sons personnalisés et classement en direct.",
+    "contenu": [
+      "**BUZZ ARENA — by BROT2YOU** transforme les smartphones, tablettes et ordinateurs en buzzers pour des jeux de questions-réponses pilotés par le professeur.",
+      "## Une régie de jeu en direct",
+      "Le professeur ouvre ou verrouille les buzzers, identifie le premier participant et attribue les points. Le classement peut être projeté et exporté en CSV.",
+      "## Une expérience personnalisable",
+      "Les élèves rejoignent par QR code ou lien, choisissent un pseudo et un son. Le jeu propose six langues et des parties individuelles ou par équipes. Le professeur choisit la diffusion sonore sur le PC seul ou également sur les smartphones.",
+      "## Des usages pédagogiques variés",
+      "Réactivation du vocabulaire, calcul mental, révisions ou devinettes : alternez les questions rapides avec des temps de réflexion et demandez une justification avant d'attribuer les points.",
+      "## Une infrastructure à configurer",
+      "Les enseignants extérieurs doivent utiliser leur propre projet Firebase Realtime Database. Le tutoriel dédié explique la configuration. Privilégiez les pseudonymes et évitez les données personnelles.",
+      "**À essayer :** [ouvrir BUZZ ARENA](https://brot2you.github.io/Buzz-arena/)."
+    ]
+  },
+  {
     "id": "dyspositif",
     "icone": "images/apps/Logo%20%C3%A9ducatif%20DYS%2B%20color%C3%A9.png",
     "titre": "DYSPOSITIF (DYS+) : un couteau suisse pour apprendre à son rythme",
@@ -2704,6 +2739,47 @@
     ]
   }
 ]
+</script>
+
+<script type="text/markdown" id="tuto-buzz-arena">
+# BUZZ ARENA — Tutoriel pas à pas
+
+## 1. Préparer son espace Firebase
+
+Pour un enseignant extérieur, créer un projet Firebase personnel, activer Realtime Database et les connexions Google et Anonyme dans Authentication. Ajouter brot2you.github.io aux domaines autorisés. Publier les règles fournies dans [database.rules.json](https://github.com/brot2you/Buzz-arena/blob/main/database.rules.json) dans son propre projet. Enregistrer une application Web et récupérer sa configuration firebaseConfig. Ne jamais transmettre de clé privée ni de mot de passe.
+
+## 2. Connecter son espace professeur
+
+Ouvrir [BUZZ ARENA](https://brot2you.github.io/Buzz-arena/), choisir Je suis professeur puis Mon propre Firebase. Coller la configuration Web et cliquer sur Enregistrer et utiliser mon Firebase. Le mode Mon espace BROT2YOU est destiné au propriétaire.
+
+## 3. Créer une partie
+
+Choisir Chacun pour soi ou Par équipes. Dans le second cas, renseigner les noms des équipes. Cliquer sur Créer une partie et se connecter avec Google lorsque demandé.
+
+## 4. Inviter les élèves
+
+Projeter le QR code, éventuellement avec Agrandir le QR code, ou partager le lien élève. Pour un Firebase personnel, utiliser impérativement le QR code ou le lien sur les appareils qui ne connaissent pas encore ce projet. Les élèves saisissent un pseudo, choisissent et testent leur son, puis sélectionnent leur équipe si nécessaire.
+
+## 5. Régler le son et la projection
+
+Cliquer sur Activer le son du PC. Choisir la sortie audio : PC uniquement ou PC et smartphones. Ouvrir Écran projection pour afficher le classement et le résultat des manches au tableau.
+
+## 6. Lancer une question
+
+Poser la question puis cliquer sur Ouvrir les buzzers. Le premier buzz est signalé dans la régie et une fenêtre de priorité indique qui doit répondre.
+
+## 7. Attribuer les points
+
+Écouter la réponse et utiliser + 1 point ou − 1 point selon les règles annoncées. Cliquer sur Manche suivante pour préparer le prochain tour, ou Verrouiller pour interrompre les buzzers.
+
+## 8. Consulter les résultats
+
+Suivre le classement et les joueurs connectés. Utiliser Exporter CSV pour conserver les résultats, puis Quitter pour sortir de la régie.
+
+## Conseil pédagogique
+
+Prévoir des temps de réflexion avant l'ouverture des buzzers et alterner les participants pour que la rapidité ne soit pas le seul critère de réussite.
+
 </script>
 
 <script type="text/markdown" id="tuto-dyspositif">
