@@ -9282,26 +9282,35 @@ html body header .rubriques li button[data-rubrique="apps"]:hover .rubrique-text
 <footer class="site">
   <div class="wrap" id="footer"></div>
 </footer>
-<section id="b2y-admin-login" aria-label="Administration" style="text-align:center;padding:16px">
-<button type="button" class="btn btn-bleu" id="b2y-google-login" disabled>Connexion administrateur</button>
-<button type="button" class="btn btn-bleu" id="b2y-google-logout" hidden>Déconnexion</button>
-<p id="b2y-login-status" role="status" style="overflow-wrap:anywhere">Chargement de la connexion…</p>
-</section>
+<section id="b2y-admin-login" class="wrap" style="text-align:center;padding:16px"><button class="btn btn-bleu" id="b2y-google-login" disabled>Connexion administrateur</button> <button class="btn btn-bleu" id="b2y-google-logout" hidden>Déconnexion</button> <a class="btn btn-bleu" id="b2y-admin-link" href="#/moderation" hidden>Modération</a><p id="b2y-login-status" role="status"></p></section>
 <script type="module">
-import { initializeApp } from "https://www.gstatic.com/firebasejs/13.4.0/firebase-app.js";
-import { getAuth, GoogleAuthProvider, signInWithPopup, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/13.4.0/firebase-auth.js";
-const app = initializeApp({apiKey:"AIzaSyAG0R3IdX3BmRLZyW3N2h_2ug_czBVGBIo",authDomain:"brot2you-blog.firebaseapp.com",projectId:"brot2you-blog",storageBucket:"brot2you-blog.firebasestorage.app",messagingSenderId:"810004025173",appId:"1:810004025173:web:505da2df538f19cabee9dc"});
-const auth = getAuth(app);
-const login = document.getElementById("b2y-google-login");
-const logout = document.getElementById("b2y-google-logout");
-const status = document.getElementById("b2y-login-status");
-onAuthStateChanged(auth,user=>{
-login.disabled=false; login.hidden=!!user; logout.hidden=!user;
-status.textContent=user?"Compte connecté. UID : "+user.uid+" — aucun droit de modération activé pour le moment.":"Espace de modération en préparation.";
-},error=>{status.textContent="Erreur de connexion : "+error.code;});
-login.addEventListener("click",async()=>{login.disabled=true;try{const provider=new GoogleAuthProvider();provider.setCustomParameters({prompt:"select_account"});await signInWithPopup(auth,provider);}catch(e){status.textContent="Connexion impossible : "+(e.code||"erreur inconnue");}finally{login.disabled=false;}});
-logout.addEventListener("click",async()=>{try{await signOut(auth);}catch(e){status.textContent="Déconnexion impossible : "+(e.code||"erreur inconnue");}});
+import {initializeApp} from "https://www.gstatic.com/firebasejs/13.4.0/firebase-app.js";
+import {getAuth,GoogleAuthProvider,signInWithPopup,signInAnonymously,onAuthStateChanged,signOut} from "https://www.gstatic.com/firebasejs/13.4.0/firebase-auth.js";
+import {getFirestore,collection,query,where,limit,startAfter,getDocs,addDoc,updateDoc,deleteDoc,serverTimestamp} from "https://www.gstatic.com/firebasejs/13.4.0/firebase-firestore.js";
+const app=initializeApp({apiKey:"AIzaSyAG0R3IdX3BmRLZyW3N2h_2ug_czBVGBIo",authDomain:"brot2you-blog.firebaseapp.com",projectId:"brot2you-blog",storageBucket:"brot2you-blog.firebasestorage.app",messagingSenderId:"810004025173",appId:"1:810004025173:web:505da2df538f19cabee9dc"}),auth=getAuth(app),db=getFirestore(app),comments=collection(db,"comments");
+const admin=()=>auth.currentUser?.uid==="jzp1WkwW4bfL769r4pGG4cRzlwq1" && auth.currentUser.providerData.some(p=>p.providerId==="google.com");
+const $=id=>document.getElementById(id), login=$("b2y-google-login"),logout=$("b2y-google-logout"),status=$("b2y-login-status");
+const node=(tag,value,cls)=>{const e=document.createElement(tag);if(value)e.textContent=value;if(cls)e.className=cls;return e};
+function button(label,fn){const b=node("button",label,"btn btn-bleu");b.type="button";b.addEventListener("click",fn);return b}
+function error(e){return "Action impossible ("+(e.code||"erreur réseau")+"). Réessaie plus tard."}
+onAuthStateChanged(auth,u=>{login.disabled=false;login.hidden=admin();logout.hidden=!u||u.isAnonymous;$("b2y-admin-link").hidden=!admin();status.textContent=admin()?"Administration connectée.":u&&!u.isAnonymous?"Ce compte ne dispose pas des droits de modération.":"";if(location.hash==="#/moderation")mount();});
+login.onclick=async()=>{login.disabled=true;try{const p=new GoogleAuthProvider();p.setCustomParameters({prompt:"select_account"});await signInWithPopup(auth,p)}catch(e){status.textContent=error(e)}finally{login.disabled=false}};
+logout.onclick=async()=>{try{await signOut(auth)}catch(e){status.textContent=error(e)}};
+function card(d){const x=d.data(),box=node("article","","b2y-comment");box.append(node("strong",x.name||"Anonyme"),node("p",x.message||""));if(x.createdAt?.toDate)box.append(node("small",x.createdAt.toDate().toLocaleDateString("fr-FR")));if(x.reply)box.append(node("p","BROT2YOU : "+x.reply,"b2y-reply"));return box}
+function panel(root,id){root.append(node("h2",id==="guestbook"?"Le livre d’or BROT2YOU":"Vos commentaires"));root.append(node("p","Partagez un retour pédagogique. Utilisez un pseudonyme, sans nom complet, coordonnées ni information sur un élève. Les messages sont validés avant publication. Firebase utilise un identifiant technique de connexion, accessible dans les données publiées."));
+const list=node("div"),info=node("p");info.setAttribute("role","status");let cursor=null;
+const more=button("Afficher les messages",async()=>{more.disabled=true;try{const q=query(comments,where("articleId","==",id),where("status","==","approved"),...(cursor?[startAfter(cursor)]:[]),limit(10));const snap=await getDocs(q);snap.docs.forEach(d=>list.append(card(d)));cursor=snap.docs.at(-1)||cursor;info.textContent=list.childElementCount?"":"Aucun message publié pour le moment.";more.hidden=snap.size<10;more.textContent="Afficher la suite"}catch(e){info.textContent=error(e)}finally{more.disabled=false}});
+root.append(more,list,info);
+const form=node("form","","b2y-comment-form");const name=node("input"),msg=node("textarea"),send=node("button","Envoyer pour validation","btn btn-rouge"),feedback=node("p");name.required=true;name.minLength=2;name.maxLength=30;name.placeholder="Pseudonyme";name.setAttribute("aria-label","Pseudonyme");msg.required=true;msg.minLength=3;msg.maxLength=1000;msg.rows=4;msg.placeholder="Votre message";msg.setAttribute("aria-label","Votre message");send.type="submit";feedback.setAttribute("role","status");form.append(name,msg,send,feedback);root.append(form);
+form.onsubmit=async e=>{e.preventDefault();if(name.value.trim().length<2||msg.value.trim().length<3)return;try{if(Date.now()-Number(localStorage.getItem("b2y-last-comment")||0)<60000){feedback.textContent="Attendez une minute avant un nouvel envoi.";return}}catch{}send.disabled=true;try{if(!auth.currentUser)await signInAnonymously(auth);await addDoc(comments,{uid:auth.currentUser.uid,articleId:id,name:name.value.trim(),message:msg.value.trim(),status:"pending",createdAt:serverTimestamp()});try{localStorage.setItem("b2y-last-comment",String(Date.now()))}catch{}form.reset();feedback.textContent="Merci ! Votre message est en attente de validation."}catch(e){feedback.textContent=error(e)}finally{send.disabled=false}};
+}
+function moderation(root){root.append(node("h2","Modération BROT2YOU"));if(!admin()){root.append(node("p","Connectez-vous avec le compte administrateur en bas de page."));return}const select=node("select");for(const [v,t] of [["pending","En attente"],["approved","Publiés"],["rejected","Refusés"]]){const o=node("option",t);o.value=v;select.append(o)}const list=node("div"),info=node("p");let cursor=null;const load=button("Charger les messages",async()=>{load.disabled=true;try{const snap=await getDocs(query(comments,where("status","==",select.value),...(cursor?[startAfter(cursor)]:[]),limit(20)));for(const d of snap.docs){const box=card(d);box.prepend(node("small","Article : "+d.data().articleId));const actions=node("div","","b2y-comment-actions");const act=(label,fn)=>button(label,async e=>{e.currentTarget.disabled=true;try{await fn();box.remove();info.textContent="Modification enregistrée."}catch(err){info.textContent=error(err);e.currentTarget.disabled=false}});actions.append(act("Valider",()=>updateDoc(d.ref,{status:"approved"})),act("Refuser",()=>updateDoc(d.ref,{status:"rejected"})),act("Supprimer",async()=>{if(!confirm("Supprimer définitivement ce message ?"))throw new Error("annulé");await deleteDoc(d.ref)}));const reply=node("textarea");reply.maxLength=1000;reply.placeholder="Réponse officielle";reply.value=d.data().reply||"";actions.append(reply,act("Enregistrer la réponse",()=>updateDoc(d.ref,{reply:reply.value.trim()})));box.append(actions);list.append(box)}cursor=snap.docs.at(-1)||cursor;load.hidden=snap.size<20;info.textContent=list.childElementCount?"":"Aucun message dans cette catégorie."}catch(e){info.textContent=error(e)}finally{load.disabled=false}});select.onchange=()=>{cursor=null;list.replaceChildren();load.hidden=false;load.click()};root.append(select,load,info,list)}
+function mount(){const root=$("b2y-community");if(!root)return;root.replaceChildren();const id=root.dataset.article;if(id==="moderation")moderation(root);else panel(root,id)}
+window.b2yMountCommunity=mount;mount();
 </script>
+<style>
+.b2y-community{margin:24px auto;padding:clamp(14px,3vw,28px);background:#fff;border:2px solid #dce5f7;border-radius:20px;color:#172b4d;box-shadow:0 4px 12px #163b7520}.b2y-community h2{color:#173e83}.b2y-comment{padding:14px;margin:12px 0;border:1px solid #dce5f7;border-radius:12px;background:#f5f8ff;overflow-wrap:anywhere}.b2y-comment p{white-space:pre-wrap}.b2y-reply{border-left:4px solid #e6b447;padding-left:12px}.b2y-comment-form,.b2y-comment-actions{display:grid;gap:10px;margin-top:14px}.b2y-community input,.b2y-community textarea,.b2y-community select{font:inherit;padding:10px;border:1px solid #aabbd8;border-radius:9px;box-sizing:border-box;width:100%;color:#172b4d;background:white}.b2y-community button{white-space:normal}.b2y-community [hidden],#b2y-admin-login [hidden]{display:none!important}
+</style>
 
 <script>
 (function () {
@@ -9929,6 +9938,8 @@ logout.addEventListener("click",async()=>{try{await signOut(auth);}catch(e){stat
     if (hash === "#/" || hash === "#" || hash === "") {
       page = recherche ? "" : "accueil";
       vueListe(null);
+    } else if (hash === "#/livre-or" || hash === "#/moderation") {
+      mainEl.innerHTML = '<a class="retour" href="#/">← Accueil</a><section class="b2y-community" id="b2y-community" data-article="' + (hash === "#/moderation" ? "moderation" : "guestbook") + '"></section>';
     } else if (hash === "#/archives") {
       page = "archives";
       vueArchives();
@@ -9942,7 +9953,7 @@ logout.addEventListener("click",async()=>{try{await signOut(auth);}catch(e){stat
       else mainEl.innerHTML = '<a class="retour" href="#/">← Tous les articles</a><p class="vide">Ce tuto n\'existe pas ou a changé d\'adresse.</p>';
     } else if (hash.indexOf("#/") === 0) {
       var a = trouver(decodeURIComponent(hash.slice(2)));
-      if (a) { rubActive = rubriqueDe(a); vueArticle(a); }
+      if (a) { rubActive = rubriqueDe(a); vueArticle(a); var community=document.createElement("section"); community.id="b2y-community"; community.className="b2y-community"; community.dataset.article=a.id; mainEl.appendChild(community); }
       else mainEl.innerHTML = '<a class="retour" href="#/">← Tous les articles</a><p class="vide">Cet article n\'existe pas ou a changé d\'adresse.</p>';
     } else {
       page = "accueil";
@@ -9950,6 +9961,7 @@ logout.addEventListener("click",async()=>{try{await signOut(auth);}catch(e){stat
     }
     construireRubriques(rubActive);
     construireIcones(page);
+    var guest=document.createElement("li"); guest.innerHTML='<a href="#/livre-or"><span aria-hidden="true">✦</span><span>Livre d’or</span></a>'; iconbarEl.appendChild(guest); if(window.b2yMountCommunity)window.b2yMountCommunity();
     document.getElementById("accueil-flottant").hidden = (hash === "#/" || hash === "#" || hash === "");
     if (!premierAffichage) {
       if (recherche && !searchEl.hidden) {
@@ -9983,7 +9995,7 @@ logout.addEventListener("click",async()=>{try{await signOut(auth);}catch(e){stat
   });
 
   document.getElementById("footer").innerHTML =
-    "Applications gratuites, sans inscription ni collecte de données. Un projet BROT2YOU.";
+    "Applications gratuites. Les commentaires facultatifs utilisent Firebase et sont modérés. Un projet BROT2YOU.";
 
   window.addEventListener("hashchange", surNavigationNavigateur);
   window.addEventListener("popstate", surNavigationNavigateur);
@@ -10167,7 +10179,7 @@ html body .carte .actions .btn:first-child{grid-column:1/-1}
 html body .carte .actions .btn:nth-child(2):last-child{grid-column:1/-1}
 html body header .rubriques{display:flex!important;flex-wrap:wrap!important;justify-content:center!important;align-items:stretch!important;overflow:visible!important;gap:10px!important}
 html body header .rubriques li{display:flex!important;justify-content:center!important}
-html body header .iconbar{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr));width:min(100%,420px)!important;gap:8px!important}
+html body header .iconbar{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr));width:min(100%,560px)!important;gap:8px!important}
 html body header .iconbar li{min-width:0;display:flex!important}
 html body header .iconbar li a,html body header .iconbar li button{width:100%;box-sizing:border-box;min-width:0!important;min-height:54px!important;justify-content:center;text-align:center}
 @media(max-width:700px){
