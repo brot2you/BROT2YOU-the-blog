@@ -9282,6 +9282,26 @@ html body header .rubriques li button[data-rubrique="apps"]:hover .rubrique-text
 <footer class="site">
   <div class="wrap" id="footer"></div>
 </footer>
+<section id="b2y-admin-login" aria-label="Administration" style="text-align:center;padding:16px">
+<button type="button" class="btn btn-bleu" id="b2y-google-login" disabled>Connexion administrateur</button>
+<button type="button" class="btn btn-bleu" id="b2y-google-logout" hidden>Déconnexion</button>
+<p id="b2y-login-status" role="status" style="overflow-wrap:anywhere">Chargement de la connexion…</p>
+</section>
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/13.4.0/firebase-app.js";
+import { getAuth, GoogleAuthProvider, signInWithPopup, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/13.4.0/firebase-auth.js";
+const app = initializeApp({apiKey:"AIzaSyAG0R3IdX3BmRLZyW3N2h_2ug_czBVGBIo",authDomain:"brot2you-blog.firebaseapp.com",projectId:"brot2you-blog",storageBucket:"brot2you-blog.firebasestorage.app",messagingSenderId:"810004025173",appId:"1:810004025173:web:505da2df538f19cabee9dc"});
+const auth = getAuth(app);
+const login = document.getElementById("b2y-google-login");
+const logout = document.getElementById("b2y-google-logout");
+const status = document.getElementById("b2y-login-status");
+onAuthStateChanged(auth,user=>{
+login.disabled=false; login.hidden=!!user; logout.hidden=!user;
+status.textContent=user?"Compte connecté. UID : "+user.uid+" — aucun droit de modération activé pour le moment.":"Espace de modération en préparation.";
+},error=>{status.textContent="Erreur de connexion : "+error.code;});
+login.addEventListener("click",async()=>{login.disabled=true;try{const provider=new GoogleAuthProvider();provider.setCustomParameters({prompt:"select_account"});await signInWithPopup(auth,provider);}catch(e){status.textContent="Connexion impossible : "+(e.code||"erreur inconnue");}finally{login.disabled=false;}});
+logout.addEventListener("click",async()=>{try{await signOut(auth);}catch(e){status.textContent="Déconnexion impossible : "+(e.code||"erreur inconnue");}});
+</script>
 
 <script>
 (function () {
